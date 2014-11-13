@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema describes the amount consumed of a certain food item or food type as weight, volume, number of servings or number of units.",
+
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represent Food amount.",
+            "url": ""
+        }
+    ],
+
+    "definitions": {
+        "mass_unit_value": {
+            "$ref": "mass-unit-value-1.0.json"
+        },
+        "volume_unit_value": {
+            "$ref": "volume-unit-value-1.0.json"
+        }
+    },
+
+    "oneOf": [
+        {
+            "properties": {
+                "mass_unit_value": {
+                    "$ref": "#/definitions/mass_unit_value"
+                }
+            },
+            "required": [ "mass_unit_value"]
+        },
+        {
+            "properties": {
+                "volume_unit_value": {
+                    "$ref": "#/definitions/volume_unit_value"
+                }
+            },
+            "required": [ "volume_unit_value"]
+        },
+        {
+            "properties": {
+                "number_of_servings": {
+                    "type": "number"
+                }
+            },
+            "required": [ "number_of_servings"]
+        },
+        {
+            "properties": {
+                "number_of_units": {
+                    "type": "number"
+                }
+            },
+            "required": [ "number_of_units"]
+        }
+    ]
+}
