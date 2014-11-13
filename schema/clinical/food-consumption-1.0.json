@@ -1,0 +1,61 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+ 
+   "description":"This schema represents a generic way of collecting food consumption data. This can be an individual measurement or the descriptive statistic of a set of measurements.",
+   
+   "type":"object",
+ 
+   "definitions": {
+        "time_frame": {
+            "$ref":"../generic/time-frame-1.0.json" 
+        },
+        "meal": {
+            "$ref":"meal-1.0.json"
+        }, 
+        "food_amount": {
+            "$ref":"food-amount-1.0.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "../generic/descriptive-statistic-1.0.json"
+        } 
+    },
+ 
+   "properties": {
+      "food_item": {
+         "definition": "For example, apple or lettuce.",
+         "type": "string"
+      },
+      "food_type":{
+         "definition": "A grouping of food items. For example, non-starchy vegetables.",
+         "type": "string"
+      },
+      "food_group": {
+         "definition": "The ChooseMyPlate.gov food groups or the National Nutrient Database for Standard Reference Release 27",
+         "url": "choosemyplate.gov",
+         "url": "http://ndb.nal.usda.gov/ndb/",
+         "type": "string"
+      },
+      "food_amount": {
+          "$ref": "#/definitions/food_amount" 
+      },
+      "effective_time_frame": {
+          "$ref": "#/definitions/time_frame"
+      },
+      "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+      },
+      "meal_type":{
+         "type": "string",
+         "enum": ["meal","snack"]
+      }
+   },
+    "required": ["food_amount"],
+    "anyOf": [
+        {
+            "required": ["food_item"]
+        },
+        {
+            "required": ["food_type"]
+        }
+    ]
+}
