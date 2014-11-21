@@ -4,8 +4,8 @@
     "description": "This schema represents a temperature",
     "references": [
         {
-            "description": "The SNOMED code represents Temperature",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+            "description": "The SNOMED code represents Temperature (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/703421000"
         }
     ],
     "allOf": [
@@ -17,7 +17,7 @@
                 "unit": {
                     "references": [
                         {
-                            "description": "The unit of measure of the element. Allowed values are drawn from the SI Area Units and English Area Units Common Synonyms (non-UCUM). The valid UCUM code is different for square inch ([sin_i]), square foot ([sft_i]), square yard ([syd_i]).",
+                            "description": "The unit of measure of the element. Allowed values are drawn from the Temperature Units Common Synonyms (non-UCUM). The valid UCUM code is different for degrees Celsius (Cel) and Fahrenheit ([degF]).",
                             "url": "http://www.hl7.de/download/documents/ucum/ucumdata.html"
                         }
                     ],
