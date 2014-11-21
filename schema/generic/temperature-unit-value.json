@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "description": "This schema represents a temperature",
+    "references": [
+        {
+            "description": "The SNOMED code represents Temperature",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+        }
+    ],
+    "allOf": [
+        {
+            "$ref": "unit-value-1.0.json"
+        },
+        {
+            "properties": {
+                "unit": {
+                    "references": [
+                        {
+                            "description": "The unit of measure of the element. Allowed values are drawn from the SI Area Units and English Area Units Common Synonyms (non-UCUM). The valid UCUM code is different for square inch ([sin_i]), square foot ([sft_i]), square yard ([syd_i]).",
+                            "url": "http://www.hl7.de/download/documents/ucum/ucumdata.html"
+                        }
+                    ],
+                    "enum": [
+                        "C",
+                        "F",
+                        "K"
+                    ]
+                }
+            }
+        }
+    ]
+}
