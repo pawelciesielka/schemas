@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "description": "This schema represents a single measurement of sleep duration. The ability to represent descriptive statistics (e.g., mean, median) will be added shortly.",
+    "description": "This schema represents duration of sleep either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures",
     "references": [
         {
             "description": "The SNOMED code represents Duration of sleep (observable entity)",
