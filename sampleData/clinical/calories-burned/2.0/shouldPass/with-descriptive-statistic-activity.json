@@ -9,9 +9,6 @@
             "end_date_time": "2015-02-12T06:00:00Z"
         }
     },
-    "descriptive_statistic": "average",
-    "statistic_time_denominator":{
-        "value": 1,
-        "unit": "d"
-    }
+    "activity_name": "walking",
+    "descriptive_statistic": "average"
 }
