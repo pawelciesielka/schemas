@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents amount of calories burned in kilocalories (kcal) either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",    "type": "object",
+    "references": [
+        {
+            "description": "The LOINC code represents Calories burned:Power = Energy/Time:Point in time:^Patient:Quantitative, that is, a Quantitative measure of Calories burned by a Patient at a Point in time",
+            "url": "http://purl.bioontology.org/ontology/LNC/41981-2"
+        }
+    ],
+
+    "definitions": {
+        "kcal_unit_value": {
+                "$ref": "../generic/kcal-unit-value-1.0.json"
+        },
+        "time_frame": {
+            "$ref": "../generic/time-frame-1.0.json"
+        },
+        "activity_name": {
+            "$ref": "activity-name-1.0.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "../generic/descriptive-statistic-1.0.json"
+        }
+    },
+
+    "properties": {
+        "kcal_burned": {
+            "$ref": "#/definitions/kcal_unit_value"
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["time_interval"]
+                }
+            ]
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        },
+        "activity_name": {
+            "$ref": "#/definitions/activity_name"
+        }
+    },
+
+    "required": ["kcal_burned"]
+}
