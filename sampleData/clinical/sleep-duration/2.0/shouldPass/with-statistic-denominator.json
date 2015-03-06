@@ -1,0 +1,21 @@
+{
+    "documentation": "The average weekly sleep duration during the year starting on February 5, 2014 was 52 hours",
+    "sleep_duration": {
+        "value": 52,
+        "unit": "h"
+    },
+    "effective_time_frame": {
+        "time_interval": {
+            "start_date_time": "2014-02-05T06:00:00Z",
+            "duration": {
+                "value": 1,
+                "unit": "yr"
+            }
+        }
+    },
+    "descriptive_statistic": "average",
+    "statistic_time_denominator": {
+        "value": 1,
+        "unit": "wk"
+    }
+}
