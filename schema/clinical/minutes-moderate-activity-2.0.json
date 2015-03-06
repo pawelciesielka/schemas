@@ -4,8 +4,8 @@
     "description": "This schema represents minutes of moderate-intensity activity performed, either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",
     "references": [
         {
-            "description": "The SNOMED code represents ???",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/ "
+            "description": "The SNOMED code represents Physical activity target moderate exercise (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/408581006"
         }
     ],
     "definitions": {
