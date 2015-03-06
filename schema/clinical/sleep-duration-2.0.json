@@ -18,6 +18,9 @@
         },
         "descriptive_statistic": {
             "$ref": "../generic/descriptive-statistic-1.0.json"
+        },
+        "duration_unit_value": {
+            "$ref": "../generic/duration-unit-value-1.0.json"
         }
     },
 
@@ -52,6 +55,26 @@
         },
         "descriptive_statistic": {
             "$ref": "#/definitions/descriptive_statistic"
+        },
+        "statistic_time_denominator": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/duration_unit_value"
+                },
+                {
+                    "properties": {
+                        "unit": {
+                            "enum": [
+                                "min",
+                                "h",
+                                "d",
+                                "wk",
+                                "Mo"
+                            ]
+                        }
+                    }
+                }
+            ]
         },
         "user_notes": {
             "type": "string"
