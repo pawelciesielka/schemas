@@ -1,5 +1,5 @@
 {
-    "documentation": "The average weekly sleep duration during the year starting on February 5, 2014 was 52 hours",
+    "description": "The average weekly sleep duration during the year starting on February 5, 2014 was 52 hours",
     "sleep_duration": {
         "value": 52,
         "unit": "h"
