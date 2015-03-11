@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents the header of a data transaction.",
+    "type": "object",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.0.json"
+        },
+        "schema_id": {
+            "$ref": "schema-id-1.0.json"
+        }
+    },
+
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "creation_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "schema_id": {
+            "$ref": "#/definitions/schema_id"
+        },
+        "acquisition_provenance": {
+            "type": "object",
+            "properties": {
+                "source_name": {
+                    "description": "The human-readable name of the source of the data: vendor name, model name/number, version name/number.",
+                    "type": "string"
+                },
+                "source_creation_date_time": {
+                    "description": "The date time (timestamp) of data creation at the source.",
+                    "$ref": "#/definitions/date_time"
+                },
+                "modality": {
+                    "description": "The modality whereby the measure is obtained.",
+                    "type": "string",
+                    "enum": ["sensed","self-reported","proxy-reported"]
+                },
+                "device": {
+                    "type": "object",
+                    "device_id": {
+                        "type": "string",
+                        "description": "The UDI or UPC/serial number or any other unique identification of the source device."
+                    },
+                    "id_type": {
+                        "type": "string",
+                        "enum": ["FDA","other"]
+                    }
+                },
+                "software": {
+                    "type": "object",
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the source application."
+                    },
+                    "version": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": ["source_name"]
+        }
+    },
+
+    "required": [
+        "id",
+        "creation_date_time",
+        "schema_id"
+    ]
+}
