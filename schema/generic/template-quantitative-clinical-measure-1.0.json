@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This template schema represents a generic quantitative clinical measure, either a single measurement, or the result of aggregating several measurements made over time (see descriptive statistic schema for a list of aggregate measures)",
+
+    "type": "object",
+
+    "definitions": {
+
+        "unit_value": {
+            "$ref": "unit-value-1.0.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.0.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.0.json"
+        }
+    },
+
+    "properties": {
+        "unit-value": {
+            "description": "The value of the quantitative measure, together with the relevant unit of measure.",
+            "$ref": "#/definitions/unit-value"
+        },
+        "effective-time-frame": {
+            "description": "The time frame to which the quantitative measure effectively refers.",
+            "$ref": "#/definitions/time-frame"
+        },
+        "descriptive-statistic": {
+            "description": "The descriptive statistic of an aggregate measure.",
+            "$ref": "#/definitions/descriptive-statistic"
+        }
+    },
+
+    "required": ["unit-value"]
+}
