@@ -6,15 +6,15 @@
     "type": "object",
 
     "definitions": {
-
+        "description": "Additional definitions are schema-specific, for ex., if measure is influenced by meals, the schema should include the data element temporal-relationship-to-meal.",
         "unit_value": {
-            "$ref": "unit-value-1.0.json"
+            "$ref": "unit-value-X.X.json"
         },
         "time_frame": {
-            "$ref": "time-frame-1.0.json"
+            "$ref": "time-frame-X.X.json"
         },
         "descriptive_statistic": {
-            "$ref": "descriptive-statistic-1.0.json"
+            "$ref": "descriptive-statistic-X.X.json"
         }
     },
 
