@@ -18,50 +18,20 @@
             "type": "string"
         },
         "creation_date_time": {
+            "description": "The date time (timestamp) of data acquisition.",
             "$ref": "#/definitions/date_time"
         },
         "schema_id": {
             "$ref": "#/definitions/schema_id"
         },
-        "acquisition_provenance": {
-            "type": "object",
-            "properties": {
-                "source_name": {
-                    "description": "The human-readable name of the source of the data: vendor name, model name/number, version name/number.",
-                    "type": "string"
-                },
-                "source_creation_date_time": {
-                    "description": "The date time (timestamp) of data creation at the source.",
-                    "$ref": "#/definitions/date_time"
-                },
-                "modality": {
-                    "description": "The modality whereby the measure is obtained.",
-                    "type": "string",
-                    "enum": ["sensed","self-reported","proxy-reported"]
-                },
-                "device": {
-                    "type": "object",
-                    "device_id": {
-                        "type": "string",
-                        "description": "The UDI or UPC/serial number or any other unique identification of the source device."
-                    },
-                    "id_type": {
-                        "type": "string",
-                        "enum": ["FDA","other"]
-                    }
-                },
-                "software": {
-                    "type": "object",
-                    "name": {
-                        "type": "string",
-                        "description": "The name of the source application."
-                    },
-                    "version": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": ["source_name"]
+        "modality": {
+            "description": "The modality whereby the data is obtained.",
+            "type": "string",
+            "enum": ["sensed","self-reported","proxy-reported"]
+        },
+        "source_creation_date_time": {
+            "description": "The date time (timestamp) of data creation at the source.",
+            "$ref": "#/definitions/date_time"
         }
     },
 

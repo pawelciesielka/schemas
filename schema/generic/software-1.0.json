@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents the application source of data.",
+    "type": "object",
+
+    "definitions": {
+    },
+
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the source application."
+        },
+        "version": {
+            "type": "string",
+            "description": "The version of the source application."
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

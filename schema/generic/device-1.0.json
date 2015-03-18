@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents the device source of data.",
+    "type": "object",
+
+    "definitions": {
+    },
+
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the device."
+        },
+        "id": {
+            "type": "string",
+            "description": "The UDI or UPC/serial number or any other unique identification of the source device."
+        },
+        "id_type": {
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "enum": ["FDA","UPC"]
+                }
+            ]
+        }
+    },
+
+    "required": [
+        "id",
+        "name"
+    ]
+}
