@@ -5,7 +5,7 @@
 
     "definitions": {
         "header": {
-            "$ref": "header-1.1.json"
+            "$ref": "header-2.0.json"
         }
     },
 

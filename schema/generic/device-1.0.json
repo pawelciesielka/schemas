@@ -18,7 +18,7 @@
         },
         "id_type": {
             "type": "string",
-            "oneOf": [
+            "anyOf": [
                 {
                     "type": "string"
                 },
@@ -30,7 +30,6 @@
     },
 
     "required": [
-        "id",
         "name"
     ]
 }

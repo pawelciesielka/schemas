@@ -6,10 +6,6 @@
             "namespace": "omh",
             "name": "physical-activity",
             "version": "1.0"
-        },
-        "acquisition_provenance": {
-            "source_name": "RunKeeper",
-            "modality": "sensed"
         }
     },
     "body": {
