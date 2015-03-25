@@ -15,6 +15,9 @@
         "version": {
             "type": "string",
             "description": "The version of the source application."
+        },
+        "position_in_lineage": {
+            "type": "string"
         }
     },
     "required": [
