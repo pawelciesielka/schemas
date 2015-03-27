@@ -20,7 +20,7 @@
             "$ref": "activity-name-1.0.json"
         },
         "descriptive_statistic": {
-            "$ref": "../generic/descriptive-statistic-1.1.json"
+            "$ref": "../generic/descriptive-statistic-1.0.json"
         },
         "duration_unit_value": {
             "$ref": "../generic/duration-unit-value-1.0.json"
