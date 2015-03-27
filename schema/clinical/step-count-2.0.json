@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents number of steps, either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",
+    "description": "This schema represents number of steps within, either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",
     "type": "object",
     "references": [
         {
@@ -15,7 +15,7 @@
             "$ref": "../generic/time-frame-1.0.json"
         },
         "descriptive_statistic": {
-            "$ref": "../generic/descriptive-statistic-1.0.json"
+            "$ref": "../generic/descriptive-statistic-1.1.json"
         },
         "duration_unit_value": {
             "$ref": "../generic/duration-unit-value-1.0.json"

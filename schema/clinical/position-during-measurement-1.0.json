@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
 
     "type": "string",
-    "description": "The position of the subject during a clinical measurement.",
+    "description": "The position of the subject during a clinical measurement. This schema is deprecated in favor of body-posture.",
     "references": [
         {
             "value": "sitting",
