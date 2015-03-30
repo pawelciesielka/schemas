@@ -8,5 +8,8 @@
         }
     },
     "descriptive_statistic": "average",
-    "statistic_time_denominator": "d"
+    "statistic_time_denominator":{
+        "value": 1,
+        "unit": "d"
+    }
 }
