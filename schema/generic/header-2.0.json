@@ -25,13 +25,20 @@
             "$ref": "#/definitions/schema_id"
         },
         "modality": {
-            "description": "The modality whereby the data is obtained.",
             "type": "string",
             "enum": ["sensed","self-reported","proxy-reported"]
         },
         "source_creation_date_time": {
             "description": "The date time (timestamp) of data creation at the source.",
             "$ref": "#/definitions/date_time"
+        },
+        "device_id": {
+            "description": "The of data creation at the source.",
+            "type": "string"
+        },
+        "application_id": {
+            "description": "The of data creation at the source.",
+            "type": "string"
         }
     },
 

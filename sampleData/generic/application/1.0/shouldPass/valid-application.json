@@ -1,0 +1,26 @@
+{
+    "id": "withings-health-mate",
+    "type": "application",
+    "provider": "withings",
+    "name": "Withings Health Mate",
+    "url":"http://www.withings.com/us/health-mate.html",
+    "platforms": [
+        {
+            "os": "iOS",
+            "version": "6.0+",
+            "url": "https://itunes.apple.com/us/app/health-mate-steps-tracker/id542701020"
+        },
+        {
+            "os": "Android",
+            "version": "4.0+",
+            "url": "https://play.google.com/store/apps/details?id=com.withings.wiscale2",
+            "communication": [
+                "BT",
+                "BT LE"
+            ]
+        }
+    ],
+    "streams": [
+        "withings-body-services"
+    ]
+}
