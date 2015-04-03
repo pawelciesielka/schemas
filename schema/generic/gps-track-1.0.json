@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a tracking.",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents ",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+        }
+    ],
+    "definitions": {
+        "plane_angle_unit_value": {
+            "$ref": "../generic/plane_angle_unit-value-1.0.json"
+        },
+        "length_unit_value": {
+            "$ref": "../generic/length_unit-value-1.0.json"
+        },
+        "time_frame": {
+            "$ref": "../generic/time-frame-1.0.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "../generic/descriptive-statistic-1.0.json"
+        }
+    },
+
+    "properties": {
+        "latitude": {
+            "references": [
+                {
+                    "description": "The ?? code represents Latitude. Negative numbers indicate South.",
+                    "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+                }
+            ],
+            "$ref": "#/definitions/plane_angle_unit_value"
+        },
+        "longitude": {
+            "references": [
+                {
+                    "description": "The ?? code represents Longitude. Negative numbers indicate West.",
+                    "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+                }
+            ],
+            "$ref": "#/definitions/plane_angle_unit_value"
+        },
+        "elevation": {
+            "$ref": "#/definitions/length_unit_value"
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        }
+    },
+    "required": [
+        "latitude",
+        "longitude"
+    ]
+}
