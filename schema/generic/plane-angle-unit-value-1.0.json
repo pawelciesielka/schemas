@@ -16,8 +16,8 @@
                             "url": "http://www.hl7.de/download/documents/ucum/ucumdata.html"
                         },
                         {
-                            "description": "The SNOMED code represents Degrees",
-                            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/258710007"
+                            "description": "The SNOMED code represents Degree of arc",
+                            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/259046004"
                         }
                     ],
                     "enum": [
