@@ -13,7 +13,7 @@
                     "references": [
                         {
                             "description": "The unit of measure of the element. Basic unit is Degree of arc.",
-                            "url": "http://www.hl7.de/download/documents/ucum/ucumdata.html"
+                            "url": "http://download.hl7.de/documents/ucum/ucumdata.html"
                         },
                         {
                             "description": "The SNOMED code represents Degree of arc",

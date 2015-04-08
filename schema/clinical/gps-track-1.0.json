@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a tracking.",
+    "description": "This schema represents a GPS tracking.",
     "type": "object",
     "references": [
         {
@@ -11,16 +11,13 @@
     ],
     "definitions": {
         "plane_angle_unit_value": {
-            "$ref": "../generic/plane_angle_unit-value-1.0.json"
+            "$ref": "../generic/plane-angle-unit-value-1.0.json"
         },
         "length_unit_value": {
-            "$ref": "../generic/length_unit-value-1.0.json"
+            "$ref": "../generic/length-unit-value-1.0.json"
         },
         "time_frame": {
             "$ref": "../generic/time-frame-1.0.json"
-        },
-        "descriptive_statistic": {
-            "$ref": "../generic/descriptive-statistic-1.0.json"
         }
     },
 
@@ -46,11 +43,17 @@
         "elevation": {
             "$ref": "#/definitions/length_unit_value"
         },
+        "bearing": {
+            "references": [
+                {
+                    "description": "The compass direction from your current position to your intended destination. Bearing is used to describe the direction of a destination or object. Also known as, azimuth",
+                    "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+                }
+            ],
+            "$ref": "#/definitions/plane_angle_unit_value"
+        },
         "effective_time_frame": {
             "$ref": "#/definitions/time_frame"
-        },
-        "descriptive_statistic": {
-            "$ref": "#/definitions/descriptive_statistic"
         }
     },
     "required": [
