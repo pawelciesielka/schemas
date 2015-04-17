@@ -25,8 +25,8 @@
         "latitude": {
             "references": [
                 {
-                    "description": "The ?? code represents Latitude. Negative numbers indicate South.",
-                    "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+                    "description": "The NCIT code represents Latitude. The angular distance north or south between an imaginary line around a heavenly body parallel to its equator and the equator itself. Negative numbers indicate South.",
+                    "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68642"
                 }
             ],
             "$ref": "#/definitions/plane_angle_unit_value"
