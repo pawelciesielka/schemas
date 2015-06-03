@@ -1,7 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents amount of calories burned in kilocalories (kcal) either as a single measurement, or as the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",    "type": "object",
+    "description": "This schema represents amount of calories burned in kilocalories (kcal) either as a single measurement, or as the result of aggregating several measurements made over time (see Descriptive statistic schema for a list of aggregate measures)",
+    "type": "object",
     "references": [
         {
             "description": "The LOINC code represents Calories burned:Power = Energy/Time:Point in time:^Patient:Quantitative, that is, a Quantitative measure of Calories burned by a Patient at a Point in time",
