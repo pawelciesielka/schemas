@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the set of a person's Photographic Affect Meter (PAM) scores, which represent the mood and affective experience of that person.",
+    "type": "object",
+    "references": [
+        {
+            "description": "Pollak, J.P., Adams, P., Gay, G. (2011) PAM: a photographic affect meter for frequent, in situ measurement of affect. in the Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2011) Vancouver, BC, Canada, May 5-12, pp. 725-734.",
+            "url": "http://idl.cornell.edu/projects/pam/"
+        }
+    ],
+    "definitions": {
+        "valence_score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "arousal_score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "affect_score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 16
+        },
+        "mood": {
+            "type": "string",
+            "enum": [
+                "afraid",
+                "tense",
+                "excited",
+                "delighted",
+                "frustrated",
+                "angry",
+                "happy",
+                "glad",
+                "miserable",
+                "sad",
+                "calm",
+                "satisfied",
+                "gloomy",
+                "tired",
+                "sleepy",
+                "serene"
+            ]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "valence": {
+            "$ref": "#/definitions/valence_score"
+        },
+        "arousal": {
+            "$ref": "#/definitions/arousal_score"
+        },
+        "positive_affect": {
+            "$ref": "#/definitions/affect_score"
+        },
+        "negative_affect": {
+            "$ref": "#/definitions/affect_score"
+        },
+        "mood": {
+            "$ref": "#/definitions/mood"
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        }
+    },
+    "required": ["positive_affect"],
+    "additionalProperties": false
+}
