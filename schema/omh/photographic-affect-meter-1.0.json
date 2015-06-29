@@ -72,6 +72,5 @@
             "$ref": "#/definitions/time_frame"
         }
     },
-    "required": ["positive_affect","mood"],
-    "additionalProperties": false
+    "required": ["positive_affect","mood"]
 }
