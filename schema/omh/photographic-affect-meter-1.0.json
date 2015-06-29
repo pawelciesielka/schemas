@@ -6,6 +6,9 @@
         {
             "description": "Pollak, J.P., Adams, P., Gay, G. (2011) PAM: a photographic affect meter for frequent, in situ measurement of affect. in the Proceedings of the ACM Conference on Human Factors in Computing Systems (CHI 2011) Vancouver, BC, Canada, May 5-12, pp. 725-734.",
             "url": "http://idl.cornell.edu/projects/pam/"
+        },
+        {
+            "description": "PA = (4 * Valence) + Arousal - 4; NA = 4 * (5 - Valence) + Arousal - 4"
         }
     ],
     "definitions": {
@@ -69,6 +72,6 @@
             "$ref": "#/definitions/time_frame"
         }
     },
-    "required": ["positive_affect"],
+    "required": ["positive_affect","mood"],
     "additionalProperties": false
 }
