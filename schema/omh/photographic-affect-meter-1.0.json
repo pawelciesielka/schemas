@@ -12,16 +12,6 @@
         }
     ],
     "definitions": {
-        "valence_score": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 4
-        },
-        "arousal_score": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 4
-        },
         "affect_score": {
             "type": "integer",
             "minimum": 1,
@@ -53,12 +43,6 @@
         }
     },
     "properties": {
-        "valence": {
-            "$ref": "#/definitions/valence_score"
-        },
-        "arousal": {
-            "$ref": "#/definitions/arousal_score"
-        },
         "positive_affect": {
             "$ref": "#/definitions/affect_score"
         },

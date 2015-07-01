@@ -1,6 +1,4 @@
 {
-    "arousal": 2,
-    "valence": 3,
     "negative_affect": 6,
     "positive_affect": 10,
     "effective_time_frame": {
