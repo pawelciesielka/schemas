@@ -9,15 +9,17 @@
         }
     ],
     "definitions": {
-        "valence_score": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 4
+        "valence": {
+            "type": "integer"
         },
-        "arousal_score": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 4
+        "arousal": {
+            "type": "integer"
+        },
+        "affect": {
+            "type": "integer"
+        },
+        "assessment_method": {
+            "type": "string"
         },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
@@ -25,14 +27,24 @@
     },
     "properties": {
         "valence": {
-            "$ref": "#/definitions/valence_score"
+            "$ref": "#/definitions/valence"
         },
         "arousal": {
-            "$ref": "#/definitions/arousal_score"
+            "$ref": "#/definitions/arousal"
+        },
+        "positive_affect": {
+            "$ref": "#/definitions/affect"
+        },
+        "negative_affect": {
+            "$ref": "#/definitions/affect"
         },
         "effective_time_frame": {
             "$ref": "#/definitions/time_frame"
+        },
+        "assessment_method": {
+            "$ref": "#/definitions/assessment_method"
         }
     },
-    "required": ["valence","arousal"]
+    "required": ["positive_affect"],
+    "additionalProperties": false
 }

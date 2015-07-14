@@ -12,10 +12,26 @@
         }
     ],
     "definitions": {
-        "affect_score": {
+        "valence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "arousal": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+        },
+        "affect": {
             "type": "integer",
             "minimum": 1,
             "maximum": 16
+        },
+        "assessment_method": {
+            "type": "string",
+            "enum": [
+                "PAM"
+            ]
         },
         "mood": {
             "type": "string",
@@ -43,18 +59,30 @@
         }
     },
     "properties": {
+        "valence": {
+            "$ref": "#/definitions/valence"
+        },
+        "arousal": {
+            "$ref": "#/definitions/arousal"
+        },
         "positive_affect": {
-            "$ref": "#/definitions/affect_score"
+            "$ref": "#/definitions/affect"
         },
         "negative_affect": {
-            "$ref": "#/definitions/affect_score"
+            "$ref": "#/definitions/affect"
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
         },
         "mood": {
             "$ref": "#/definitions/mood"
         },
-        "effective_time_frame": {
-            "$ref": "#/definitions/time_frame"
+        "assessment_method": {
+            "$ref": "#/definitions/assessment_method"
         }
     },
-    "required": ["positive_affect","mood"]
+    "required": [
+        "positive_affect"
+    ],
+    "additionalProperties": false
 }
