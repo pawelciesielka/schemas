@@ -44,6 +44,7 @@
             ]
         },
         "effective_time_frame": {
+            "description": "A measurement of sleep duration cannot by definition be associated to a date-time, so the effective time frame must be a time interval.",
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -57,6 +58,7 @@
             "$ref": "#/definitions/descriptive_statistic"
         },
         "statistic_time_denominator": {
+            "description": "The time denominator of the descriptive statistic. For example, in the case of average daily sleep duration, the value would be d.",
             "allOf": [
                 {
                     "$ref": "#/definitions/duration_unit_value"
@@ -65,8 +67,6 @@
                     "properties": {
                         "unit": {
                             "enum": [
-                                "min",
-                                "h",
                                 "d",
                                 "wk",
                                 "Mo"

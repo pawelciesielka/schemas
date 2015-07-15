@@ -27,6 +27,7 @@
             "type": "number"
         },
         "effective_time_frame": {
+            "description": "A measurement of step count cannot be associated to a date-time, because it inherently lasts over time, so the effective time frame must be a time interval.",
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -40,6 +41,7 @@
             "$ref": "#/definitions/descriptive_statistic"
         },
         "statistic_time_denominator": {
+            "description": "The time denominator of the descriptive statistic. For example, in the case of average daily step count, the value would be d.",
             "allOf": [
                 {
                     "$ref": "#/definitions/duration_unit_value"

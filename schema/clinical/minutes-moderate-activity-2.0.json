@@ -41,6 +41,7 @@
             ]
         },
         "effective_time_frame": {
+            "description": "A measurement of minutes of moderate activity cannot be associated to a date-time, because it inherently lasts over time, so the effective time frame must be a time interval.",
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -54,6 +55,7 @@
             "$ref": "#/definitions/descriptive_statistic"
         },
         "statistic_time_denominator": {
+            "description": "The time denominator of the descriptive statistic. For example, in the case of average weekly minutes of moderate activity, the value would be wk.",
             "allOf": [
                 {
                     "$ref": "#/definitions/duration_unit_value"
@@ -62,7 +64,6 @@
                     "properties": {
                         "unit": {
                             "enum": [
-                                "min",
                                 "h",
                                 "d",
                                 "wk",
