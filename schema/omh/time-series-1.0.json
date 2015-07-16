@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "array",
+    "description": "This schema represents a time series of data points.",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        }
+    },
+    "items": {
+        "type": "object",
+        "properties": {
+            "date_time": {
+                "$ref": "#/definitions/date_time"
+            },
+            "interval": {
+                "type": "number"
+            },
+            "data": {
+                "description": "The data point.",
+                "type": "object"
+            }
+        }
+    },
+    "required": ["data"]
+}

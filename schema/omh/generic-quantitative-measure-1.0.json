@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents <name of measure>, Describe here the measure the schema represents and whether the schema represents a single measure or it can also represent an aggregate measure.",    "type": "object",
+    "references": [
+        {
+            "description": "Additional details on the use of this template and an annotated sample application are available on the OmH website.",
+            "url": "http://www.openmhealth.org/documentation/#/schema-docs/write-a-schema/annotated-quantitative-measure-schema-template"
+        },
+        {
+            "description": "The XXX code represents yyy. Specify here the term from a standard vocabulary that best describes this measure.",
+            "url": "<link to term in BioPortal>"
+        },
+        {
+            "description": "Add any relevant references, for example the website or paper used to inform the definition of this measure.",
+            "url": "<link to relevant website or paper>"
+        }
+    ],
+
+    "definitions": {
+        "description": "List here the references to existing schemas that are used to define properties schema. The name should correspond to the schema name.",
+        "unit_value": {
+            "$ref": "unit-value-1.x.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        }
+    },
+
+    "properties": {
+        "description": "List here the properties of this schema. Choose a meaningful name, which may be the same name used in the definitions section or slightly different, as in the case of effective_time_frame below.",
+        "unit_value": {
+            "description": "The value of the quantitative measure, together with the relevant unit of measure. Reference an existing specific unit value schema (for ex., mass-unit-value) or, if none applies, reference the generic unit value schema and then constrain the unit value set as appropriate. If the measure is expressed by a number, do not reference the unit-value schema, but define the relevant property to be of type number (see property section below).",
+            "$ref": "#/definitions/unit_value"
+        },
+        "effective_time_frame": {
+            "description": "The time frame to which the quantitative measure effectively refers.",
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        }
+    },
+    "description": "Since additionalProperties is not specified, the default value (true) applies, which means data containing properties not listed in the relevant section will validate against this schema.",
+
+    "required": ["unit_value"]
+}
