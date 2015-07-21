@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "The secondary emotions are derived from the basic emotions but are more cognitive in orientation (Russell, 1980).Russell, J. A. (1980) A circumplex model of affect. Journal of Personality and Social Psychology, 39, 1161–1178.",
+
+    "type": "string",
+
+    "enum": [
+        "afraid",
+        "alarmed",
+        "alert",
+        "amused",
+        "angry",
+        "annoyed",
+        "astonished",
+        "at ease",
+        "bored",
+        "calm",
+        "contented",
+        "delighted",
+        "depressed",
+        "distressed",
+        "droopy",
+        "elated",
+        "enthusiastic",
+        "excited",
+        "fatigued",
+        "frustrated",
+        "glad",
+        "gloomy",
+        "happy",
+        "miserable",
+        "nervous",
+        "pleased",
+        "relaxed",
+        "sad",
+        "satisfied",
+        "serene",
+        "sleepy",
+        "stressed",
+        "tense",
+        "tired",
+        "upset"
+    ]
+}
