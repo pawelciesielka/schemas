@@ -23,6 +23,7 @@
             "maximum": 4
         },
         "affect": {
+            "description": "Both negative and positive affect use the same value range, so it is defined here.",
             "type": "integer",
             "minimum": 1,
             "maximum": 16
