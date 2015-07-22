@@ -45,6 +45,5 @@
             "$ref": "#/definitions/assessment_method"
         }
     },
-    "required": ["positive_affect"],
-    "additionalProperties": false
+    "required": ["positive_affect"]
 }
