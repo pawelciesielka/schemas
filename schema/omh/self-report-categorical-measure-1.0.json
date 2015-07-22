@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the generic concept of positive affect and negative affect which are calculated based on affect and valence. There are various ways of establishing affect and valence and of calculating positive and negative affect values.",
+    "description": "This schema represents the arousal score and valence score used to calculate photographic affect meter (PAM).",
     "type": "object",
     "references": [
         {
