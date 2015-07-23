@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic question with a set of answers.",
+    "type": "object",
+
+    "definitions": {
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+
+    "properties": {
+        "question": {
+            "type": "string"
+        },
+        "answer": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        }
+    },
+    "required": ["question","answer"]
+}

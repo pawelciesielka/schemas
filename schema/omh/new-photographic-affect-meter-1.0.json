@@ -1,6 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "This schema represents the set of a person's Photographic Affect Meter (PAM) scores, which represent the mood and affective experience of that person.",
+    "description": "Problem: can't make it work as inheritance of generic affect",
     "type": "object",
     "references": [
         {

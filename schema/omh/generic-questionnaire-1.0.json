@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic questionnaire with numerical values as answers.",
+    "type": "object",
+    "references": [
+        {
+            "description": ""
+        }
+    ],
+    "definitions": {
+        "question": {
+            "type": "string"
+        },
+        "answer_key": {
+            "type": "integer"
+        },
+        "answer_value": {
+            "type": "string"
+        },
+        "assessment_method": {
+            "type": "string"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "assessment_method": {
+            "$ref": "#/definitions/assessment_method"
+        },
+        "question": {
+            "$ref": "#/definitions/question"
+        },
+        "questionnaire": {
+            "type": "array",
+            "items": {
+
+                "answer_key": {
+                    "$ref": "#/definitions/answer_key"
+                },
+                "answer_value": {
+                    "$ref": "#/definitions/answer_value"
+                }
+            },
+            "required": ["question","answer_key"],
+            "additionalProperties": false
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        }
+    },
+    "required": ["assessment_method","questionnaire"],
+    "additionalProperties": false
+}
