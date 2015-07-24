@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic questionnaire with numerical values as answers.",
+    "type": "object",
+    "references": [
+        {
+            "description": ""
+        }
+    ],
+    "definitions": {
+        "question_1": {
+            "enum": ["Do you have the desire to eat when you are irritated?"]
+        },
+        "question_2": {
+            "enum": ["Do you have a desire to eat when you have nothing to do?"]
+        },
+        "question_3": {
+            "enum": ["Do you have a desire to eat when you are depressed or discouraged?"]
+        },
+        "question_4": {
+            "enum": ["Do you have a desire to eat when you are feeling lonely?"]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "answer": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "enum": [
+                        [1, "never"],
+                        [2, "seldom"],
+                        [3, "sometimes"],
+                        [4, "often"],
+                        [5, "very"]
+                    ],
+                    "additionalItems": false
+                },
+                {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "enum": [
+                        ["NR", "not relevant"]
+                    ],
+                    "additionalItems": false
+                }
+            ]
+        },
+        "instrument_name": {
+            "type": "string"
+        }
+    },
+    "properties": {
+        "item_1": {
+            "type": "object",
+            "properties": {
+                "question_1": {
+                    "$ref": "#/definitions/question_1"
+                },
+                "answer_1": {
+                    "$ref": "#/definitions/answer"
+                }
+            },
+            "required": ["question_1", "answer_1"]
+        },
+        "item_2": {
+            "type": "object",
+            "properties": {
+                "question_2": {
+                    "$ref": "#/definitions/question_2"
+                },
+                "answer_2": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "item_3": {
+            "type": "object",
+            "properties": {
+                "question_3": {
+                    "$ref": "#/definitions/question_3"
+                },
+                "answer_3": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name",
+            "enum": ["Dutch eating behavior questionnaire"]
+        }
+    },
+    "required": ["item_1","item_2","item_3"],
+    "additionalProperties": false
+}

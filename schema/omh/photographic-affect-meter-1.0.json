@@ -50,6 +50,9 @@
                 "serene"
             ]
         },
+        "instrument_name": {
+            "type": "string"
+        },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
@@ -73,8 +76,9 @@
         "mood": {
             "$ref": "#/definitions/mood"
         },
-        "assessment_method": {
-            "$ref": "#/definitions/assessment_method"
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name",
+            "enum": ["PAM"]
         }
     },
     "required": [

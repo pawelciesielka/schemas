@@ -8,14 +8,11 @@
         }
     ],
     "definitions": {
-        "question": {
-            "type": "string"
+        "generic_categorical_measure": {
+            "$ref": "generic-categorical-measure-1.x.json"
         },
-        "answer_key": {
-            "type": "integer"
-        },
-        "answer_value": {
-            "type": "string"
+        "generic_numeric_measure": {
+            "$ref": "generic-numeric-measure-1.x.json"
         },
         "assessment_method": {
             "type": "string"
@@ -25,25 +22,21 @@
         }
     },
     "properties": {
-        "assessment_method": {
-            "$ref": "#/definitions/assessment_method"
-        },
-        "question": {
-            "$ref": "#/definitions/question"
-        },
         "questionnaire": {
             "type": "array",
             "items": {
-
-                "answer_key": {
-                    "$ref": "#/definitions/answer_key"
+                "generic_categorical_measure": {
+                    "$ref": "generic-categorical-measure-1.x.json"
                 },
-                "answer_value": {
-                    "$ref": "#/definitions/answer_value"
+                "generic_numeric_measure": {
+                    "$ref": "generic-numeric-measure-1.x.json"
                 }
             },
-            "required": ["question","answer_key"],
-            "additionalProperties": false
+            "additionalItems": false
+        },
+
+        "assessment_method": {
+            "$ref": "#/definitions/assessment_method"
         },
         "effective_time_frame": {
             "allOf": [
@@ -56,6 +49,6 @@
             ]
         }
     },
-    "required": ["assessment_method","questionnaire"],
+    "required": ["questionnaire"],
     "additionalProperties": false
 }

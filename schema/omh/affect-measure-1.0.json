@@ -17,7 +17,7 @@
         "affect": {
             "type": "integer"
         },
-        "assessment_method": {
+        "instrument_name": {
             "type": "string"
         },
         "time_frame": {
@@ -40,8 +40,8 @@
         "effective_time_frame": {
             "$ref": "#/definitions/time_frame"
         },
-        "assessment_method": {
-            "$ref": "#/definitions/assessment_method"
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name"
         }
     },
     "required": ["positive_affect"]
