@@ -34,11 +34,6 @@
                 "negative_affect": {
                     "minimum": 1,
                     "maximum": 16
-                },
-                "assessment_method": {
-                    "enum": [
-                        "PAM"
-                    ]
                 }
             }
         }
