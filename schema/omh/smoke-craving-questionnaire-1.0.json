@@ -1,0 +1,70 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a as answers.",
+    "type": "object",
+    "references": [
+        {
+            "description": "Lam et al. (2014)"
+        }
+    ],
+    "definitions": {
+        "question": {
+            "enum": ["How strong is your urge to smoke right now?"]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "answer": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [0, "no urge"],
+                [1, "weak"],
+                [2, "moderate"],
+                [3, "strong"],
+                [4, "severe"]
+            ],
+            "additionalItems": false
+        },
+        "instrument_name": {
+            "type": "string"
+        }
+    },
+    "properties": {
+        "item": {
+            "type": "object",
+            "properties": {
+                "question1": {
+                    "$ref": "#/definitions/question"
+                },
+                "answer": {
+                    "$ref": "#/definitions/answer"
+                }
+            },
+            "required": ["question", "answer"]
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name",
+            "enum": ["Lam et al."]
+        }
+    },
+    "required": ["item"],
+    "additionalProperties": false
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic questionnaire with multiple selection as answer.",
+    "type": "object",
+    "references": [
+        {
+            "description": ""
+        }
+    ],
+    "definitions": {
+
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "answer": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "8am-9am",
+                    "9am-10am",
+                    "10am-11am",
+                    "11am-12pm",
+                    "12pm-1pm"
+                ],
+                "additionalItems": false
+            }
+        },
+        "instrument_name": {
+            "type": "string"
+        }
+    },
+    "properties": {
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "enum": [
+                        "Please check the hour blocks when you took 1 or more puffs today."
+                    ]
+                },
+                "answer": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name",
+            "enum": ["sample multiple selection answer from MD2K"]
+        }
+    },
+    "additionalProperties": false
+}

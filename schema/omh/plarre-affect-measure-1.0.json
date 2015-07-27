@@ -28,26 +28,22 @@
             "$ref": "time-frame-1.x.json"
         },
         "answer": {
-            "oneOf": [
+            "type": "array",
+            "items": [
                 {
-                    "type": "array",
-                    "items": [
-                        {
-                            "type": "integer"
-                        },
-                        {
-                            "type": "string"
-                        }
-                    ],
-                    "enum": [
-                        [0, "NO"],
-                        [1, "no"],
-                        [2, "yes"],
-                        [3, "YES"]
-                    ],
-                    "additionalItems": false
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
                 }
-            ]
+            ],
+            "enum": [
+                [0, "NO"],
+                [1, "no"],
+                [2, "yes"],
+                [3, "YES"]
+            ],
+            "additionalItems": false
         },
         "instrument_name": {
             "type": "string"
