@@ -1,0 +1,154 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the Plarre affect measure generic concept of positive affect and negative affect which are calculated based on affect and valence. There are various ways of establishing affect and valence and of calculating positive and negative affect values.",
+    "type": "object",
+    "references": [
+        {
+            "description": "Plarre et al. Continuous Inference of Psychological Stress from Sensory Measurements Collected in the Natural Environment 2011.",
+            "url": "http://pie.eng.usf.edu/wp-content/uploads/2011/12/plarre-ipsn20111.pdf"
+        }
+    ],
+    "definitions": {
+        "question_1": {
+            "enum": ["I feel cheerful."]
+        },
+        "question_2": {
+            "enum": ["I feel happy"]
+        },
+        "question_3": {
+            "enum": ["I feel angry/frustrated"]
+        },
+        "question_4": {
+            "enum": ["I feel nervous/stressed"]
+        },
+        "question_5": {
+            "enum": ["I feel sad"]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "answer": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "enum": [
+                        [0, "NO"],
+                        [1, "no"],
+                        [2, "yes"],
+                        [3, "YES"]
+                    ],
+                    "additionalItems": false
+                }
+            ]
+        },
+        "instrument_name": {
+            "type": "string"
+        },
+        "valence": {
+            "type": "integer"
+        },
+        "arousal": {
+            "type": "integer"
+        },
+        "affect": {
+            "type": "integer"
+        },
+        "instrument_name": {
+            "type": "string"
+        }
+    },
+    "properties": {
+        "item_1": {
+            "type": "object",
+            "properties": {
+                "question_1": {
+                    "$ref": "#/definitions/question_1"
+                },
+                "answer_1": {
+                    "$ref": "#/definitions/answer"
+                }
+            },
+            "required": ["question_1", "answer_1"]
+        },
+        "item_2": {
+            "type": "object",
+            "properties": {
+                "question_2": {
+                    "$ref": "#/definitions/question_2"
+                },
+                "answer_2": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "item_3": {
+            "type": "object",
+            "properties": {
+                "question_3": {
+                    "$ref": "#/definitions/question_3"
+                },
+                "answer_3": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "item_4": {
+            "type": "object",
+            "properties": {
+                "question_4": {
+                    "$ref": "#/definitions/question_4"
+                },
+                "answer_4": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "item_5": {
+            "type": "object",
+            "properties": {
+                "question_5": {
+                    "$ref": "#/definitions/question_5"
+                },
+                "answer_5": {
+                    "$ref": "#/definitions/answer"
+                }
+            }
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "instrument_name": {
+            "$ref": "#/definitions/instrument_name",
+            "enum": ["Plarre affect measure"]
+        },
+        "positive_affect": {
+            "description": "SAffect = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
+            "$ref": "#/definitions/affect",
+            "minimum": 0,
+            "maximum": 15
+        },
+        "negative_affect": {
+            "$ref": "#/definitions/affect"
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        }
+    },
+    "required": ["item_1","item_2","item_3","item_4","item_5","positive_affect"],
+    "additionalProperties": false
+}
