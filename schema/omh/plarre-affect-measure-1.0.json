@@ -70,9 +70,21 @@
                 },
                 "answer_1": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_1": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
             },
-            "required": ["question_1", "answer_1"]
+            "required": ["question_1", "answer_1","effective_time_frame_1"]
         },
         "item_2": {
             "type": "object",
@@ -118,7 +130,7 @@
                 }
             }
         },
-        "effective_time_frame": {
+        "time_frame_first_delivered": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -128,6 +140,17 @@
                 }
             ]
         },
+        "time_frame_last_available": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+
         "instrument_name": {
             "$ref": "#/definitions/instrument_name",
             "enum": ["Plarre affect measure"]
@@ -143,8 +166,12 @@
         },
         "effective_time_frame": {
             "$ref": "#/definitions/time_frame"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["successful","missed","abandoned"]
         }
     },
-    "required": ["item_1","item_2","item_3","item_4","item_5","positive_affect"],
+    "required": ["time_frame_first_delivered","status"],
     "additionalProperties": false
 }
