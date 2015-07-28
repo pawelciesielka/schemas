@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the Plarre affect measure generic concept of positive affect and negative affect which are calculated based on affect and valence. There are various ways of establishing affect and valence and of calculating positive and negative affect values.",
+    "description": "This schema represents the Plarre et al. self-report measure of perceived stress.",
     "type": "object",
     "references": [
         {
@@ -24,9 +24,6 @@
         "question_5": {
             "enum": ["I feel sad"]
         },
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
-        },
         "answer": {
             "type": "array",
             "items": [
@@ -45,20 +42,8 @@
             ],
             "additionalItems": false
         },
-        "instrument_name": {
-            "type": "string"
-        },
-        "valence": {
-            "type": "integer"
-        },
-        "arousal": {
-            "type": "integer"
-        },
-        "affect": {
-            "type": "integer"
-        },
-        "instrument_name": {
-            "type": "string"
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
         }
     },
     "properties": {
@@ -94,8 +79,21 @@
                 },
                 "answer_2": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_2": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
-            }
+            },
+            "required": ["question_2", "answer_2","effective_time_frame_2"]
         },
         "item_3": {
             "type": "object",
@@ -152,20 +150,14 @@
         },
 
         "instrument_name": {
-            "$ref": "#/definitions/instrument_name",
-            "enum": ["Plarre affect measure"]
+            "type": "string",
+            "enum": ["Plarre stress measure"]
         },
-        "positive_affect": {
+        "stress": {
             "description": "SAffect = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
-            "$ref": "#/definitions/affect",
+            "type": "integer",
             "minimum": 0,
             "maximum": 15
-        },
-        "negative_affect": {
-            "$ref": "#/definitions/affect"
-        },
-        "effective_time_frame": {
-            "$ref": "#/definitions/time_frame"
         },
         "status": {
             "type": "string",

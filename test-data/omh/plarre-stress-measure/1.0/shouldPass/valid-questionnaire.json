@@ -8,7 +8,10 @@
     },
     "item_2": {
         "question_2": "I feel happy",
-        "answer_2": [2, "yes"]
+        "answer_2": [2, "yes"],
+        "effective_time_frame_2": {
+            "date_time": "2015-02-05T07:25:10Z"
+        }
     },
     "item_3": {
         "question_3": "I feel angry/frustrated",
@@ -22,9 +25,12 @@
         "question_5": "I feel sad",
         "answer_5": [0, "NO"]
     },
-    "instrument_name": "Plarre et al. 2011",
-    "effective_time_frame": {
-        "date_time": "2015-02-05T07:25:00Z"
+    "instrument_name": "Plarre stress measure",
+    "time_frame_first_delivered": {
+        "date_time": "2015-02-05T07:24:00Z"
     },
-    "positive_affect": 3
+    "time_frame_last_available": {
+        "date_time": "2015-02-05T07:35:10Z"
+    },
+    "status": "abandoned"
 }
