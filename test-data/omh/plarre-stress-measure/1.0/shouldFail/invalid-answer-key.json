@@ -1,27 +1,24 @@
 {
     "item_1": {
         "question_1": "I feel cheerful.",
-        "answer_1": [4, "YES"]
+        "answer_1": [4, "YES"],
+        "effective_time_frame_1": {
+            "date_time": "2015-02-05T07:25:00Z"
+        }
     },
     "item_2": {
         "question_2": "I feel happy",
-        "answer_2": [2, "yes"]
+        "answer_2": [2, "yes"],
+        "effective_time_frame_2": {
+            "date_time": "2015-02-05T07:25:10Z"
+        }
     },
-    "item_3": {
-        "question_3": "I feel angry/frustrated",
-        "answer_3": [1, "no"]
+    "instrument_name": "Plarre stress measure",
+    "time_frame_first_delivered": {
+        "date_time": "2015-02-05T07:24:00Z"
     },
-    "item_4": {
-        "question_4": "I feel nervous/stressed",
-        "answer_4": [1, "no"]
+    "time_frame_last_available": {
+        "date_time": "2015-02-05T07:35:10Z"
     },
-    "item_5": {
-        "question_5": "I feel sad",
-        "answer_5": [0, "NO"]
-    },
-    "instrument_name": "Plarre et al. 2011",
-    "effective_time_frame": {
-        "date_time": "2015-02-05T07:25:00Z"
-    },
-    "positive_affect": 3
+    "status": "abandoned"
 }

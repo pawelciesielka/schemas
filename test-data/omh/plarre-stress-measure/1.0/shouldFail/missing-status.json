@@ -1,7 +1,7 @@
 {
     "item_1": {
         "question_1": "I feel cheerful.",
-        "answer_1": [3, "YESum"],
+        "answer_1": [4, "YES"],
         "effective_time_frame_1": {
             "date_time": "2015-02-05T07:25:00Z"
         }
@@ -19,6 +19,5 @@
     },
     "time_frame_last_available": {
         "date_time": "2015-02-05T07:35:10Z"
-    },
-    "status": "abandoned"
+    }
 }

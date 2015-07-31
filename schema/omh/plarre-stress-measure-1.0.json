@@ -121,8 +121,21 @@
                 },
                 "answer_3": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_3": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
-            }
+            },
+            "required": ["question_3", "answer_3","effective_time_frame_3"]
         },
         "item_4": {
             "type": "object",
@@ -132,8 +145,21 @@
                 },
                 "answer_4": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_4": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
-            }
+            },
+            "required": ["question_4", "answer_4","effective_time_frame_4"]
         },
         "item_5": {
             "type": "object",
@@ -143,8 +169,21 @@
                 },
                 "answer_5": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_5": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
-            }
+            },
+            "required": ["question_5", "answer_5","effective_time_frame_5"]
         },
         "time_frame_first_delivered": {
             "allOf": [
@@ -172,7 +211,7 @@
             "enum": ["Plarre stress measure"]
         },
         "stress": {
-            "description": "SAffect = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
+            "description": "SStress = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
             "type": "integer",
             "minimum": 0,
             "maximum": 15
@@ -180,6 +219,10 @@
         "status": {
             "type": "string",
             "enum": ["successful","missed","abandoned"]
+        },
+        "trigger": {
+            "type": "string",
+            "enum": ["random","event","signal","end of day"]
         }
     },
     "required": ["time_frame_first_delivered","status"],
