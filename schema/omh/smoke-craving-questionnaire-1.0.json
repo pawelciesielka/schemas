@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a as answers.",
+    "description": "This schema represents yje Lam et al. self-report smoke craving questionnaire.",
     "type": "object",
     "references": [
         {
@@ -10,9 +10,6 @@
     "definitions": {
         "question": {
             "enum": ["How strong is your urge to smoke right now?"]
-        },
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
         },
         "answer": {
             "type": "array",
@@ -33,8 +30,8 @@
             ],
             "additionalItems": false
         },
-        "instrument_name": {
-            "type": "string"
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
         }
     },
     "properties": {
@@ -46,11 +43,23 @@
                 },
                 "answer": {
                     "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
             },
-            "required": ["question", "answer"]
+            "required": ["question", "answer", "effective_time_frame"]
         },
-        "effective_time_frame": {
+        "time_frame_first_delivered": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -60,11 +69,29 @@
                 }
             ]
         },
-        "instrument_name": {
-            "$ref": "#/definitions/instrument_name",
+        "time_frame_last_available": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+
+        "assessment_method": {
             "enum": ["Lam et al."]
+        },
+        "status": {
+            "type": "string",
+            "enum": ["successful","missed","abandoned"]
+        },
+        "trigger": {
+            "type": "string",
+            "enum": ["random","event","signal","end of day"]
         }
     },
-    "required": ["item"],
+    "required": ["time_frame_first_delivered","status"],
     "additionalProperties": false
 }

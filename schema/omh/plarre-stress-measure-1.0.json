@@ -142,7 +142,7 @@
                     ]
                 }
             },
-            "required": ["question_4", "answer_4","effective_time_frame_4"]
+            "required": ["question_4","answer_4","effective_time_frame_4"]
         },
         "item_5": {
             "type": "object",
@@ -189,7 +189,7 @@
             ]
         },
 
-        "instrument_name": {
+        "assessment_method": {
             "type": "string",
             "enum": ["Plarre stress measure"]
         },

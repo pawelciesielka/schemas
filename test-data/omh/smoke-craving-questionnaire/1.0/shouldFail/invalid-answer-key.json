@@ -1,0 +1,17 @@
+{
+    "item": {
+        "question": "How strong is your urge to smoke right now?",
+        "answer": [5, "severe"],
+        "effective_time_frame": {
+            "date_time": "2015-02-05T07:25:00Z"
+        }
+    },
+    "assessment_method": "Lam et al.",
+    "time_frame_first_delivered": {
+        "date_time": "2015-02-05T07:24:00Z"
+    },
+    "time_frame_last_available": {
+        "date_time": "2015-02-05T07:35:10Z"
+    },
+    "status": "completed"
+}
