@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with a set of answers.",
+    "description": "This schema represents an example question with a set of categorical answers.",
     "type": "object",
 
     "definitions": {
@@ -62,6 +62,5 @@
             ]
         }
     },
-    "required": ["question","answer"],
-    "additionalProperties": false
+    "required": ["question","answer"]
 }

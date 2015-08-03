@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with a set of answers.",
+    "description": "This schema represents a generic question with categorical values as answers.",
     "type": "object",
 
     "definitions": {
@@ -14,15 +14,33 @@
             "type": "string"
         },
         "answer": {
-            "type": "array",
-            "items": [
+            "oneOf": [
                 {
-                    "type": "integer"
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
                 },
                 {
-                    "type": "string"
+                    "type": "array",
+                    "items": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
                 }
             ]
+        },
+        "assessment_method": {
+            "type": "string"
         },
         "effective_time_frame": {
             "allOf": [
@@ -34,6 +52,5 @@
                 }
             ]
         }
-    },
-    "required": ["question","answer"]
+    }
 }
