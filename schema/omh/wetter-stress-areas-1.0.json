@@ -1,0 +1,286 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the Wetter stress areas.",
+    "type": "object",
+    "references": [
+        {
+            "description": ""
+        }
+    ],
+    "definitions": {
+        "answer": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [0, "no response"],
+                [1, "experienced"]
+            ],
+            "additionalItems": false
+        },
+        "question_1": {
+            "enum": ["Since the last assessment, have you experienced stress at Work/School?"]
+        },
+        "question_2": {
+            "enum": ["Since the last assessment, have you experienced stress in Family Relationships?"]
+        },
+        "question_3": {
+            "enum": ["Since the last assessment, have you experienced stress in Other Relationships?"]
+        },
+        "question_4": {
+            "enum": ["Since the last assessment, have you experienced stress at Housing/Where You Live?"]
+        },
+        "question_5": {
+            "enum": ["Since the last assessment, have you experienced stress due to Crime and Legal Matters?"]
+        },
+        "question_6": {
+            "enum": ["Since the last assessment, have you experienced stress due to Money and Financial Matters?"]
+        },
+        "question_7": {
+            "enum": ["Since the last assessment, have you experienced stress due to Health?"]
+        },
+        "question_8": {
+            "enum": ["Since the last assessment, have you experienced stress in Other areas?"]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "item_1": {
+            "type": "object",
+            "properties": {
+                "question_1": {
+                    "$ref": "#/definitions/question_1"
+                },
+                "answer_1": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_1": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_1", "answer_1","effective_time_frame_1"]
+        },
+        "item_2": {
+            "type": "object",
+            "properties": {
+                "question_2": {
+                    "$ref": "#/definitions/question_2"
+                },
+                "answer_2": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_2": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_2", "answer_2","effective_time_frame_2"]
+        },
+        "item_3": {
+            "type": "object",
+            "properties": {
+                "question_3": {
+                    "$ref": "#/definitions/question_3"
+                },
+                "answer_3": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_3": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_3", "answer_3","effective_time_frame_3"]
+        },
+        "item_4": {
+            "type": "object",
+            "properties": {
+                "question_4": {
+                    "$ref": "#/definitions/question_4"
+                },
+                "answer_4": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_4": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_4","answer_4","effective_time_frame_4"]
+        },
+        "item_5": {
+            "type": "object",
+            "properties": {
+                "question_5": {
+                    "$ref": "#/definitions/question_5"
+                },
+                "answer_5": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_5": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_5", "answer_5","effective_time_frame_5"]
+        },
+
+        "item_6": {
+            "type": "object",
+            "properties": {
+                "question_6": {
+                    "$ref": "#/definitions/question_6"
+                },
+                "answer_5": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_6": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_6", "answer_6","effective_time_frame_6"]
+        },
+        "item_7": {
+            "type": "object",
+            "properties": {
+                "question_7": {
+                    "$ref": "#/definitions/question_7"
+                },
+                "answer_7": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_7": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_7", "answer_7","effective_time_frame_7"]
+        },
+        "item_8": {
+            "type": "object",
+            "properties": {
+                "question_8": {
+                    "$ref": "#/definitions/question_8"
+                },
+                "answer_8": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame_8": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_8", "answer_8","effective_time_frame_8"]
+        },
+        "time_frame_first_delivered": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "time_frame_last_available": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+
+        "assessment_method": {
+            "type": "string",
+            "enum": ["Wetter stress areas"]
+        },
+
+        "status": {
+            "type": "string",
+            "enum": ["successful","missed","abandoned"]
+        },
+        "trigger": {
+            "type": "string",
+            "enum": ["random","event","signal","end of day"]
+        }
+    },
+    "required": ["time_frame_first_delivered","status"],
+    "additionalProperties": false
+}
