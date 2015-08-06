@@ -1,0 +1,223 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the random experience sampling questions for smoke study.",
+    "type": "object",
+    "references": [
+        {
+            "description": "custom questionnaire"
+        }
+    ],
+    "definitions": {
+        "question_1": {
+            "enum": ["Have you smoked since the last time you recorded anything on the phone?"]
+        },
+        "answer_yn": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [0, "no"],
+                [1, "yes"]
+            ],
+            "additionalItems": false
+        },
+        "question_2": {
+            "enum": ["Approximately how long ago did you take the first puff from that cigarette?"]
+        },
+        "answer_2": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 120
+        },
+        "question_3": {
+            "enum": ["Have you received a stress-reduction suggestion on your watch since the last time you recorded anything on the phone?"]
+        },
+        "question_4": {
+            "enum": ["Did you access any of the stress reduction apps on the phone?"]
+        },
+        "answer_5": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [1, "not useful"],
+                [2, "somewhat useful"],
+                [3, "moderately useful"],
+                [4, "very useful"],
+                [5, "extremely useful"]
+            ],
+            "additionalItems": false
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "item_1": {
+            "type": "object",
+            "properties": {
+                "question_1": {
+                    "$ref": "#/definitions/question_1"
+                },
+                "answer_1": {
+                    "$ref": "#/definitions/answer_yn"
+                },
+                "effective_time_frame_1": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_1", "answer_1","effective_time_frame_1"]
+        },
+        "item_2": {
+            "type": "object",
+            "properties": {
+                "question_2": {
+                    "$ref": "#/definitions/question_2"
+                },
+                "answer_2": {
+                    "$ref": "#/definitions/answer_2"
+                },
+                "effective_time_frame_2": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_2", "answer_2", "effective_time_frame_2"]
+        },
+        "item_3": {
+            "type": "object",
+            "properties": {
+                "question_3": {
+                    "$ref": "#/definitions/question_3"
+                },
+                "answer_3": {
+                    "$ref": "#/definitions/answer_yn"
+                },
+                "effective_time_frame_3": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_3", "answer_3","effective_time_frame_3"]
+        },
+        "item_4": {
+            "type": "object",
+            "properties": {
+                "question_4": {
+                    "$ref": "#/definitions/question_4"
+                },
+                "answer_4": {
+                    "$ref": "#/definitions/answer_yn"
+                },
+                "effective_time_frame_4": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_4", "answer_4","effective_time_frame_4"]
+        },
+        "item_5": {
+            "type": "object",
+            "properties": {
+                "question_5": {
+                    "$ref": "#/definitions/question_5"
+                },
+                "answer_5": {
+                    "$ref": "#/definitions/answer_5"
+                },
+                "effective_time_frame_5": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_5", "answer_5", "effective_time_frame_5"]
+        },
+        "time_frame_first_delivered": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "time_frame_last_available": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+
+        "assessment_method": {
+            "enum": ["custom"]
+        },
+        "status": {
+            "type": "string",
+            "enum": ["successful","missed","abandoned"]
+        },
+        "trigger": {
+            "type": "string",
+            "enum": ["random","event","signal","end of day"]
+        }
+    },
+    "required": ["time_frame_first_delivered","status"],
+    "additionalProperties": false
+}

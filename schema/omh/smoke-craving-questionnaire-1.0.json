@@ -38,7 +38,7 @@
         "item": {
             "type": "object",
             "properties": {
-                "question1": {
+                "question": {
                     "$ref": "#/definitions/question"
                 },
                 "answer": {
@@ -79,7 +79,6 @@
                 }
             ]
         },
-
         "assessment_method": {
             "enum": ["Lam et al."]
         },
