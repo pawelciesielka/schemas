@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the Daily diary questions.",
+    "type": "object",
+    "references": [
+        {
+            "description": "custom"
+        }
+    ],
+    "definitions": {
+        "answer_1": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "8am-9am",
+                    "9am-10am",
+                    "10am-11am",
+                    "11am-12pm",
+                    "12pm-1pm",
+                    "1pm-2pm",
+                    "2pm-3pm",
+                    "3pm-4pm",
+                    "4pm-5pm",
+                    "5pm-6pm",
+                    "6pm-7pm",
+                    "7pm-8pm"
+                ],
+                "additionalItems": false
+            }
+        },
+        "question_1": {
+            "type": "string",
+            "enum": [
+                "Please check the hour blocks when you took 1 or more puffs today."
+            ]
+        },
+        "answer_yn": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [0, "no"],
+                [1, "yes"]
+            ],
+            "additionalItems": false
+        },
+        "question_2": {
+            "enum": ["Did you receive a stress-reduction suggestion on your watch today?"]
+        },
+        "question_3": {
+            "enum": ["Did you access any of the stress reduction apps on the phone?"]
+        },
+        "answer_4": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [1, "not useful"],
+                [2, "somewhat useful"],
+                [3, "moderately useful"],
+                [4, "very useful"],
+                [5, "extremely useful"]
+            ],
+            "additionalItems": false
+        },
+        "question_3": {
+            "enum": ["How useful did you find the stress reduction app?"]
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "item_1": {
+            "type": "object",
+            "properties": {
+                "question_1": {
+                    "$ref": "#/definitions/question_1"
+                },
+                "answer_1": {
+                    "$ref": "#/definitions/answer_yn"
+                },
+                "effective_time_frame_1": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question_1", "answer_1","effective_time_frame_1"]
+        },
+
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": ["date_time"]
+                }
+            ]
+        },
+        "assessment_method": {
+            "type": "string",
+            "enum": ["sample multiple selection answer from MD2K"]
+        }
+    },
+    "additionalProperties": false
+}

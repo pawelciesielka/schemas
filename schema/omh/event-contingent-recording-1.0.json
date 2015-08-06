@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the random experience sampling questions for smoke study.",
+    "description": "This schema represents the event-contingent recording questions for smoke study.",
     "type": "object",
     "references": [
         {
@@ -9,7 +9,9 @@
     ],
     "definitions": {
         "question_1": {
-            "enum": ["Have you smoked since the last time you recorded anything on the phone?"]
+            "enum": [
+                "I puffed!"
+            ]
         },
         "answer_yn": {
             "type": "array",
@@ -59,6 +61,9 @@
                 [5, "extremely useful"]
             ],
             "additionalItems": false
+        },
+        "question_5": {
+            "enum": ["How useful did you find the stress reduction app?"]
         },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
@@ -215,7 +220,7 @@
         },
         "trigger": {
             "type": "string",
-            "enum": ["random"]
+            "enum": ["event"]
         }
     },
     "required": ["time_frame_first_delivered","status"],
