@@ -6,6 +6,10 @@
         {
             "description": "Van Strien et al. (1986)",
             "url": "http://onlinelibrary.wiley.com/doi/10.1002/1098-108X(198602)5:2%3C295::AID-EAT2260050209%3E3.0.CO;2-T/abstract"
+        },
+        {
+            "description": "The SNOMED code represents Eating behavior and appetite (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/248113009"
         }
     ],
     "definitions": {
@@ -46,7 +50,6 @@
         "question_5": {
             "enum": ["Do you have a desire to eat when somebody lets you down?"]
         },
-
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
@@ -122,6 +125,6 @@
             "enum": ["Dutch eating behavior questionnaire"]
         }
     },
-    "required": ["item_1","item_2","item_3"],
+    "required": ["item_1","item_2","item_3","item_4","item_5"],
     "additionalProperties": false
 }

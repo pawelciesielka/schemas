@@ -1,10 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the event-contingent recording questions for smoke study.",
+    "description": "This schema represents the event-contingent recording questions for the MD2K smoking cessation study.",
     "type": "object",
     "references": [
         {
-            "description": "custom questionnaire"
+            "description": "This is a custom questionnaire."
+        },
+        {
+            "description": "The SNOMED code represents Tobacco smoking behavior (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/365981007"
         }
     ],
     "definitions": {
