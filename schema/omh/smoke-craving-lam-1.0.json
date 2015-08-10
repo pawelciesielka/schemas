@@ -1,19 +1,21 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the signal-contingent recording questions for smoke study.",
+    "description": "This schema represents the Lam et al. self-report smoke craving questionnaire.",
     "type": "object",
     "references": [
         {
-            "description": "custom questionnaire"
+            "description": "Lam et al. (2014)"
+        },
+        {
+            "description": "The SNOMED code represents Tobacco smoking behavior (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/365981007"
         }
     ],
     "definitions": {
-        "question_1": {
-            "enum": [
-                "You seem to be smoking right now. Is this true?"
-            ]
+        "question": {
+            "enum": ["How strong is your urge to smoke right now?"]
         },
-        "answer_yn": {
+        "answer": {
             "type": "array",
             "items": [
                 {
@@ -24,8 +26,11 @@
                 }
             ],
             "enum": [
-                [0, "no"],
-                [1, "yes"]
+                [0, "no urge"],
+                [1, "weak"],
+                [2, "moderate"],
+                [3, "strong"],
+                [4, "severe"]
             ],
             "additionalItems": false
         },
@@ -34,16 +39,16 @@
         }
     },
     "properties": {
-        "item_1": {
+        "item": {
             "type": "object",
             "properties": {
-                "question_1": {
-                    "$ref": "#/definitions/question_1"
+                "question": {
+                    "$ref": "#/definitions/question"
                 },
-                "answer_1": {
-                    "$ref": "#/definitions/answer_yn"
+                "answer": {
+                    "$ref": "#/definitions/answer"
                 },
-                "effective_time_frame_1": {
+                "effective_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -56,7 +61,7 @@
                     ]
                 }
             },
-            "required": ["question_1", "answer_1","effective_time_frame_1"]
+            "required": ["question", "answer", "effective_time_frame"]
         },
         "time_frame_first_delivered": {
             "allOf": [
@@ -78,9 +83,8 @@
                 }
             ]
         },
-
         "assessment_method": {
-            "enum": ["custom"]
+            "enum": ["Lam et al."]
         },
         "status": {
             "type": "string",
@@ -88,7 +92,7 @@
         },
         "trigger": {
             "type": "string",
-            "enum": ["signal"]
+            "enum": ["random","event","signal","end of day"]
         }
     },
     "required": ["time_frame_first_delivered","status"],
