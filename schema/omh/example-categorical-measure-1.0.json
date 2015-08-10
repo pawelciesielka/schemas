@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents an example question with a set of categorical answers.",
+    "description": "This schema represents an example question with a set of categorical answers. It is an implementation of the generic categorical measure schema",
     "type": "object",
 
     "definitions": {

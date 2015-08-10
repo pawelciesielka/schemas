@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a sample question with multiple selection as answer.",
+    "description": "This schema represents a sample question with multiple selection as answer. It is an implementation of the generic multiple selection schema.",
     "type": "object",
     "references": [
         {
