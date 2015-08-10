@@ -19,9 +19,6 @@
         "answer": {
             "type": "string"
         },
-        "assessment_method": {
-            "type": "string"
-        },
         "effective_time_frame": {
             "allOf": [
                 {

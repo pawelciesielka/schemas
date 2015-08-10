@@ -40,9 +40,6 @@
                     "required": ["date_time"]
                 }
             ]
-        },
-        "assessment_method": {
-            "type": "string"
         }
     },
     "additionalProperties": false
