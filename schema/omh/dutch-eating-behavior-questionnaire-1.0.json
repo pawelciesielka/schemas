@@ -120,9 +120,6 @@
                     "required": ["date_time"]
                 }
             ]
-        },
-        "instrument_name": {
-            "enum": ["Dutch eating behavior questionnaire"]
         }
     },
     "required": ["item_1","item_2","item_3","item_4","item_5"],

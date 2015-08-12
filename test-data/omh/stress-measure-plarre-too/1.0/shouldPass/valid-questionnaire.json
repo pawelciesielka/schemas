@@ -1,15 +1,15 @@
 {
     "item_1": {
-        "question_1": "I feel cheerful.",
-        "answer_1": [3, "YES"],
-        "effective_time_frame_1": {
+        "question": "I feel cheerful.",
+        "answer": [3, "YES"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:00Z"
         }
     },
     "item_2": {
-        "question_2": "I feel happy",
-        "answer_2": [2, "yes"],
-        "effective_time_frame_2": {
+        "question": "I feel happy",
+        "answer": [2, "yes"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:10Z"
         }
     },
