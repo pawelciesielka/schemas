@@ -1,36 +1,36 @@
 {
     "item_1": {
         "question_1": "I feel cheerful.",
-        "answer_1": [3, "YES"],
-        "effective_time_frame_1": {
+        "answer": [3, "YES"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:00Z"
         }
     },
     "item_2": {
         "question_2": "I feel happy",
-        "answer_2": [2, "yes"],
-        "effective_time_frame_2": {
+        "answer": [2, "yes"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:10Z"
         }
     },
     "item_3": {
         "question_3": "I feel angry/frustrated",
-        "answer_3": [1, "no"],
-        "effective_time_frame_3": {
+        "answer": [1, "no"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:20Z"
         }
     },
     "item_4": {
         "question_4": "I feel nervous/stressed",
-        "answer_4": [1, "no"],
-        "effective_time_frame_4": {
+        "answer": [1, "no"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:25:30Z"
         }
     },
     "item_5": {
         "question_5": "I feel sad",
-        "answer_5": [0, "NO"],
-        "effective_time_frame_5": {
+        "answer": [0, "NO"],
+        "effective_time_frame": {
             "date_time": "2015-02-05T07:26:00Z"
         }
     },

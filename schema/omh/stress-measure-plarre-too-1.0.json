@@ -42,7 +42,7 @@
                 "answer": {
                     "$ref": "#/definitions/answer"
                 },
-                "effective_time_frame_1": {
+                "effective_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
