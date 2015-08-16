@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "type": "object",
+
+    "description": "The modified Borg scale is a self-report measure on the subjective feeling of breathlessness or fatigue associated with a current physical activity (Borg, G. (1970). The 0-10 scale is the ‘modified’ Borg scale; the original perceived exertion scale was scored from 6-20 (corresponding to heart rate range of 60-200). The modified Borg scale as a perceived symptom scale can be used to rate various symptoms associated with exercise (e.g., breathlessness, muscle fatigue).",
+    "references": [
+        {
+            "description": "The SNOMED code represents Borg scale",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/263487004"
+        },
+        {
+            "description": "The modified Borg scale as a perceived symptom scale can be used to rate various symptoms associated with exercise (e.g., breathless- ness, muscle fatigue).",
+            "url": "https://www.aacvpr.org/Portals/0/resources/professionals/Section%202.pdf"
+
+        }
+    ],
+
+    "definitions": {
+        "answer": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "enum": [
+                [0, "Nothing at all"],
+                [0.5, "Very, very slight (just noticeable)"],
+                [1, "Very slight"],
+                [2, "Slight"],
+                [3, "Moderate"],
+                [4, "Somewhat severe"],
+                [5, "Severe"],
+                [7, "Very severe"],
+                [9, "Very, very severe (almost maximal)"],
+                [10, "Maximal"]
+            ],
+            "additionalItems": false
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "string",
+                    "enum": ["This is a scale that asks you to rate the difficulty of your breathing. It starts at number 0 where your breathing is causing you no difficulty at all and progresses through to number 10 where your breathing difficulty is maximal. How much difficulty is your breathing causing you right now?"]
+                },
+                "answer": {
+                    "$ref": "#/definitions/answer"
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "required": ["question", "answer","effective_time_frame"]
+        }
+    },
+    "required": ["item"],
+    "additionalProperties": false
+}
