@@ -2,9 +2,19 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
 
     "type": "object",
+    "description": "This schema describes subjective dyspnea (a.k.a. breathlessness) using the modified Borg scale, with optional description for the activity during which the breathlessness was experienced.",
 
     "description": "The modified Borg scale is a self-report measure on the subjective feeling of breathlessness or fatigue associated with a current physical activity (Borg, G. (1970). The 0-10 scale is the ‘modified’ Borg scale; the original perceived exertion scale was scored from 6-20 (corresponding to heart rate range of 60-200). The modified Borg scale as a perceived symptom scale can be used to rate various symptoms associated with exercise (e.g., breathlessness, muscle fatigue).",
+
     "references": [
+        {
+            "description": "The SNOMED code represents Dyspnea (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/267036007"
+        },
+        {
+            "description": "The SNOMED code represents Borg Breathlessness Scale finding (finding).",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/397718005"
+        },
         {
             "description": "The SNOMED code represents Borg scale",
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/263487004"
@@ -41,6 +51,9 @@
             ],
             "additionalItems": false
         },
+        "activity_name": {
+            "$ref": "activity-name-1.x.json"
+        },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
@@ -70,6 +83,9 @@
                 }
             },
             "required": ["question", "answer","effective_time_frame"]
+        },
+        "activity_name": {
+            "$ref": "#/definitions/activity_name"
         }
     },
     "required": ["item"],
