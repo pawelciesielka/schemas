@@ -1,0 +1,337 @@
+[
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "description": "This schema represents the Dutch Eating Behavior Questionnaire.",
+        "type": "object",
+        "references": [
+            {
+                "description": "Van Strien et al. (1986)",
+                "url": "http://onlinelibrary.wiley.com/doi/10.1002/1098-108X(198602)5:2%3C295::AID-EAT2260050209%3E3.0.CO;2-T/abstract"
+            }
+        ],
+        "definitions": {
+            "tuple": {
+                "type": "object",
+                "properties": {
+                    "question_key": {
+                        "type": "string"
+                    },
+                    "question_text": {
+                        "type": "string"
+                    },
+                    "answer": {
+                        "type": "array",
+                        "enum": [
+                            [
+                                1,
+                                "never"
+                            ],
+                            [
+                                2,
+                                "seldom"
+                            ],
+                            [
+                                3,
+                                "sometimes"
+                            ],
+                            [
+                                4,
+                                "often"
+                            ],
+                            [
+                                5,
+                                "very"
+                            ],
+                            [
+                                "NR",
+                                "not relevant"
+                            ]
+                        ],
+                        "additionalItems": false
+                    }
+                },
+                "required": [
+                    "question"
+                ]
+            },
+
+            "time_frame": {
+                "$ref": "time-frame-1.x.json"
+            }
+        },
+        "properties": {
+            "tuples": {
+                "type": "array",
+                "items": [
+                    {
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/tuple"
+                            },
+                            {
+                                "properties": {
+                                    "question_identifier": {
+                                        "enum": [
+                                            "A1"
+                                        ]
+                                    },
+                                    "question_text": {
+                                        "enum": [
+                                            "Do you have the desire to eat when you are irritated?"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/tuple"
+                            },
+                            {
+                                "properties": {
+                                    "question": {
+                                        "enum": [
+                                            "Do you have a desire to eat when you have nothing to do?"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "question": {
+                                "enum": [
+                                    "Do you have a desire to eat when you are depressed or discouraged?"
+                                ]
+                            },
+                            "answer": {
+                                "$ref": "#/definitions/answer"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "question": {
+                                "enum": [
+                                    "Do you have a desire to eat when you are feeling lonely?"
+                                ]
+                            },
+                            "answer": {
+                                "$ref": "#/definitions/answer"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "question": {
+                                "enum": [
+                                    "Do you have a desire to eat when somebody lets you down?"
+                                ]
+                            },
+                            "answer": {
+                                "$ref": "#/definitions/answer"
+                            }
+                        }
+                    }
+                ]
+            },
+            "effective_time_frame": {
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/time_frame"
+                    },
+                    {
+                        "required": [
+                            "date_time"
+                        ]
+                    }
+                ]
+            },
+            "instrument_name": {
+                "enum": [
+                    "Dutch eating behavior questionnaire"
+                ]
+            }
+        },
+        "required": [
+            "item_1",
+            "item_2",
+            "item_3"
+        ],
+        "additionalProperties": false
+    },
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "description": "This schema represents the Dutch Eating Behavior Questionnaire.",
+        "type": "object",
+        "references": [
+            {
+                "description": "Van Strien et al. (1986)",
+                "url": "http://onlinelibrary.wiley.com/doi/10.1002/1098-108X(198602)5:2%3C295::AID-EAT2260050209%3E3.0.CO;2-T/abstract"
+            }
+        ],
+        "definitions": {
+            "answer": {
+                "oneOf": [
+                    {
+                        "type": "array",
+                        "enum": [
+                            [
+                                1,
+                                "never"
+                            ],
+                            [
+                                2,
+                                "seldom"
+                            ],
+                            [
+                                3,
+                                "sometimes"
+                            ],
+                            [
+                                4,
+                                "often"
+                            ],
+                            [
+                                5,
+                                "very"
+                            ]
+                        ],
+                        "additionalItems": false
+                    },
+                    {
+                        "type": "array",
+                        "enum": [
+                            [
+                                "NR",
+                                "not relevant"
+                            ]
+                        ],
+                        "additionalItems": false
+                    }
+                ]
+            },
+            "question_1": {
+                "enum": [
+                    "Do you have the desire to eat when you are irritated?"
+                ]
+            },
+            "question_2": {
+                "enum": [
+                    "Do you have a desire to eat when you have nothing to do?"
+                ]
+            },
+            "question_3": {
+                "enum": [
+                    "Do you have a desire to eat when you are depressed or discouraged?"
+                ]
+            },
+            "question_4": {
+                "enum": [
+                    "Do you have a desire to eat when you are feeling lonely?"
+                ]
+            },
+            "question_5": {
+                "enum": [
+                    "Do you have a desire to eat when somebody lets you down?"
+                ]
+            },
+
+            "time_frame": {
+                "$ref": "time-frame-1.x.json"
+            }
+        },
+        "properties": {
+            "item_1": {
+                "type": "object",
+                "properties": {
+                    "question_1": {
+                        "$ref": "#/definitions/question_1"
+                    },
+                    "answer_1": {
+                        "$ref": "#/definitions/answer"
+                    }
+                },
+                "required": [
+                    "question_1",
+                    "answer_1"
+                ]
+            },
+            "item_2": {
+                "type": "object",
+                "properties": {
+                    "question_2": {
+                        "$ref": "#/definitions/question_2"
+                    },
+                    "answer_2": {
+                        "$ref": "#/definitions/answer"
+                    }
+                }
+            },
+            "item_3": {
+                "type": "object",
+                "properties": {
+                    "question_3": {
+                        "$ref": "#/definitions/question_3"
+                    },
+                    "answer_3": {
+                        "$ref": "#/definitions/answer"
+                    }
+                }
+            },
+            "item_4": {
+                "type": "object",
+                "properties": {
+                    "question_4": {
+                        "$ref": "#/definitions/question_4"
+                    },
+                    "answer_4": {
+                        "$ref": "#/definitions/answer"
+                    }
+                }
+            },
+            "item_5": {
+                "type": "object",
+                "properties": {
+                    "question_5": {
+                        "$ref": "#/definitions/question_5"
+                    },
+                    "answer_5": {
+                        "$ref": "#/definitions/answer"
+                    }
+                }
+            },
+            "effective_time_frame": {
+                "allOf": [
+                    {
+                        "$ref": "#/definitions/time_frame"
+                    },
+                    {
+                        "required": [
+                            "date_time"
+                        ]
+                    }
+                ]
+            },
+            "instrument_name": {
+                "enum": [
+                    "Dutch eating behavior questionnaire"
+                ]
+            }
+        },
+        "required": [
+            "item_1",
+            "item_2",
+            "item_3"
+        ],
+        "additionalProperties": false
+    }
+]

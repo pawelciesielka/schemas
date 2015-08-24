@@ -64,7 +64,8 @@
             "properties": {
                 "question": {
                     "type": "string",
-                    "enum": ["???"]
+                    "enum": ["This is a scale that asks you to rate the difficulty of your breathing. It starts at number 0 where your breathing is causing you no difficulty at all and progresses through to number 10 where your breathing difficulty is maximal. How much difficulty is your breathing causing you right now?"
+                    ]
                 },
                 "answer": {
                     "$ref": "#/definitions/answer"

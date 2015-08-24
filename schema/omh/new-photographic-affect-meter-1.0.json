@@ -20,30 +20,35 @@
     },
 
     "properties": {
-        "pam": {
-            "allOf": [
+        "answers": {
+            "type": "array",
+            "items": [
                 {
-                    "$ref": "#/definitions/affect_measure"
-                },
-                {
-                    "properties": {
-                        "valence": {
-                            "minimum": 1,
-                            "maximum": 4
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/affect_measure"
                         },
-                        "arousal": {
-                            "minimum": 1,
-                            "maximum": 4
-                        },
-                        "positive_affect": {
-                            "minimum": 1,
-                            "maximum": 16
-                        },
-                        "negative_affect": {
-                            "minimum": 1,
-                            "maximum": 16
+                        {
+                            "properties": {
+                                "valence": {
+                                    "minimum": 1,
+                                    "maximum": 4
+                                },
+                                "arousal": {
+                                    "minimum": 1,
+                                    "maximum": 4
+                                },
+                                "positive_affect": {
+                                    "minimum": 1,
+                                    "maximum": 16
+                                },
+                                "negative_affect": {
+                                    "minimum": 1,
+                                    "maximum": 16
+                                }
+                            }
                         }
-                    }
+                    ]
                 }
             ]
         },
