@@ -1,0 +1,106 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents the Dutch Eating Behavior Questionnaire.",
+    "type": "object",
+    "references": [
+        {
+            "description": "Van Strien et al. (1986)",
+            "url": "http://onlinelibrary.wiley.com/doi/10.1002/1098-108X(198602)5:2%3C295::AID-EAT2260050209%3E3.0.CO;2-T/abstract"
+        }
+    ],
+    "definitions": {
+        "tuple": {
+            "type": "object",
+            "properties": {
+                "question_identifier": {
+                    "type": "string"
+                },
+                "question_text": {
+                    "type": "string"
+                },
+                "answer_key": {
+                    "type": "string",
+                    "enum": ["1","2","3","4","5","NR"]
+                },
+                "answer_value": {
+                    "type": "string",
+                    "enum": ["never","seldom","sometimes","often","very","not relevant"]
+                }
+            },
+            "required": [
+                "question_text"
+            ]
+        },
+
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        }
+    },
+    "properties": {
+        "tuples": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee11"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have the desire to eat when you are irritated?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee12"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you have nothing to do?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "effective_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": [
+                        "date_time"
+                    ]
+                }
+            ]
+        }
+    },
+    "required": [
+        "tuples"
+    ],
+    "additionalProperties": false
+}
