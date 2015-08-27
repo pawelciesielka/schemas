@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the Dutch Eating Behavior Questionnaire.",
+    "description": "This schema represents the Dutch Eating Behavior Questionnaire. Note: with this schema structure, the answer can be missing and the last question can be missing, but all other questions need to be present",
     "type": "object",
     "references": [
         {
@@ -25,7 +25,7 @@
                         [2, "seldom"],
                         [3, "sometimes"],
                         [4, "often"],
-                        [5, "very"],
+                        [5, "very often"],
                         ["NR", "not relevant"]
                     ],
                     "additionalItems": false
@@ -88,9 +88,257 @@
                             }
                         }
                     ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee13"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are depressed or discouraged?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee14"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are feeling lonely?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee15"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when somebody lets you down?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee16"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are cross?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee17"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are approaching something unpleasant to happen?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee18"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are anxious, worried or tense?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee19"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when things are going against you or when things have gone wrong?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee20"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are frightened?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee21"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are disappointed?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee22"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are emotionally upset?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "Debq_ee23"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Do you have a desire to eat when you are bored or restless?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
                 }
+
+
             ],
             "additionalItems": false
+        },
+        "emotional_eating_scale": {
+            "type": "number",
+            "description": "DEBQ_EE = (DEBQ_EE11 + DEBQ_EE12 + DEBQ_EE13 + DEBQ_EE14 + DEBQ_EE15 + DEBQ_EE16 + DEBQ_EE17 + DEBQ_EE18 + DEBQ_EE19 + DEBQ_EE20 + DEBQ_EE21 + DEBQ_EE22 + DEBQ_EE23)/13"
         },
         "effective_time_frame": {
             "allOf": [
