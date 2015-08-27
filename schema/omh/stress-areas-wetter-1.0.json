@@ -1,11 +1,10 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the Plarre et al. self-report measure of perceived stress.",
+    "description": "This schema represents the Wetter stress areas.",
     "type": "object",
     "references": [
         {
-            "description": "Plarre et al. Continuous Inference of Psychological Stress from Sensory Measurements Collected in the Natural Environment 2011.",
-            "url": "http://pie.eng.usf.edu/wp-content/uploads/2011/12/plarre-ipsn20111.pdf"
+            "description": ""
         }
     ],
     "definitions": {
@@ -21,10 +20,8 @@
                 "answer": {
                     "type": "array",
                     "enum": [
-                        [0, "NO"],
-                        [1, "no"],
-                        [2, "yes"],
-                        [3, "YES"]
+                        [0, "no response"],
+                        [1, "experienced"]
                     ],
                     "additionalItems": false
                 }
@@ -52,12 +49,12 @@
                             "properties": {
                                 "question_identifier": {
                                     "enum": [
-                                        "SStress1r"
+                                        "S_work"
                                     ]
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel cheerful."
+                                        "Since the last assessment, have you experienced stress at Work/School?"
                                     ]
                                 }
                             }
@@ -86,12 +83,12 @@
                             "properties": {
                                 "question_identifier": {
                                     "enum": [
-                                        "SStress2r"
+                                        "S_frel"
                                     ]
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel happy"
+                                        "Since the last assessment, have you experienced stress in Family Relationships?"
                                     ]
                                 }
                             }
@@ -120,12 +117,12 @@
                             "properties": {
                                 "question_identifier": {
                                     "enum": [
-                                        "SStress3r"
+                                        "S_orel"
                                     ]
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel angry/frustrated"
+                                        "Since the last assessment, have you experienced stress in Other Relationships?"
                                     ]
                                 }
                             }
@@ -154,12 +151,12 @@
                             "properties": {
                                 "question_identifier": {
                                     "enum": [
-                                        "SStress4r"
+                                        "S_house"
                                     ]
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel nervous/stressed"
+                                        "Since the last assessment, have you experienced stress at Housing/Where You Live?"
                                     ]
                                 }
                             }
@@ -188,12 +185,114 @@
                             "properties": {
                                 "question_identifier": {
                                     "enum": [
-                                        "SStress5r"
+                                        "S_legal"
                                     ]
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel sad"
+                                        "Since the last assessment, have you experienced stress due to Crime and Legal Matters?"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "effective_time_frame": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/time_frame"
+                            },
+                            {
+                                "required": [
+                                    "date_time"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "S_money"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Since the last assessment, have you experienced stress due to Money and Financial Matters?"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "effective_time_frame": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/time_frame"
+                            },
+                            {
+                                "required": [
+                                    "date_time"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "s_health"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Since the last assessment, have you experienced stress due to Health?"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "effective_time_frame": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/time_frame"
+                            },
+                            {
+                                "required": [
+                                    "date_time"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "S_other"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Since the last assessment, have you experienced stress in Other areas?"
                                     ]
                                 }
                             }
@@ -214,6 +313,7 @@
                 }
             ]
         },
+
         "time_frame_first_delivered": {
             "allOf": [
                 {
@@ -234,12 +334,12 @@
                 }
             ]
         },
-        "stress": {
-            "description": "SStress = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 15
+
+        "assessment_method": {
+            "type": "string",
+            "enum": ["Wetter stress areas"]
         },
+
         "status": {
             "type": "string",
             "enum": ["successful","missed","abandoned"]
