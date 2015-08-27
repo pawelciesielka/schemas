@@ -13,55 +13,72 @@
     ],
 
     "definitions": {
-        "question_1": {
-            "enum": [
-                "You seem to be smoking right now. Is this true?"
-            ]
-        },
-        "answer_yn": {
-            "type": "array",
-            "items": [
-                {
-                    "type": "integer"
-                },
-                {
+        "tuple": {
+            "type": "object",
+            "properties": {
+                "question_identifier": {
                     "type": "string"
+                },
+                "question_text": {
+                    "type": "string"
+                },
+                "answer": {
+                    "type": "array",
+                    "enum": [
+                        [0, "no"],
+                        [1, "yes"]
+                    ],
+                    "additionalItems": false
                 }
+            },
+            "required": [
+                "question_text"
             ],
-            "enum": [
-                [0, "no"],
-                [1, "yes"]
-            ],
-            "additionalItems": false
+            "additionalProperties": false
         },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
     },
     "properties": {
-        "item_1": {
-            "type": "object",
-            "properties": {
-                "question_1": {
-                    "$ref": "#/definitions/question_1"
-                },
-                "answer_1": {
-                    "$ref": "#/definitions/answer_yn"
-                },
-                "effective_time_frame_1": {
+        "tuples": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/time_frame"
+                            "$ref": "#/definitions/tuple"
                         },
                         {
-                            "required": [
-                                "date_time"
-                            ]
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "SCRSmo"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "You seem to be smoking right now. Is this true?"
+                                    ]
+                                }
+                            }
                         }
-                    ]
+                    ],
+                    "effective_time_frame": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/time_frame"
+                            },
+                            {
+                                "required": [
+                                    "date_time"
+                                ]
+                            }
+                        ]
+                    }
                 }
-            },
-            "required": ["question_1", "answer_1","effective_time_frame_1"]
+            ]
         },
         "time_frame_first_delivered": {
             "allOf": [
@@ -82,10 +99,6 @@
                     "required": ["date_time"]
                 }
             ]
-        },
-
-        "assessment_method": {
-            "enum": ["custom"]
         },
         "status": {
             "type": "string",

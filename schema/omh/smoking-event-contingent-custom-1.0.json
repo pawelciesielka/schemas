@@ -12,187 +12,233 @@
         }
     ],
     "definitions": {
-        "question_1": {
-            "enum": [
-                "I puffed!"
-            ]
-        },
-        "answer_yn": {
-            "type": "array",
-            "items": [
-                {
-                    "type": "integer"
-                },
-                {
+        "tuple_yn": {
+            "type": "object",
+            "properties": {
+                "question_identifier": {
                     "type": "string"
-                }
-            ],
-            "enum": [
-                [0, "no"],
-                [1, "yes"]
-            ],
-            "additionalItems": false
-        },
-        "question_2": {
-            "enum": ["Approximately how long ago did you take the first puff from that cigarette?"]
-        },
-        "answer_2": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 120
-        },
-        "question_3": {
-            "enum": ["Have you received a stress-reduction suggestion on your watch since the last time you recorded anything on the phone?"]
-        },
-        "question_4": {
-            "enum": ["Did you access any of the stress reduction apps on the phone?"]
-        },
-        "answer_5": {
-            "type": "array",
-            "items": [
-                {
-                    "type": "integer"
                 },
-                {
+                "question_text": {
                     "type": "string"
+                },
+                "answer": {
+                    "type": "array",
+                    "enum": [
+                        [0, "no"],
+                        [1, "yes"]
+                    ],
+                    "additionalItems": false
                 }
+            },
+            "required": [
+                "question_text"
             ],
-            "enum": [
-                [1, "not useful"],
-                [2, "somewhat useful"],
-                [3, "moderately useful"],
-                [4, "very useful"],
-                [5, "extremely useful"]
+            "additionalProperties": false
+        },
+
+        "tuple_time": {
+            "type": "object",
+            "properties": {
+                "question_identifier": {
+                    "type": "string"
+                },
+                "question_text": {
+                    "type": "string"
+                },
+                "answer": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 120
+                }
+            },
+            "required": [
+                "question_text"
             ],
-            "additionalItems": false
+            "additionalProperties": false
         },
-        "question_5": {
-            "enum": ["How useful did you find the stress reduction app?"]
+        "tuple_scale": {
+            "type": "object",
+            "properties": {
+                "question_identifier": {
+                    "type": "string"
+                },
+                "question_text": {
+                    "type": "string"
+                },
+                "answer": {
+                    "type": "array",
+                    "enum": [
+                        [1, "not useful"],
+                        [2, "somewhat useful"],
+                        [3, "moderately useful"],
+                        [4, "very useful"],
+                        [5, "extremely useful"]
+                    ],
+                    "additionalItems": false
+                }
+            },
+            "required": [
+                "question_text"
+            ],
+            "additionalProperties": false
         },
+
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
     },
     "properties": {
-        "item_1": {
-            "type": "object",
-            "properties": {
-                "question_1": {
-                    "$ref": "#/definitions/question_1"
-                },
-                "answer_1": {
-                    "$ref": "#/definitions/answer_yn"
-                },
-                "effective_time_frame_1": {
+        "tuples": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/time_frame"
+                            "$ref": "#/definitions/tuple_yn"
                         },
                         {
-                            "required": [
-                                "date_time"
-                            ]
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRSmo"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "I puffed!"
+                                    ]
+                                }
+                            }
+                        }
+                    ],
+                    "effective_time_frame": {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/time_frame"
+                            },
+                            {
+                                "required": [
+                                    "date_time"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple_time"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRSmoLat"
+                                    ]
+                                },
+                                "description": "(only if EXPEat=1)",
+                                "question_text": {
+                                    "enum": [
+                                        "Approximately how long ago did you take the first puff from that cigarette?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple_yn"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRInt"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Have you received a stress-reduction suggestion on your watch since the last time you recorded anything on the phone?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple_yn"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRIntUse"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Did you access any of the stress reduction apps on the phone?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple_scale"
+                        },
+                        {
+                            "properties": {
+                                "description": "(only if EXPIntUse=1)",
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRIntHelp"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "How useful did you find the stress reduction app?"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/tuple_yn"
+                        },
+                        {
+                            "properties": {
+                                "question_identifier": {
+                                    "enum": [
+                                        "ECRIntSR"
+                                    ]
+                                },
+                                "question_text": {
+                                    "enum": [
+                                        "Did you use any of the stress reduction exercises (with or without the app) since the last time you recorded anything on the phone?"
+                                    ]
+                                }
+                            }
                         }
                     ]
                 }
-            },
-            "required": ["question_1", "answer_1","effective_time_frame_1"]
-        },
-        "item_2": {
-            "type": "object",
-            "properties": {
-                "question_2": {
-                    "$ref": "#/definitions/question_2"
-                },
-                "answer_2": {
-                    "$ref": "#/definitions/answer_2"
-                },
-                "effective_time_frame_2": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "required": ["question_2", "answer_2", "effective_time_frame_2"]
-        },
-        "item_3": {
-            "type": "object",
-            "properties": {
-                "question_3": {
-                    "$ref": "#/definitions/question_3"
-                },
-                "answer_3": {
-                    "$ref": "#/definitions/answer_yn"
-                },
-                "effective_time_frame_3": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "required": ["question_3", "answer_3","effective_time_frame_3"]
-        },
-        "item_4": {
-            "type": "object",
-            "properties": {
-                "question_4": {
-                    "$ref": "#/definitions/question_4"
-                },
-                "answer_4": {
-                    "$ref": "#/definitions/answer_yn"
-                },
-                "effective_time_frame_4": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "required": ["question_4", "answer_4","effective_time_frame_4"]
-        },
-        "item_5": {
-            "type": "object",
-            "properties": {
-                "question_5": {
-                    "$ref": "#/definitions/question_5"
-                },
-                "answer_5": {
-                    "$ref": "#/definitions/answer_5"
-                },
-                "effective_time_frame_5": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "required": ["question_5", "answer_5", "effective_time_frame_5"]
+            ]
         },
         "time_frame_first_delivered": {
             "allOf": [
@@ -215,9 +261,6 @@
             ]
         },
 
-        "assessment_method": {
-            "enum": ["custom"]
-        },
         "status": {
             "type": "string",
             "enum": ["successful","missed","abandoned"]
