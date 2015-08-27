@@ -18,18 +18,23 @@
                 "question_text": {
                     "type": "string"
                 },
-                "answer_key": {
-                    "type": "string",
-                    "enum": ["1","2","3","4","5","NR"]
-                },
-                "answer_value": {
-                    "type": "string",
-                    "enum": ["never","seldom","sometimes","often","very","not relevant"]
+                "answer": {
+                    "type": "array",
+                    "enum": [
+                        [1, "never"],
+                        [2, "seldom"],
+                        [3, "sometimes"],
+                        [4, "often"],
+                        [5, "very"],
+                        ["NR", "not relevant"]
+                    ],
+                    "additionalItems": false
                 }
             },
             "required": [
                 "question_text"
-            ]
+            ],
+            "additionalProperties": false
         },
 
         "time_frame": {
@@ -84,7 +89,8 @@
                         }
                     ]
                 }
-            ]
+            ],
+            "additionalItems": false
         },
         "effective_time_frame": {
             "allOf": [
