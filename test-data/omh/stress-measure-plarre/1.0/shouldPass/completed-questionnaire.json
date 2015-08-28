@@ -75,6 +75,6 @@
         "date_time": "2015-02-05T07:24:00Z"
     },
     "status": "successful",
-    "stress": 3,
+    "stress_measure": 3,
     "trigger": "random"
 }

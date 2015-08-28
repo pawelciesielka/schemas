@@ -8,308 +8,223 @@
         }
     ],
     "definitions": {
-        "tuple": {
-            "type": "object",
-            "properties": {
-                "question_identifier": {
-                    "type": "string"
-                },
-                "question_text": {
-                    "type": "string"
-                },
-                "answer": {
-                    "type": "array",
-                    "enum": [
-                        [0, "no response"],
-                        [1, "experienced"]
-                    ],
-                    "additionalItems": false
-                }
-            },
-            "required": [
-                "question_text"
-            ],
-            "additionalProperties": false
-        },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
+        },
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "type": "object",
+                    "enum": [
+                        {
+                            "code": 0,
+                            "text": "no response"
+                        },
+                        {
+                            "code": 1,
+                            "text": "experienced"
+                        }
+                    ],
+                    "additionalItems": false
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false
         }
     },
     "properties": {
-        "tuples": {
+        "items_intro": {
+            "type": "string",
+            "enum": ["Since the last assessment, have you experienced stress in any of the following areas? Check all that apply."]
+        },
+        "items": {
             "type": "array",
             "items": [
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_work"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress at Work/School?"
+                                        {
+                                            "code": "S_work",
+                                            "text": "Work/School"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_frel"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress in Family Relationships?"
+                                        {
+                                            "code": "S_frel",
+                                            "text": "Family Relationships"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_orel"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress in Other Relationships?"
+                                        {
+                                            "code": "S_orel",
+                                            "text": "Other Relationships"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_house"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress at Housing/Where You Live?"
+                                        {
+                                            "code": "S_house",
+                                            "text": "Housing/Where You Live?"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_legal"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress due to Crime and Legal Matters?"
+                                        {
+                                            "code": "S_legal",
+                                            "text": "Crime and Legal Matters"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_money"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress due to Money and Financial Matters?"
+                                        {
+                                            "code": "S_money",
+                                            "text": "Money and Financial Matters"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "s_health"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress due to Health?"
+                                        {
+                                            "code": "S_health",
+                                            "text": "Health"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "S_other"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Since the last assessment, have you experienced stress in Other areas?"
+                                        {
+                                            "code": "S_other",
+                                            "text": "Miscellaneous/Other"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 }
             ]
         },
@@ -333,11 +248,6 @@
                     "required": ["date_time"]
                 }
             ]
-        },
-
-        "assessment_method": {
-            "type": "string",
-            "enum": ["Wetter stress areas"]
         },
 
         "status": {

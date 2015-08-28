@@ -1,0 +1,121 @@
+{
+    "items_intro": "Since the last assessment, have you experienced stress in any of the following areas? Check all that apply.",
+    "items": [
+        {
+            "question": {
+                "code": "S_work",
+                "text": "Work/School"
+            },
+            "answer": {
+                "code": 1,
+                "text": "experienced"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:00Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_frel",
+                "text": "Family Relationships"
+            },
+            "answer": {
+                "code": 1,
+                "text": "experienced"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_orel",
+                "text": "Other Relationships"
+            },
+            "answer": {
+                "code": 0,
+                "text": "no response"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_house",
+                "text": "Housing/Where You Live?"
+            },
+            "answer": {
+                "code": 0,
+                "text": "no response"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_legal",
+                "text": "Crime and Legal Matters"
+            },
+            "answer": {
+                "code": 1,
+                "text": "experienced"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_money",
+                "text": "Money and Financial Matters"
+            },
+            "answer": {
+                "code": 0,
+                "text": "no response"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_health",
+                "text": "Health"
+            },
+            "answer": {
+                "code": 0,
+                "text": "no response"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "S_other",
+                "text": "Miscellaneous/Other"
+            },
+            "answer": {
+                "code": 0,
+                "text": "no response"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        }
+    ],
+    "time_frame_first_delivered": {
+        "date_time": "2015-02-05T07:24:00Z"
+    },
+    "status": "successful"
+}

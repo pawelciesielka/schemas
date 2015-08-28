@@ -1,13 +1,14 @@
 {
+    "items_intro": "Since the last assessment, have you experienced stress in any of the following areas? Check all that apply.",
     "items": [
         {
             "question": {
-                "code": "SStress1r",
-                "text": "I feel cheerful."
+                "code": "S_work",
+                "text": "Work/School"
             },
             "answer": {
-                "code": 4,
-                "text": "YES"
+                "code": 1,
+                "text": "experienced"
 
             },
             "effective_time_frame": {
@@ -16,12 +17,12 @@
         },
         {
             "question": {
-                "code": "SStress2r",
-                "text": "I feel happy."
+                "code": "S_frel",
+                "text": "Family Relationships"
             },
             "answer": {
-                "code": 2,
-                "text": "yes"
+                "code": 1,
+                "text": "experienced"
 
             },
             "effective_time_frame": {
@@ -31,9 +32,5 @@
     ],
     "time_frame_first_delivered": {
         "date_time": "2015-02-05T07:24:00Z"
-    },
-    "time_frame_last_available": {
-        "date_time": "2015-02-05T07:35:10Z"
-    },
-    "status": "abandoned"
+    }
 }

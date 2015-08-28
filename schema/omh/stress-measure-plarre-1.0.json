@@ -193,7 +193,7 @@
                 }
             ]
         },
-        "stress": {
+        "stress_measure": {
             "description": "SStress = (3 – SAffect1r) + (3 – SAffect2r) + SAffect3 + SAffect4 + SAffect5",
             "type": "integer",
             "minimum": 0,
