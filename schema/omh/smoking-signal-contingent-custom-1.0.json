@@ -13,70 +13,79 @@
     ],
 
     "definitions": {
-        "tuple": {
-            "type": "object",
-            "properties": {
-                "question_identifier": {
-                    "type": "string"
-                },
-                "question_text": {
-                    "type": "string"
-                },
-                "answer": {
-                    "type": "array",
-                    "enum": [
-                        [0, "no"],
-                        [1, "yes"]
-                    ],
-                    "additionalItems": false
-                }
-            },
-            "required": [
-                "question_text"
-            ],
-            "additionalProperties": false
-        },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
+        },
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "type": "object",
+                    "enum": [
+                        {
+                            "code": 0,
+                            "text": "no"
+                        },
+                        {
+                            "code": 1,
+                            "text": "yes"
+                        }
+                    ],
+                    "additionalItems": false
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false
         }
     },
     "properties": {
-        "tuples": {
+        "items": {
             "type": "array",
             "items": [
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SCRSmo"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "You seem to be smoking right now. Is this true?"
+                                        {
+                                            "code": "SCRSmo",
+                                            "text": "You seem to be smoking right now. Is this true?"
+                                        }
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 }
             ]
         },
