@@ -1,11 +1,13 @@
 {
-    "tuples": [
+    "items": [
         {
-            "question_identifier": "SUrge",
-            "question_text": "How strong is your urge to smoke right now?",
-            "answer": [5, "severe"],
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:25:00Z"
+            "question": {
+                "code": "SUrge",
+                "text": "How strong is your urge to smoke right now?"
+            },
+            "answer": {
+                "code": 5,
+                "text": "severe"
             }
         }
     ],

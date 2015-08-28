@@ -12,7 +12,7 @@
         }
     ],
     "definitions": {
-        "tuple_yn": {
+        "yn_item": {
             "type": "object",
             "properties": {
                 "question_identifier": {
