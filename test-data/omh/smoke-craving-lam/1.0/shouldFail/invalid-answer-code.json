@@ -8,14 +8,14 @@
             "answer": {
                 "code": 5,
                 "text": "severe"
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:24:10Z"
             }
         }
     ],
     "time_frame_first_delivered": {
         "date_time": "2015-02-05T07:24:00Z"
-    },
-    "time_frame_last_available": {
-        "date_time": "2015-02-05T07:35:10Z"
     },
     "status": "completed"
 }

@@ -8,6 +8,9 @@
             "answer": {
                 "code": 4,
                 "text": "severe"
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:24:10Z"
             }
         }
     ],

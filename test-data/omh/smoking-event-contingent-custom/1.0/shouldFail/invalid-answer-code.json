@@ -2,12 +2,12 @@
     "items": [
         {
             "question": {
-                "code": "SUrge",
-                "text": "How strong is your urge to smoke right now?"
+                "code": "ECRSmo",
+                "text": "I puffed!"
             },
             "answer": {
-                "code": 4,
-                "text": "tadah"
+                "code": 2,
+                "text": "no"
             },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:24:10Z"
