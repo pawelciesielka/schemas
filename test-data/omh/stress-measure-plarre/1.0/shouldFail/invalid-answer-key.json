@@ -1,18 +1,34 @@
 {
-    "item_1": {
-        "question_1": "I feel cheerful.",
-        "answer": [4, "YES"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:00Z"
+    "items": [
+        {
+            "question": {
+                "code": "SStress1r",
+                "text": "I feel cheerful."
+            },
+            "answer": {
+                "code": 4,
+                "text": "YES"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:00Z"
+            }
+        },
+        {
+            "question": {
+                "code": "SStress2r",
+                "text": "I feel happy."
+            },
+            "answer": {
+                "code": 2,
+                "text": "yes"
+
+            },
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
         }
-    },
-    "item_2": {
-        "question_2": "I feel happy.",
-        "answer": [2, "yes"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:10Z"
-        }
-    },
+    ],
     "time_frame_first_delivered": {
         "date_time": "2015-02-05T07:24:00Z"
     },

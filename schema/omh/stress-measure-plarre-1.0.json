@@ -9,29 +9,52 @@
         }
     ],
     "definitions": {
-        "tuple": {
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "item": {
             "type": "object",
             "properties": {
-                "question_identifier": {
-                    "type": "string"
-                },
-                "question_text": {
-                    "type": "string"
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
                 },
                 "answer": {
-                    "type": "array",
+                    "type": "object",
                     "enum": [
-                        [0, "NO"],
-                        [1, "no"],
-                        [2, "yes"],
-                        [3, "YES"]
+                        {
+                            "code": 0,
+                            "text": "NO"
+                        },
+                        {
+                            "code": 1,
+                            "text": "no"
+                        },
+                        {
+                            "code": 2,
+                            "text": "yes"
+                        },
+                        {
+                            "code": 3,
+                            "text": "YES"
+                        }
                     ],
                     "additionalItems": false
                 },
                 "effective_time_frame": {
                     "allOf": [
                         {
-                            "$ref": "time-frame-1.x.json"
+                            "$ref": "#/definitions/time_frame"
                         },
                         {
                             "required": [
@@ -41,35 +64,27 @@
                     ]
                 }
             },
-            "required": [
-                "question_text"
-            ],
             "additionalProperties": false
-        },
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
         }
     },
     "properties": {
-        "tuples": {
+        "items": {
             "type": "array",
             "items": [
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SStress1r"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "I feel cheerful."
+                                        {
+                                            "code": "SStress1r",
+                                            "text": "I feel cheerful."
+                                        }
                                     ]
                                 }
                             }
@@ -80,18 +95,16 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SStress2r"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "I feel happy."
+                                        {
+                                            "code": "SStress2r",
+                                            "text": "I feel happy."
+                                        }
                                     ]
                                 }
                             }
@@ -102,18 +115,16 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SStress3r"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "I feel angry/frustrated."
+                                        {
+                                            "code": "SStress3r",
+                                            "text": "I feel angry/frustrated."
+                                        }
                                     ]
                                 }
                             }
@@ -124,18 +135,16 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SStress4r"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "I feel nervous/stressed."
+                                        {
+                                            "code": "SStress4r",
+                                            "text": "I feel nervous/stressed."
+                                        }
                                     ]
                                 }
                             }
@@ -146,18 +155,16 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "SStress5r"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "I feel sad."
+                                        {
+                                            "code": "SStress5r",
+                                            "text": "I feel sad."
+                                        }
                                     ]
                                 }
                             }

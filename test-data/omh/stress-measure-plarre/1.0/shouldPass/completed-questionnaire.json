@@ -1,41 +1,71 @@
 {
-    "tuples": [
+    "items": [
         {
-            "question_identifier": "SStress1r",
-            "question_text": "I feel cheerful.",
-            "answer": [3, "YES"],
+            "question": {
+                "code": "SStress1r",
+                "text": "I feel cheerful."
+            },
+            "answer": {
+                "code": 3,
+                "text": "YES"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:00Z"
             }
         },
         {
-            "question_identifier": "SStress2r",
-            "question_text": "I feel happy.",
-            "answer": [2, "yes"],
+            "question": {
+                "code": "SStress2r",
+                "text": "I feel happy."
+            },
+            "answer": {
+                "code": 2,
+                "text": "yes"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:10Z"
             }
         },
         {
-            "question_identifier": "SStress3r",
-            "question_text": "I feel angry/frustrated.",
-            "answer": [1, "no"],
+            "question": {
+                "code": "SStress3r",
+                "text": "I feel angry/frustrated."
+            },
+            "answer": {
+                "code": 1,
+                "text": "no"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:20Z"
             }
         },
         {
-            "question_identifier": "SStress4r",
-            "question_text": "I feel nervous/stressed.",
-            "answer": [1, "no"],
+            "question": {
+                "code": "SStress4r",
+                "text": "I feel nervous/stressed."
+            },
+            "answer": {
+                "code": 2,
+                "text": "yes"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:30Z"
             }
         },
         {
-            "question_identifier": "SStress5r",
-            "question_text": "I feel sad.",
-            "answer": [0, "NO"],
+            "question": {
+                "code": "SStress5r",
+                "text": "I feel sad."
+            },
+            "answer": {
+                "code": 0,
+                "text": "NO"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:26:00Z"
             }

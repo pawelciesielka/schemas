@@ -1,17 +1,29 @@
 {
-    "tuples": [
+    "items": [
         {
-            "question_identifier": "SStress1r",
-            "question_text": "I feel cheerful.",
-            "answer": [3, "YES"],
+            "question": {
+                "code": "SStress1r",
+                "text": "I feel cheerful."
+            },
+            "answer": {
+                "code": 3,
+                "text": "YES"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:00Z"
             }
         },
         {
-            "question_identifier": "SStress2r",
-            "question_text": "I feel happy.",
-            "answer": [2, "yes"],
+            "question": {
+                "code": "SStress2r",
+                "text": "I feel happy."
+            },
+            "answer": {
+                "code": 2,
+                "text": "yes"
+
+            },
             "effective_time_frame": {
                 "date_time": "2015-02-05T07:25:10Z"
             }
