@@ -9,7 +9,7 @@
         }
     ],
     "definitions": {
-        "tuple": {
+        "item": {
             "type": "object",
             "properties": {
                 "question_identifier": {
@@ -42,14 +42,14 @@
         }
     },
     "properties": {
-        "tuples": {
+        "items": {
             "type": "array",
             "items": [
                 {
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -71,7 +71,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -93,7 +93,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -115,7 +115,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -137,7 +137,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -159,7 +159,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -181,7 +181,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -203,7 +203,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -225,7 +225,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -247,7 +247,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -269,7 +269,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -291,7 +291,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -313,7 +313,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/tuple"
+                            "$ref": "#/definitions/item"
                         },
                         {
                             "properties": {
@@ -353,8 +353,5 @@
             ]
         }
     },
-    "required": [
-        "tuples"
-    ],
     "additionalProperties": false
 }
