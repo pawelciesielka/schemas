@@ -27,6 +27,18 @@
                         [3, "YES"]
                     ],
                     "additionalItems": false
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "time-frame-1.x.json"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
             },
             "required": [
@@ -62,19 +74,7 @@
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
@@ -91,24 +91,12 @@
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel happy"
+                                        "I feel happy."
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
@@ -125,24 +113,12 @@
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel angry/frustrated"
+                                        "I feel angry/frustrated."
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
@@ -159,24 +135,12 @@
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel nervous/stressed"
+                                        "I feel nervous/stressed."
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 },
                 {
                     "type": "object",
@@ -193,24 +157,12 @@
                                 },
                                 "question_text": {
                                     "enum": [
-                                        "I feel sad"
+                                        "I feel sad."
                                     ]
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 }
             ]
         },

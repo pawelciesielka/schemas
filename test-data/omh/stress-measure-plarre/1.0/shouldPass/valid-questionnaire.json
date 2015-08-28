@@ -1,18 +1,22 @@
 {
-    "item_1": {
-        "question_1": "I feel cheerful.",
-        "answer": [3, "YES"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:00Z"
+    "tuples": [
+        {
+            "question_identifier": "SStress1r",
+            "question_text": "I feel cheerful.",
+            "answer": [3, "YES"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:00Z"
+            }
+        },
+        {
+            "question_identifier": "SStress2r",
+            "question_text": "I feel happy.",
+            "answer": [2, "yes"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
         }
-    },
-    "item_2": {
-        "question_2": "I feel happy",
-        "answer": [2, "yes"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:10Z"
-        }
-    },
+    ],
     "time_frame_first_delivered": {
         "date_time": "2015-02-05T07:24:00Z"
     },

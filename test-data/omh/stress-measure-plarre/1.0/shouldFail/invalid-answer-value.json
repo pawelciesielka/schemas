@@ -7,7 +7,7 @@
         }
     },
     "item_2": {
-        "question_2": "I feel happy",
+        "question_2": "I feel happy.",
         "answer": [2, "yes"],
         "effective_time_frame": {
             "date_time": "2015-02-05T07:25:10Z"

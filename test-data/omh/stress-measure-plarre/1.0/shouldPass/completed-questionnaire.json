@@ -1,39 +1,46 @@
 {
-    "item_1": {
-        "question_1": "I feel cheerful.",
-        "answer": [3, "YES"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:00Z"
+    "tuples": [
+        {
+            "question_identifier": "SStress1r",
+            "question_text": "I feel cheerful.",
+            "answer": [3, "YES"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:00Z"
+            }
+        },
+        {
+            "question_identifier": "SStress2r",
+            "question_text": "I feel happy.",
+            "answer": [2, "yes"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question_identifier": "SStress3r",
+            "question_text": "I feel angry/frustrated.",
+            "answer": [1, "no"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:20Z"
+            }
+        },
+        {
+            "question_identifier": "SStress4r",
+            "question_text": "I feel nervous/stressed.",
+            "answer": [1, "no"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:25:30Z"
+            }
+        },
+        {
+            "question_identifier": "SStress5r",
+            "question_text": "I feel sad.",
+            "answer": [0, "NO"],
+            "effective_time_frame": {
+                "date_time": "2015-02-05T07:26:00Z"
+            }
         }
-    },
-    "item_2": {
-        "question_2": "I feel happy",
-        "answer": [2, "yes"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:10Z"
-        }
-    },
-    "item_3": {
-        "question_3": "I feel angry/frustrated",
-        "answer": [1, "no"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:20Z"
-        }
-    },
-    "item_4": {
-        "question_4": "I feel nervous/stressed",
-        "answer": [1, "no"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:25:30Z"
-        }
-    },
-    "item_5": {
-        "question_5": "I feel sad",
-        "answer": [0, "NO"],
-        "effective_time_frame": {
-            "date_time": "2015-02-05T07:26:00Z"
-        }
-    },
+    ],
     "time_frame_first_delivered": {
         "date_time": "2015-02-05T07:24:00Z"
     },

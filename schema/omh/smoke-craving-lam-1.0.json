@@ -31,6 +31,18 @@
                         [4, "severe"]
                     ],
                     "additionalItems": false
+                },
+                "effective_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "time-frame-1.x.json"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
                 }
             },
             "required": [
@@ -38,7 +50,6 @@
             ],
             "additionalProperties": false
         },
-
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
@@ -67,19 +78,7 @@
                                 }
                             }
                         }
-                    ],
-                    "effective_time_frame": {
-                        "allOf": [
-                            {
-                                "$ref": "#/definitions/time_frame"
-                            },
-                            {
-                                "required": [
-                                    "date_time"
-                                ]
-                            }
-                        ]
-                    }
+                    ]
                 }
             ]
         },
@@ -102,9 +101,6 @@
                     "required": ["date_time"]
                 }
             ]
-        },
-        "assessment_method": {
-            "enum": ["Lam et al."]
         },
         "status": {
             "type": "string",
