@@ -1,0 +1,19 @@
+{
+    "tuples": [
+        {
+            "question_identifier": "Debq_ee11",
+            "question_text": "Do you have the desire to eat when you are irritated?",
+            "answer_key": "1",
+            "answer_value": "never"
+        },
+        {
+            "question_identifier": "Debq_ee12",
+            "question_text": "Do you have a desire to eat when you have nothing to do?",
+            "answer_key": "3",
+            "answer_value": "sometimes"
+        }
+    ],
+    "effective_time_frame": {
+        "date_time": "2015-02-05T07:25:00Z"
+    }
+}

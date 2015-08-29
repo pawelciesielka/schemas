@@ -1,24 +1,73 @@
 {
-    "item_1": {
-        "question_1": "Do you have the desire to eat when you are irritated?",
-        "answer_1": [2, "seldom"]
-    },
-    "item_2": {
-        "question_2": "Do you have a desire to eat when you have nothing to do?",
-        "answer_2": ["NR", "not relevant"]
-    },
-    "item_3": {
-        "question_3": "Do you have a desire to eat when you are depressed or discouraged?",
-        "answer_3": [3, "sometimes"]
-    },
-    "item_4": {
-        "question_4": "Do you have a desire to eat when you are feeling lonely?",
-        "answer_4": [4, "often"]
-    },
-    "item_5": {
-        "question_5": "Do you have a desire to eat when somebody lets you down?",
-        "answer_5": [3, "sometimes"]
-    },
+    "tuples": [
+        {
+            "question_identifier": "Debq_ee11",
+            "question_text": "Do you have the desire to eat when you are irritated?",
+            "answer": [1, "never"]
+        },
+        {
+            "question_identifier": "Debq_ee12",
+            "question_text": "Do you have a desire to eat when you have nothing to do?",
+            "answer": [3, "sometimes"]
+        },
+        {
+            "question_identifier": "Debq_ee13",
+            "question_text": "Do you have a desire to eat when you are depressed or discouraged?",
+            "answer": [3, "sometimes"]
+        },
+        {
+            "question_identifier": "Debq_ee14",
+            "question_text": "Do you have a desire to eat when you are feeling lonely?",
+            "answer": [2, "seldom"]
+        },
+        {
+            "question_identifier": "Debq_ee15",
+            "question_text": "Do you have a desire to eat when somebody lets you down?",
+            "answer": [1, "never"]
+        },
+        {
+            "question_identifier": "Debq_ee16",
+            "question_text": "Do you have a desire to eat when you are cross?",
+            "answer": [3, "sometimes"]
+        },
+        {
+            "question_identifier": "Debq_ee17",
+            "question_text": "Do you have a desire to eat when you are approaching something unpleasant to happen?",
+            "answer": [3, "sometimes"]
+        },
+        {
+            "question_identifier": "Debq_ee18",
+            "question_text": "Do you have a desire to eat when you are anxious, worried or tense?",
+            "answer": [2, "seldom"]
+        },
+        {
+            "question_identifier": "Debq_ee19",
+            "question_text": "Do you have a desire to eat when things are going against you or when things have gone wrong?",
+            "answer": [1, "never"]
+        },
+        {
+            "question_identifier": "Debq_ee20",
+            "question_text": "Do you have a desire to eat when you are frightened?",
+            "answer": [3, "sometimes"]
+        },
+        {
+            "question_identifier": "Debq_ee21",
+            "question_text": "Do you have a desire to eat when you are disappointed?"
+        },
+        {
+            "question_identifier": "Debq_ee22",
+            "question_text": "Do you have a desire to eat when you are emotionally upset?",
+            "answer": [2, "seldom"]
+        },
+        {
+            "question_identifier": "Debq_ee23",
+            "question_text": "Do you have a desire to eat when you are bored or restless?",
+            "answer": ["NR", "not relevant"]
+        }
+
+    ],
+    "emotional_eating_scale": 1.846,
+
     "effective_time_frame": {
         "date_time": "2015-02-05T07:25:00Z"
     }
