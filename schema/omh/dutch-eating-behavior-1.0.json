@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the Dutch Eating Behavior Questionnaire. Note: with this schema structure, the answer can be missing and the last question can be missing, but all other questions need to be present",
+    "description": "This schema represents the Dutch Eating Behavior Questionnaire.",
     "type": "object",
     "references": [
         {
@@ -12,31 +12,54 @@
         "item": {
             "type": "object",
             "properties": {
-                "question_identifier": {
-                    "type": "string"
-                },
-                "question_text": {
-                    "type": "string"
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
                 },
                 "answer": {
-                    "type": "array",
+                    "type": "object",
                     "enum": [
-                        [1, "never"],
-                        [2, "seldom"],
-                        [3, "sometimes"],
-                        [4, "often"],
-                        [5, "very often"],
-                        ["NR", "not relevant"]
+                        {
+                            "code": 1,
+                            "text": "never"
+                        },
+                        {
+                            "code": 2,
+                            "text": "seldom"
+                        },
+                        {
+                            "code": 3,
+                            "text": "sometimes"
+                        },
+                        {
+                            "code": 4,
+                            "text": "often"
+                        },
+                        {
+                            "code": 5,
+                            "text": "very often"
+                        },
+                        {
+                            "code": "NR",
+                            "text": "not relevant"
+                        }
+
                     ],
                     "additionalItems": false
                 }
             },
-            "required": [
-                "question_text"
-            ],
             "additionalProperties": false
         },
-
         "time_frame": {
             "$ref": "time-frame-1.x.json"
         }
@@ -53,14 +76,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee11"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have the desire to eat when you are irritated?"
+                                        {
+                                            "code": "Debq_ee11",
+                                            "text": "Do you have the desire to eat when you are irritated?"
+                                        }
                                     ]
                                 }
                             }
@@ -75,14 +96,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee12"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you have nothing to do?"
+                                        {
+                                            "code": "Debq_ee12",
+                                            "text": "Do you have a desire to eat when you have nothing to do?"
+                                        }
                                     ]
                                 }
                             }
@@ -97,14 +116,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee13"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are depressed or discouraged?"
+                                        {
+                                            "code": "Debq_ee13",
+                                            "text": "Do you have a desire to eat when you are depressed or discouraged?"
+                                        }
                                     ]
                                 }
                             }
@@ -119,14 +136,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee14"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are feeling lonely?"
+                                        {
+                                            "code": "Debq_ee14",
+                                            "text": "Do you have a desire to eat when you are feeling lonely?"
+                                        }
                                     ]
                                 }
                             }
@@ -141,14 +156,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee15"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when somebody lets you down?"
+                                        {
+                                            "code": "Debq_ee15",
+                                            "text": "Do you have a desire to eat when somebody lets you down?"
+                                        }
                                     ]
                                 }
                             }
@@ -163,14 +176,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee16"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are cross?"
+                                        {
+                                            "code": "Debq_ee16",
+                                            "text": "Do you have a desire to eat when you are cross?"
+                                        }
                                     ]
                                 }
                             }
@@ -185,14 +196,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee17"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are approaching something unpleasant to happen?"
+                                        {
+                                            "code": "Debq_ee17",
+                                            "text": "Do you have a desire to eat when you are approaching something unpleasant to happen?"
+                                        }
                                     ]
                                 }
                             }
@@ -207,14 +216,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee18"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are anxious, worried or tense?"
+                                        {
+                                            "code": "Debq_ee18",
+                                            "text": "Do you have a desire to eat when you are anxious, worried or tense?"
+                                        }
                                     ]
                                 }
                             }
@@ -229,14 +236,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee19"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when things are going against you or when things have gone wrong?"
+                                        {
+                                            "code": "Debq_ee19",
+                                            "text": "Do you have a desire to eat when things are going against you or when things have gone wrong?"
+                                        }
                                     ]
                                 }
                             }
@@ -251,14 +256,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee20"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are frightened?"
+                                        {
+                                            "code": "Debq_ee20",
+                                            "text": "Do you have a desire to eat when you are frightened?"
+                                        }
                                     ]
                                 }
                             }
@@ -273,14 +276,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee21"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are disappointed?"
+                                        {
+                                            "code": "Debq_ee21",
+                                            "text": "Do you have a desire to eat when you are disappointed?"
+                                        }
                                     ]
                                 }
                             }
@@ -295,14 +296,12 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee22"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are emotionally upset?"
+                                        {
+                                            "code": "Debq_ee22",
+                                            "text": "Do you have a desire to eat when you are emotionally upset?"
+                                        }
                                     ]
                                 }
                             }
@@ -317,22 +316,18 @@
                         },
                         {
                             "properties": {
-                                "question_identifier": {
+                                "question": {
                                     "enum": [
-                                        "Debq_ee23"
-                                    ]
-                                },
-                                "question_text": {
-                                    "enum": [
-                                        "Do you have a desire to eat when you are bored or restless?"
+                                        {
+                                            "code": "Debq_ee23",
+                                            "text": "Do you have a desire to eat when you are bored or restless?"
+                                        }
                                     ]
                                 }
                             }
                         }
                     ]
                 }
-
-
             ],
             "additionalItems": false
         },
