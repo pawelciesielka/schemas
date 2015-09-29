@@ -24,7 +24,19 @@
                 "text": "yes"
 
             },
-            "effective_time_frame": {
+            "time_frame_first_delivered": {
+                "date_time": "2015-02-05T07:25:10Z"
+            },
+            "time_frame_answered": {
+                "date_time": "2015-02-05T07:25:10Z"
+            }
+        },
+        {
+            "question": {
+                "code": "SStress3r",
+                "text": "I feel angry/frustrated."
+            },
+            "time_frame_first_delivered": {
                 "date_time": "2015-02-05T07:25:10Z"
             }
         }
@@ -33,7 +45,7 @@
         "date_time": "2015-02-05T07:24:00Z"
     },
     "time_frame_last_available": {
-        "date_time": "2015-02-05T07:35:10Z"
+        "date_time": "2015-02-05T07:34:00Z"
     },
     "status": "abandoned"
 }
