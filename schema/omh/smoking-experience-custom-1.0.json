@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the event-contingent recording questions for the MD2K smoking cessation study.",
+    "description": "This schema represents the random experience questions for the MD2K smoking detection study.",
     "type": "object",
     "references": [
         {
@@ -46,7 +46,19 @@
                     ],
                     "additionalItems": false
                 },
-                "effective_time_frame": {
+                "question_start_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                },
+                "question_end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -83,7 +95,19 @@
                     "minimum": 0,
                     "maximum": 120
                 },
-                "effective_time_frame": {
+                "question_start_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                },
+                "question_end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -141,7 +165,19 @@
                     ],
                     "additionalItems": false
                 },
-                "effective_time_frame": {
+                "question_start_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                },
+                "question_end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -192,6 +228,7 @@
                                 "question": {
                                     "enum": [
                                         {
+                                            "description": "Only if EXPSmo = 1",
                                             "code": "EXPSmoLat",
                                             "text": "Approximately how long ago did you take the first puff from that cigarette?"
                                         }
@@ -252,6 +289,7 @@
                                 "question": {
                                     "enum": [
                                         {
+                                            "description": "Only if EXPIntUse = 1",
                                             "code": "EXPIntHelp",
                                             "text": "How useful did you find the stress reduction app?"
                                         }
@@ -283,7 +321,6 @@
                 }
             ]
         },
-
         "time_frame_first_delivered": {
             "allOf": [
                 {
@@ -304,7 +341,30 @@
                 }
             ]
         },
-
+        "delay_start_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": [
+                        "date_time"
+                    ]
+                }
+            ]
+        },
+        "delay_end_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": [
+                        "date_time"
+                    ]
+                }
+            ]
+        },
         "status": {
             "type": "string",
             "enum": ["successful","missed","abandoned"]

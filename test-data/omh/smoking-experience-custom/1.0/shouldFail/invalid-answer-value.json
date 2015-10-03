@@ -9,8 +9,11 @@
                 "code": 0,
                 "text": "tadah"
             },
-            "effective_time_frame": {
+            "question_start_time_frame": {
                 "date_time": "2015-02-05T07:24:10Z"
+            },
+            "question_end_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
             }
         }
     ],
