@@ -228,7 +228,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "description": "Only if EXPSmo = 1",
+                                            "description": "If EXPSmo = 1, then EXPSmoLat is displayed.",
                                             "code": "EXPSmoLat",
                                             "text": "Approximately how long ago did you take the first puff from that cigarette?"
                                         }
@@ -289,7 +289,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "description": "Only if EXPIntUse = 1",
+                                            "description": "If EXPIntUse = 1, then EXPIntHelp is displayed.",
                                             "code": "EXPIntHelp",
                                             "text": "How useful did you find the stress reduction app?"
                                         }
