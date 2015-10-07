@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic question with categorical values as answers.",
+    "type": "object",
+
+    "definitions": {
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "categorical_item": {
+            "description": "If categorical values are on a scale, use the name scale_item.",
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "type": "object",
+                    "description": "Enumerate the code/text pairs inside the enum array: for example 'code': 1, 'text': 'not useful'",
+                    "enum": [
+
+                    ],
+                    "additionalItems": false
+                },
+                "question_start_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                },
+                "question_end_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}
