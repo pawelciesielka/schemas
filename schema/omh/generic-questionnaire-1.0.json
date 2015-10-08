@@ -140,5 +140,5 @@
             "enum": ["event", "random", "signal"]
         }
     },
-    "required": ["time_frame_first_delivered","status"]
+    "required": ["first_delivered_time_frame","status"]
 }

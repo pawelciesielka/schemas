@@ -38,7 +38,7 @@
                     ],
                     "additionalItems": false
                 },
-                "question_start_time_frame": {
+                "start_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -50,7 +50,7 @@
                         }
                     ]
                 },
-                "question_end_time_frame": {
+                "end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -62,7 +62,8 @@
                         }
                     ]
                 }
-            }
+            },
+            "additionalProperties": false
         }
     }
 }
