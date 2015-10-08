@@ -9,10 +9,10 @@
                 "code": 1,
                 "text": "yes"
             },
-            "question_start_time_frame": {
-                "date_time": "2015-02-05T07:24:10Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:22:10Z"
             },
-            "question_end_time_frame": {
+            "end_time_frame": {
                 "date_time": "2015-02-05T07:25:10Z"
             }
         },
@@ -22,8 +22,11 @@
                 "text": "Approximately how long ago did you take the first puff from that cigarette?"
             },
             "answer": 60,
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:15Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:27:10Z"
+            },
+            "end_time_frame": {
+                "date_time": "2015-02-05T07:30:10Z"
             }
         },
         {
@@ -35,8 +38,11 @@
                 "code": 1,
                 "text": "yes"
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:20Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:33:10Z"
+            },
+            "end_time_frame": {
+                "date_time": "2015-02-05T07:36:10Z"
             }
         },
         {
@@ -48,8 +54,11 @@
                 "code": 1,
                 "text": "yes"
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:30Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:38:10Z"
+            },
+            "end_time_frame": {
+                "date_time": "2015-02-05T07:42:10Z"
             }
         },
         {
@@ -61,8 +70,11 @@
                 "code": 2,
                 "text": "somewhat useful"
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:35Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:45:10Z"
+            },
+            "end_time_frame": {
+                "date_time": "2015-02-05T07:50:10Z"
             }
         },
         {
@@ -74,12 +86,15 @@
                 "code": 0,
                 "text": "no"
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:45Z"
+            "start_time_frame": {
+                "date_time": "2015-02-05T07:52:10Z"
+            },
+            "end_time_frame": {
+                "date_time": "2015-02-05T08:00:10Z"
             }
         }
     ],
-    "time_frame_first_delivered": {
+    "first_delivered_time_frame": {
         "date_time": "2015-02-05T07:24:00Z"
     },
     "status": "successful",

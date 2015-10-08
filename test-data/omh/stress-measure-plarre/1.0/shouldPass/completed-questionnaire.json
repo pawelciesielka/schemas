@@ -10,8 +10,11 @@
                 "text": "YES"
 
             },
-            "effective_time_frame": {
+            "first_delivered_time_frame": {
                 "date_time": "2015-02-05T07:25:00Z"
+            },
+            "answered_time_frame": {
+                "date_time": "2015-02-05T07:25:10Z"
             }
         },
         {
@@ -24,8 +27,11 @@
                 "text": "yes"
 
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:25:10Z"
+            "first_delivered_time_frame": {
+                "date_time": "2015-02-05T07:25:30Z"
+            },
+            "answered_time_frame": {
+                "date_time": "2015-02-05T07:25:40Z"
             }
         },
         {
@@ -38,8 +44,11 @@
                 "text": "no"
 
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:25:20Z"
+            "first_delivered_time_frame": {
+                "date_time": "2015-02-05T07:26:00Z"
+            },
+            "answered_time_frame": {
+                "date_time": "2015-02-05T07:26:10Z"
             }
         },
         {
@@ -52,8 +61,11 @@
                 "text": "yes"
 
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:25:30Z"
+            "first_delivered_time_frame": {
+                "date_time": "2015-02-05T07:26:30Z"
+            },
+            "answered_time_frame": {
+                "date_time": "2015-02-05T07:26:40Z"
             }
         },
         {
@@ -66,12 +78,15 @@
                 "text": "NO"
 
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:26:00Z"
+            "first_delivered_time_frame": {
+                "date_time": "2015-02-05T07:27:30Z"
+            },
+            "answered_time_frame": {
+                "date_time": "2015-02-05T07:27:40Z"
             }
         }
     ],
-    "time_frame_first_delivered": {
+    "first_delivered_time_frame": {
         "date_time": "2015-02-05T07:24:00Z"
     },
     "status": "successful",

@@ -312,6 +312,10 @@
         "trigger": {
             "type": "string",
             "enum": ["event"]
+        },
+        "event_type": {
+            "type": "string",
+            "enum": ["smoking"]
         }
     },
     "required": ["time_frame_first_delivered","status"],

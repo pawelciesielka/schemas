@@ -46,7 +46,7 @@
                     ],
                     "additionalItems": false
                 },
-                "question_start_time_frame": {
+                "start_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -58,7 +58,7 @@
                         }
                     ]
                 },
-                "question_end_time_frame": {
+                "end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -95,7 +95,7 @@
                     "minimum": 0,
                     "maximum": 120
                 },
-                "question_start_time_frame": {
+                "start_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -107,7 +107,7 @@
                         }
                     ]
                 },
-                "question_end_time_frame": {
+                "end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -165,7 +165,7 @@
                     ],
                     "additionalItems": false
                 },
-                "question_start_time_frame": {
+                "start_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -177,7 +177,7 @@
                         }
                     ]
                 },
-                "question_end_time_frame": {
+                "end_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -226,9 +226,9 @@
                         {
                             "properties": {
                                 "question": {
+                                    "description": "If EXPSmo = 1, then EXPSmoLat is displayed.",
                                     "enum": [
                                         {
-                                            "description": "If EXPSmo = 1, then EXPSmoLat is displayed.",
                                             "code": "EXPSmoLat",
                                             "text": "Approximately how long ago did you take the first puff from that cigarette?"
                                         }
@@ -287,9 +287,9 @@
                         {
                             "properties": {
                                 "question": {
+                                    "description": "If EXPIntUse = 1, then EXPIntHelp is displayed.",
                                     "enum": [
                                         {
-                                            "description": "If EXPIntUse = 1, then EXPIntHelp is displayed.",
                                             "code": "EXPIntHelp",
                                             "text": "How useful did you find the stress reduction app?"
                                         }
@@ -321,7 +321,7 @@
                 }
             ]
         },
-        "time_frame_first_delivered": {
+        "first_delivered_time_frame": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -331,7 +331,19 @@
                 }
             ]
         },
-        "time_frame_last_available": {
+        "start_time_frame": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/time_frame"
+                },
+                {
+                    "required": [
+                        "date_time"
+                    ]
+                }
+            ]
+        },
+        "last_available_time_frame": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -374,6 +386,6 @@
             "enum": ["random"]
         }
     },
-    "required": ["time_frame_first_delivered","status"],
+    "required": ["first_delivered_time_frame","status"],
     "additionalProperties": false
 }

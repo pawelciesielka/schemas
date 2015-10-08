@@ -51,7 +51,19 @@
                     ],
                     "additionalItems": false
                 },
-                "effective_time_frame": {
+                "first_delivered_time_frame": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/time_frame"
+                        },
+                        {
+                            "required": [
+                                "date_time"
+                            ]
+                        }
+                    ]
+                },
+                "answered_time_frame": {
                     "allOf": [
                         {
                             "$ref": "#/definitions/time_frame"
@@ -173,7 +185,7 @@
                 }
             ]
         },
-        "time_frame_first_delivered": {
+        "first_delivered_time_frame": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -183,7 +195,7 @@
                 }
             ]
         },
-        "time_frame_last_available": {
+        "last_available_time_frame": {
             "allOf": [
                 {
                     "$ref": "#/definitions/time_frame"
@@ -208,6 +220,6 @@
             "enum": ["random","event","signal","end of day"]
         }
     },
-    "required": ["time_frame_first_delivered","status"],
+    "required": ["first_delivered_time_frame","status"],
     "additionalProperties": false
 }
