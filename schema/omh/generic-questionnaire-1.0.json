@@ -40,7 +40,6 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "description": "Add here the skip logic definition, if applicable.",
                                             "code": "Specify here the question code (e.g., EXPSmo).",
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
@@ -61,7 +60,6 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "description": "Add here the skip logic definition, if applicable.",
                                             "code": "Specify here the question code (e.g., EXPSmo).",
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
