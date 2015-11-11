@@ -27,5 +27,5 @@
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/2546009"
         }
     ],
-    "enum": ["morning", "afternoon", "evening", "night"]
+    "enum": ["", "afternoon", "evening", "night"]
 }
