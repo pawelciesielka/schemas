@@ -4,8 +4,8 @@
     "type": "object",
 
     "definitions": {
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
+        "date-time": {
+            "$ref": "date-time-1.x.json"
         },
         "yn_item": {
             "type": "object",
@@ -38,29 +38,9 @@
                     ],
                     "additionalItems": false
                 },
-                "start_time_frame": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
-                },
-                "end_time_frame": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
+                "date_time": {
+                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
+                    "$ref": "#/definitions/date_time"
                 }
             },
             "additionalProperties": false
