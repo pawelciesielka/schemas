@@ -76,11 +76,11 @@
             ],
             "additionalItems": false
         },
-        "question_3": {
+        "question_4": {
             "enum": ["How useful did you find the stress reduction app?"]
         },
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
+        "date_time_frame": {
+            "$ref": "date-time-1.x.json"
         }
     },
     "properties": {
@@ -93,31 +93,14 @@
                 "answer_1": {
                     "$ref": "#/definitions/answer_yn"
                 },
-                "effective_time_frame_1": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
+                "start_date_time_1": {
+                    "$ref": "date-time-1.x.json"
                 }
             },
-            "required": ["question_1", "answer_1","effective_time_frame_1"]
+            "required": ["question_1", "answer_1","start_date_time_1"]
         },
-
-        "effective_time_frame": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/time_frame"
-                },
-                {
-                    "required": ["date_time"]
-                }
-            ]
+        "start_date_time": {
+            "$ref": "date-time-1.x.json"
         },
         "assessment_method": {
             "type": "string",
