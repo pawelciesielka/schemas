@@ -42,8 +42,7 @@
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
                     "$ref": "#/definitions/date_time"
                 }
-            },
-            "additionalProperties": false
+            }
         }
     }
 }
