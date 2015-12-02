@@ -4,7 +4,7 @@
     "type": "object",
 
     "definitions": {
-        "date-time": {
+        "date_time": {
             "$ref": "date-time-1.x.json"
         },
         "categorical_item": {

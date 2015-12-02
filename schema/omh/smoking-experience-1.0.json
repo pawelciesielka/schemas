@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents the signal-contingent recording questions for the MD2K smoking cessation study.",
+    "description": "This schema represents the random experience questions for the MD2K smoking detection study.",
     "type": "object",
     "references": [
         {
@@ -11,50 +11,12 @@
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/365981007"
         }
     ],
-
     "definitions": {
         "date_time": {
             "$ref": "date-time-1.x.json"
         },
-        "item": {
-            "type": "object",
-            "properties": {
-                "question": {
-                    "type": "object",
-                    "properties": {
-                        "code": {
-                            "type": "string"
-                        },
-                        "text": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "text"
-                    ]
-                },
-                "answer": {
-                    "type": "object",
-                    "enum": [
-                        {
-                            "code": 0,
-                            "text": "no"
-                        },
-                        {
-                            "code": 1,
-                            "text": "yes"
-                        }
-                    ],
-                    "additionalItems": false
-                },
-                "start_date_time": {
-                    "$ref": "#/definitions/date_time"
-                },
-                "end_date_time": {
-                    "$ref": "#/definitions/date_time"
-                }
-            },
-            "additionalProperties": false
+        "generic_question_yesno": {
+            "$ref": "generic-question-yesno-1.x.json"
         }
     },
     "properties": {
@@ -65,15 +27,15 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/item"
+                            "$ref": "#/definitions/generic_question_yesno"
                         },
                         {
                             "properties": {
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "SCRSmo",
-                                            "text": "You seem to be smoking right now. Is this true?"
+                                            "code": "EXPSmo",
+                                            "text": "Have you smoked since the last time you recorded anything on the phone?"
                                         }
                                     ]
                                 }
@@ -104,9 +66,8 @@
         },
         "trigger": {
             "type": "string",
-            "enum": ["signal"]
+            "enum": ["random"]
         }
     },
-    "required": ["date_time_first_delievered","status"],
-    "additionalProperties": false
+    "required": ["first_delivered_date_time","status"]
 }
