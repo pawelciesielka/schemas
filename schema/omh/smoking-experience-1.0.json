@@ -38,6 +38,12 @@
                                             "text": "Have you smoked since the last time you recorded anything on the phone?"
                                         }
                                     ]
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
                                 }
                             }
                         }
@@ -48,7 +54,7 @@
         "first_delivered_date_time": {
             "$ref": "#/definitions/date_time"
         },
-        "start__date_time": {
+        "start_date_time": {
             "$ref": "#/definitions/date_time"
         },
         "last_available_date_time": {
