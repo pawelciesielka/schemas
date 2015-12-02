@@ -1,14 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with categorical values as answers.",
+    "description": "This schema represents a generic question with free text answer.",
     "type": "object",
 
     "definitions": {
         "date_time": {
             "$ref": "date-time-1.x.json"
         },
-        "categorical_item": {
-            "description": "If categorical values are on a scale, use scale_item instead of categorical_item.",
+        "yn_item": {
             "type": "object",
             "properties": {
                 "question": {
@@ -26,18 +25,15 @@
                     ]
                 },
                 "answer": {
-                    "description": "Enumerate the code/text pairs inside the enum array: for example 'code': 1, 'text': 'not useful'",
-                    "type": "object",
-                    "enum": [
-
-                    ],
+                    "type": "string",
                     "additionalItems": false
                 },
                 "date_time": {
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
                     "$ref": "#/definitions/date_time"
                 }
-            }
+            },
+            "additionalProperties": false
         }
     }
 }
