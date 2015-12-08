@@ -9,12 +9,9 @@
                 "code": 4,
                 "text": "severe"
             },
-            "effective_time_frame": {
-                "date_time": "2015-02-05T07:24:10Z"
-            }
+            "start_date_time": "2015-02-05T07:24:10Z",
+            "end_date_time": "2015-02-05T07:24:15Z"
         }
     ],
-    "time_frame_first_delivered": {
-        "date_time": "2015-02-05T07:24:00Z"
-    }
+    "first_delivered_date_time": "2015-02-05T07:24:00Z"
 }

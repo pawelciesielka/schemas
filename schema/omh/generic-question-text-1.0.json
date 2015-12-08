@@ -25,15 +25,14 @@
                     ]
                 },
                 "answer": {
-                    "type": "string",
-                    "additionalItems": false
+                    "description": "Everything will validate here, because if number, then considered an additional property",
+                    "type": "string"
                 },
                 "date_time": {
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
                     "$ref": "#/definitions/date_time"
                 }
-            },
-            "additionalProperties": false
+            }
         }
     }
 }

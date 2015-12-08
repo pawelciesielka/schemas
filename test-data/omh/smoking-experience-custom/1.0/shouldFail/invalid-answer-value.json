@@ -2,7 +2,7 @@
     "items": [
         {
             "question": {
-                "code": "EXPSmo",
+                "code": "EXPRSmo",
                 "text": "Have you smoked since the last time you recorded anything on the phone?"
             },
             "answer": {
@@ -15,5 +15,5 @@
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",
     "start_date_time": "2015-02-05T07:24:10Z",
-    "status": "successful"
+    "status": "completed"
 }

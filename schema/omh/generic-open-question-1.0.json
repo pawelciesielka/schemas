@@ -25,8 +25,7 @@
                     ]
                 },
                 "answer": {
-                    "description": "Everything will validate here, because if number, then considered an additional property",
-                    "type": "string"
+                    "description": "Define type as needed: string, number, integer, date, etc."
                 },
                 "date_time": {
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",

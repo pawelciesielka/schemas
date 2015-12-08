@@ -17,9 +17,9 @@
                 "code": "EXPSmoText",
                 "text": "How did it feel to inhale that first puff?"
             },
-            "answer": {
-                "text": "I felt guilty."
-            }
+            "answer": "Bad taste in my mouth",
+            "start_date_time": "2015-02-05T07:24:10Z",
+            "end_date_time": "2015-02-05T07:24:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

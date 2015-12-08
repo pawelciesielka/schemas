@@ -15,11 +15,51 @@
         "date_time": {
             "$ref": "date-time-1.x.json"
         },
-        "generic_categorical_question": {
-            "$ref": "generic-categorical-question-1.x.json"
+        "generic_question_categorical": {
+            "$ref": "generic-question-categorical-1.x.json"
         },
-        "generic_open_question": {
-            "$ref": "generic-open-question-1.x.json"
+        "yesno_item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "type": "object",
+                    "enum": [
+                        {
+                            "code": 0,
+                            "text": "no"
+                        },
+                        {
+                            "code": 1,
+                            "text": "yes"
+                        }
+                    ],
+                    "additionalItems": false
+                },
+                "start_date_time": {
+                    "$ref": "#/definitions/date_time"
+                },
+                "end_date_time": {
+                    "$ref": "#/definitions/date_time"
+                }
+            },
+            "additionalProperties": false
+        },
+        "generic_question_text": {
+            "$ref": "generic-question-text-1.x.json"
         }
     },
     "properties": {
@@ -30,7 +70,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/generic_categorical_question"
+                            "$ref": "#/definitions/generic_question_categorical"
                         },
                         {
                             "properties": {
@@ -61,8 +101,7 @@
                                 "end_date_time": {
                                     "$ref": "#/definitions/date_time"
                                 }
-                            },
-                            "additionalProperties": false
+                            }
                         }
                     ]
                 },
@@ -70,7 +109,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/generic_open_question"
+                            "$ref": "#/definitions/generic_question_text"
                         },
                         {
                             "properties": {
@@ -83,17 +122,13 @@
                                         }
                                     ]
                                 },
-                                "answer": {
-                                    "type": "string"
-                                },
                                 "start_date_time": {
                                     "$ref": "#/definitions/date_time"
                                 },
                                 "end_date_time": {
                                     "$ref": "#/definitions/date_time"
                                 }
-                            },
-                            "additionalProperties": false
+                            }
                         }
                     ]
                 }

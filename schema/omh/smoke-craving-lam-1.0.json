@@ -12,10 +12,10 @@
         }
     ],
     "definitions": {
-        "time_frame": {
-            "$ref": "time-frame-1.x.json"
+        "date_time": {
+            "$ref": "date-time-1.x.json"
         },
-        "item": {
+        "categorical_item": {
             "type": "object",
             "properties": {
                 "question": {
@@ -58,17 +58,11 @@
                     ],
                     "additionalItems": false
                 },
-                "effective_time_frame": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/time_frame"
-                        },
-                        {
-                            "required": [
-                                "date_time"
-                            ]
-                        }
-                    ]
+                "start_date_time": {
+                    "$ref": "#/definitions/date_time"
+                },
+                "end_date_time": {
+                    "$ref": "#/definitions/date_time"
                 }
             },
             "additionalProperties": false
@@ -82,7 +76,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/item"
+                            "$ref": "#/definitions/categorical_item"
                         },
                         {
                             "properties": {
@@ -100,25 +94,20 @@
                 }
             ]
         },
-        "time_frame_first_delivered": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/time_frame"
-                },
-                {
-                    "required": ["date_time"]
-                }
-            ]
+        "first_delivered_date_time": {
+            "$ref": "#/definitions/date_time"
         },
-        "time_frame_last_available": {
-            "allOf": [
-                {
-                    "$ref": "#/definitions/time_frame"
-                },
-                {
-                    "required": ["date_time"]
-                }
-            ]
+        "start_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "last_available_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "delay_start_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "delay_end_date_time": {
+            "$ref": "#/definitions/date_time"
         },
         "status": {
             "type": "string",
@@ -129,6 +118,6 @@
             "enum": ["random","event","signal","end of day"]
         }
     },
-    "required": ["time_frame_first_delivered","status"],
+    "required": ["first_delivered_date_time","status"],
     "additionalProperties": false
 }
