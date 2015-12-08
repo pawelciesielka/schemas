@@ -44,6 +44,9 @@
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
                                     ]
+                                },
+                                "answer": {
+                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), as applicable."
                                 }
                             }
                         }
@@ -64,6 +67,9 @@
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
                                     ]
+                                },
+                                "answer": {
+                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), as applicable."
                                 }
                             }
                         }
