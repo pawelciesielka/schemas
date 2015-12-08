@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic question with free text answer.",
+    "type": "object",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "text_item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "description": "Everything will validate here, because if number, then considered an additional property",
+                    "type": "string"
+                },
+                "date_time": {
+                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
+                    "$ref": "#/definitions/date_time"
+                }
+            }
+        }
+    }
+}
