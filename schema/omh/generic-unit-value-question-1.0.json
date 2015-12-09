@@ -1,11 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with free text answer.",
+    "description": "This schema represents a generic open question with a unit-value pair answer that needs to be defined (for example, a time duration).",
     "type": "object",
 
     "definitions": {
         "date_time": {
             "$ref": "date-time-1.x.json"
+        },
+        "unit_value": {
+            "$ref": "unit-value-1.x.json"
         },
         "text_item": {
             "type": "object",
@@ -25,8 +28,9 @@
                     ]
                 },
                 "answer": {
-                    "description": "Everything will validate here, because if number, then considered an additional property",
-                    "type": "string"
+                    "type": "object",
+                    "description": "Reference the appropriate unit_value schema, if it already exists (for ex., duration-unit-value for time) and, if applicable, subset the unit of measures, or define a unit-value schema as needed.",
+                    "$ref": "#/definitions/unit_value"
                 },
                 "date_time": {
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",

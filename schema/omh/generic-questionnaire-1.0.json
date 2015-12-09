@@ -82,12 +82,12 @@
             "$ref": "#/definitions/date_time"
         },
         "status": {
-            "description": "Optional value set describing status of questionnaire.",
+            "description": "Optional value set describing status of questionnaire. This is an MD2K-specific property.",
             "type": "string",
             "enum": [" "]
         },
         "trigger": {
-            "description": "Optional value set describing questionnaire's trigger.",
+            "description": "Optional value set describing questionnaire's trigger. This is an MD2K-specific property.",
             "type": "string",
             "enum": [" "]
         }

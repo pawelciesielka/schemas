@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with free text answer.",
+    "description": "This schema represents a generic open question with a to-be-defined type of answer (text, integer, etc.).",
     "type": "object",
 
     "definitions": {
@@ -25,7 +25,7 @@
                     ]
                 },
                 "answer": {
-                    "description": "Define type as needed: string, number, integer, date, etc."
+                    "description": "Define type as needed: string, integer, date, etc."
                 },
                 "date_time": {
                     "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",

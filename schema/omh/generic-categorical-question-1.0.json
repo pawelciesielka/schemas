@@ -8,7 +8,7 @@
             "$ref": "date-time-1.x.json"
         },
         "categorical_item": {
-            "description": "If categorical values are on a scale, use scale_item instead of categorical_item.",
+            "description": "If categorical values are on a scale, use scale_item instead of categorical_item as name.",
             "type": "object",
             "properties": {
                 "question": {

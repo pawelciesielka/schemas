@@ -15,6 +15,9 @@
         "date_time": {
             "$ref": "date-time-1.x.json"
         },
+        "generic_categorical_question": {
+            "$ref": "generic-categorical-question-1.x.json"
+        },
         "categorical_item": {
             "type": "object",
             "properties": {
@@ -76,7 +79,7 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/categorical_item"
+                            "$ref": "#/definitions/generic_categorical_question"
                         },
                         {
                             "properties": {
@@ -87,12 +90,45 @@
                                             "text": "How strong is your urge to smoke right now?"
                                         }
                                     ]
+                                },
+                                "answer": {
+                                    "enum": [
+                                        {
+                                            "code": 0,
+                                            "text": "no urge"
+                                        },
+                                        {
+                                            "code": 1,
+                                            "text": "weak"
+                                        },
+                                        {
+                                            "code": 2,
+                                            "text": "moderate"
+                                        },
+                                        {
+                                            "code": 3,
+                                            "text": "strong"
+                                        },
+                                        {
+                                            "code": 4,
+                                            "text": "severe"
+                                        }
+                                    ],
+                                    "additionalItems": false
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
                                 }
-                            }
+                            },
+                            "additionalProperties": false
                         }
                     ]
                 }
-            ]
+            ],
+            "additionalItems": false
         },
         "first_delivered_date_time": {
             "$ref": "#/definitions/date_time"

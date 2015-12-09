@@ -20,6 +20,12 @@
         },
         "generic_open_question": {
             "$ref": "generic-open-question-1.x.json"
+        },
+        "generic_unit_value_question": {
+            "$ref": "generic-unit-value-question-1.x.json"
+        },
+        "duration_unit_value": {
+            "$ref": "duration-unit-value-1.x.json"
         }
     },
     "properties": {
@@ -54,6 +60,51 @@
                                         }
                                     ],
                                     "additionalItems": false
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/generic_unit_value_question"
+                        },
+                        {
+                            "properties": {
+                                "question": {
+                                    "description": "If EXPSmo = 1, then EXPSmoTime is displayed.",
+                                    "enum": [
+                                        {
+                                            "code": "EXPSmoTime",
+                                            "text": "Approximately how long ago did you take the first puff from that cigarette?"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "type": "object",
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/definitions/duration_unit_value"
+                                        },
+                                        {
+                                            "properties": {
+                                                "unit": {
+                                                    "enum": [
+                                                        "min"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
                                 },
                                 "start_date_time": {
                                     "$ref": "#/definitions/date_time"
