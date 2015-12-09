@@ -24,6 +24,9 @@
         "generic_unit_value_question": {
             "$ref": "generic-unit-value-question-1.x.json"
         },
+        "generic_multiple_answer_question": {
+            "$ref": "generic-multiple-answer-question-1.x.json"
+        },
         "duration_unit_value": {
             "$ref": "duration-unit-value-1.x.json"
         }
@@ -184,6 +187,53 @@
                                         }
                                     ],
                                     "additionalItems": false
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/generic_multiple_answer_question"
+                        },
+                        {
+                            "properties": {
+                                "question": {
+                                    "enum": [
+                                        {
+                                            "code": "DDTFB",
+                                            "text": "Please check the hour blocks when you took 1 or more puffs today."
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "items": {
+                                        "type": "string",
+                                        "enum": [
+                                            "8am-9am",
+                                            "9am-10am",
+                                            "10am-11am",
+                                            "11am-12pm",
+                                            "12pm-1pm",
+                                            "1pm-2pm",
+                                            "2pm-3pm",
+                                            "3pm-4pm",
+                                            "4pm-5pm",
+                                            "5pm-6pm",
+                                            "6pm-7pm",
+                                            "7pm-8pm"
+                                        ],
+                                        "additionalItems": false
+                                    }
                                 },
                                 "start_date_time": {
                                     "$ref": "#/definitions/date_time"

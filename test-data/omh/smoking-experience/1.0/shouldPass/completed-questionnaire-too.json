@@ -44,6 +44,19 @@
             },
             "start_date_time": "2015-02-05T07:26:10Z",
             "end_date_time": "2015-02-05T07:26:40Z"
+        },
+        {
+            "question": {
+                "code": "DDTFB",
+                "text": "Please check the hour blocks when you took 1 or more puffs today."
+            },
+            "answer": [
+                "1pm-2pm",
+                "4pm-5pm",
+                "7pm-8pm"
+            ],
+            "start_date_time": "2015-02-05T07:27:10Z",
+            "end_date_time": "2015-02-05T07:27:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

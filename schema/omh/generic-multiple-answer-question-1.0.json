@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic question with multiple answers possible taken from a value set.",
+    "type": "object",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "multiple_item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "code": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "description": "Define the type of values inside the enum, then enumerate them.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+
+                        ],
+                        "additionalItems": false
+                    }
+                },
+                "date_time": {
+                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
+                    "$ref": "#/definitions/date_time"
+                }
+            }
+        }
+    }
+}
