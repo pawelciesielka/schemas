@@ -32,6 +32,18 @@
             "answer": "Bad taste in my mouth",
             "start_date_time": "2015-02-05T07:25:10Z",
             "end_date_time": "2015-02-05T07:25:40Z"
+        },
+        {
+            "question": {
+                "code": "SUrge",
+                "text": "How strong is your urge to smoke right now?"
+            },
+            "answer": {
+                "code": 2,
+                "text": "moderate"
+            },
+            "start_date_time": "2015-02-05T07:26:10Z",
+            "end_date_time": "2015-02-05T07:26:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

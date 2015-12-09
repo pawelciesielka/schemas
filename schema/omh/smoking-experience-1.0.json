@@ -147,6 +147,54 @@
                             "additionalProperties": false
                         }
                     ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/generic_categorical_question"
+                        },
+                        {
+                            "properties": {
+                                "question": {
+                                    "enum": [
+                                        {
+                                            "code": "SUrge",
+                                            "text": "How strong is your urge to smoke right now?"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "enum": [
+                                        {
+                                            "code": 0,
+                                            "text": "no urge"
+                                        },
+                                        {
+                                            "code": 1,
+                                            "text": "weak"
+                                        },
+                                        {
+                                            "code": 2,
+                                            "text": "moderate"
+                                        },
+                                        {
+                                            "code": 3,
+                                            "text": "severe"
+                                        }
+                                    ],
+                                    "additionalItems": false
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
                 }
             ],
             "additionalItems": false
