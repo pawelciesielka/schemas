@@ -35,6 +35,19 @@
         },
         {
             "question": {
+                "code": "DDTFB",
+                "text": "Please check the hour blocks when you took 1 or more puffs today."
+            },
+            "answer": [
+                "1pm-2pm",
+                "4pm-5pm",
+                "7pm-8pm"
+            ],
+            "start_date_time": "2015-02-05T07:27:10Z",
+            "end_date_time": "2015-02-05T07:27:40Z"
+        },
+        {
+            "question": {
                 "code": "SUrge",
                 "text": "How strong is your urge to smoke right now?"
             },
@@ -47,16 +60,27 @@
         },
         {
             "question": {
-                "code": "DDTFB",
-                "text": "Please check the hour blocks when you took 1 or more puffs today."
+                "code": "SStress1r",
+                "text": "I feel cheerful."
             },
-            "answer": [
-                "1pm-2pm",
-                "4pm-5pm",
-                "7pm-8pm"
-            ],
+            "answer": {
+                "code": 2,
+                "text": "no"
+            },
             "start_date_time": "2015-02-05T07:27:10Z",
             "end_date_time": "2015-02-05T07:27:40Z"
+        },
+        {
+            "question": {
+                "code": "SStress2r",
+                "text": "I feel happy."
+            },
+            "answer": {
+                "code": 1,
+                "text": "NO"
+            },
+            "start_date_time": "2015-02-05T07:28:10Z",
+            "end_date_time": "2015-02-05T07:28:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

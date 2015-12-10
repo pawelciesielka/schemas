@@ -29,6 +29,36 @@
         },
         "duration_unit_value": {
             "$ref": "duration-unit-value-1.x.json"
+        },
+        "yesno_value_set": {
+            "type": "object",
+            "enum": [
+                {
+                    "code": 0,
+                    "text": "NO!!!"
+                },
+                {
+                    "code": 1,
+                    "text": "NO"
+                },
+                {
+                    "code": 2,
+                    "text": "no"
+                },
+                {
+                    "code": 3,
+                    "text": "yes"
+                },
+                {
+                    "code": 4,
+                    "text": "YES"
+                },
+                {
+                    "code": 5,
+                    "text": "YES!!!"
+                }
+            ],
+            "additionalItems": false
         }
     },
     "properties": {
@@ -155,6 +185,53 @@
                     "type": "object",
                     "allOf": [
                         {
+                            "$ref": "#/definitions/generic_multiple_answer_question"
+                        },
+                        {
+                            "properties": {
+                                "question": {
+                                    "enum": [
+                                        {
+                                            "code": "DDTFB",
+                                            "text": "Please check the hour blocks when you took 1 or more puffs today."
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "items": {
+                                        "type": "string",
+                                        "enum": [
+                                            "8am-9am",
+                                            "9am-10am",
+                                            "10am-11am",
+                                            "11am-12pm",
+                                            "12pm-1pm",
+                                            "1pm-2pm",
+                                            "2pm-3pm",
+                                            "3pm-4pm",
+                                            "4pm-5pm",
+                                            "5pm-6pm",
+                                            "6pm-7pm",
+                                            "7pm-8pm"
+                                        ],
+                                        "additionalItems": false
+                                    }
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
                             "$ref": "#/definitions/generic_categorical_question"
                         },
                         {
@@ -203,37 +280,50 @@
                     "type": "object",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/generic_multiple_answer_question"
+                            "$ref": "#/definitions/generic_categorical_question"
                         },
                         {
                             "properties": {
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "DDTFB",
-                                            "text": "Please check the hour blocks when you took 1 or more puffs today."
+                                            "code": "SStress1r",
+                                            "text": "I feel cheerful."
                                         }
                                     ]
                                 },
                                 "answer": {
-                                    "items": {
-                                        "type": "string",
-                                        "enum": [
-                                            "8am-9am",
-                                            "9am-10am",
-                                            "10am-11am",
-                                            "11am-12pm",
-                                            "12pm-1pm",
-                                            "1pm-2pm",
-                                            "2pm-3pm",
-                                            "3pm-4pm",
-                                            "4pm-5pm",
-                                            "5pm-6pm",
-                                            "6pm-7pm",
-                                            "7pm-8pm"
-                                        ],
-                                        "additionalItems": false
-                                    }
+                                    "$ref": "#/definitions/yesno_value_set"
+                                },
+                                "start_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                },
+                                "end_date_time": {
+                                    "$ref": "#/definitions/date_time"
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/generic_categorical_question"
+                        },
+                        {
+                            "properties": {
+                                "question": {
+                                    "enum": [
+                                        {
+                                            "code": "SStress2r",
+                                            "text": "I feel happy."
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "$ref": "#/definitions/yesno_value_set"
                                 },
                                 "start_date_time": {
                                     "$ref": "#/definitions/date_time"

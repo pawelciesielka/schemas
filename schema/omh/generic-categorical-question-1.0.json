@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a generic question with categorical values as answers.",
+    "description": "This template represents a generic question with categorical values as answers.",
     "type": "object",
 
     "definitions": {

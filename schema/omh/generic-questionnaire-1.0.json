@@ -16,12 +16,15 @@
             "$ref": "date-time-1.x.json"
         },
         "first_question_item": {
-            "description": "Include here the question type to be used and specify code set and text of the answers."
+            "description": "Include here the question type to be used."
         },
         "second_question_item": {
-            "description": "Include here the question type to be used and specify code set and text of the answers."
+            "description": "Include here the question type to be used."
         },
-        "description": "Add as many items as needed, choosing them from the generic set and customizing as needed (see below)."
+        "description": "Add as many items as needed, choosing them from the generic set and customizing as needed (see below).",
+        "some_value_set": {
+            "description":"Define code set used by more than one question."
+        }
 
     },
     "properties": {
@@ -46,7 +49,12 @@
                                     ]
                                 },
                                 "answer": {
-                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), as applicable."
+                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), or referenced defines code set, as applicable.",
+                                    "$ref": "#/definitions/some_value_set"
+                                },
+                                "date_time": {
+                                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time.",
+                                    "$ref": "#/definitions/date_time"
                                 }
                             }
                         }
@@ -69,8 +77,13 @@
                                     ]
                                 },
                                 "answer": {
-                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), as applicable."
+                                    "description": "Specify answer type (text, number, time, date) or value set (categories, scale), or referenced defines code set, as applicable."
+                                },
+                                "date_time": {
+                                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time.",
+                                    "$ref": "#/definitions/date_time"
                                 }
+
                             }
                         }
                     ]
