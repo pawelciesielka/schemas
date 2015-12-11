@@ -1,0 +1,106 @@
+{
+    "intro": "Over the last 2 weeks, how often have you been bothered by any of the following problems?",
+    "items": [
+        {
+            "question": {
+                "code": "1",
+                "text": "Little interest or pleasure in doing things"
+            },
+            "answer": {
+                "code": 0,
+                "text": 10
+            }
+        },
+        {
+            "question": {
+                "code": "2",
+                "text": "Feeling down, depressed, or hopeless"
+            },
+            "answer": {
+                "code": 0,
+                "text": "Not at all"
+            }
+        },
+        {
+            "question": {
+                "code": "3",
+                "text": "Trouble falling or staying asleep, or sleeping too much"
+            },
+            "answer": {
+                "code": 1,
+                "text": "Several days"
+            }
+        },
+        {
+            "question": {
+                "code": "4",
+                "text": "Feeling tired or having little energy"
+            },
+            "answer": {
+                "code": 1,
+                "text": "Several days"
+            }
+        },
+        {
+            "question": {
+                "code": "5",
+                "text": "Poor appetite or overeating"
+            },
+            "answer": {
+                "code": 1,
+                "text": "Several days"
+            }
+        },
+        {
+            "question": {
+                "code": "6",
+                "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down"
+            },
+            "answer": {
+                "code": 0,
+                "text": "Not at all"
+            }
+        },
+        {
+            "question": {
+                "code": "7",
+                "text": "Trouble concentrating on things, such as reading the newspaper or watching television"
+            },
+            "answer": {
+                "code": 0,
+                "text": "Not at all"
+            }
+        },
+        {
+            "question": {
+                "code": "8",
+                "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
+            },
+            "answer": {
+                "code": 0,
+                "text": "Not at all"
+            }
+        },
+        {
+            "question": {
+                "code": "9",
+                "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
+            },
+            "answer": {
+                "code": 0,
+                "text": "Not at all"
+            }
+        },
+        {
+            "question": {
+                "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+            },
+            "answer": {
+                "text": "Somewhat difficult"
+            }
+        }
+    ],
+    "first_delivered_date_time": "2015-02-05T07:24:00Z",
+    "start_date_time": "2015-02-05T07:24:10Z",
+    "status": "successful"
+}
