@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a generic question with multiple answers possible taken from a value set.",
+    "type": "object",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "description": "Define the answer cardinality: one only or multiple. If the latter, the answer is an array of answer type (see generic-question-by-answer-type template for details).",
+                    "oneOf": [
+                        {
+                            "description": "Define the item type, for ex., string, number, enum of code/text pairs (object), like 'code': 1, 'text': 'not useful'"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "description": "Define the item type, for ex., string, number, enum of code/text pairs (object), like 'code': 1, 'text': 'not useful'"
+                            }
+                        }
+                    ]
+                },
+                "date_time": {
+                    "description": "Create one property for each of the question-level timestamp you need: for ex.,  date_time_asked, date_time_answered.",
+                    "$ref": "#/definitions/date_time"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema shows he Patient Health Questionnaire 9. http://www.cqaimh.org/pdf/tool_phq9.pdf",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents ...",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+        }
+    ],
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "phq9_value_set": {
+            "type": "object",
+            "enum": [
+                {
+                    "code": 0,
+                    "text": "Not at all"
+                },
+                {
+                    "code": 1,
+                    "text": "Several days"
+                },
+                {
+                    "code": 2,
+                    "text": "More than half the days"
+                },
+                {
+                    "code": 3,
+                    "text": "Nearly every day"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "intro": {
+            "type": "string",
+            "enum": ["Over the last 2 weeks, how often have you been bothered by any of the following problems?"]
+        },
+        "items": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "1",
+                                    "text": "Little interest or pleasure in doing things"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "2",
+                                    "text": "Feeling down, depressed, or hopeless"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "3",
+                                    "text": "Trouble falling or staying asleep, or sleeping too much"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "4",
+                                    "text": "Feeling tired or having little energy"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "5",
+                                    "text": "Poor appetite or overeating"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "6",
+                                    "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "7",
+                                    "text": "Trouble concentrating on things, such as reading the newspaper or watching television"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "8",
+                                    "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "enum": [
+                                {
+                                    "code": "9",
+                                    "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
+                                }
+                            ]
+                        },
+                        "answer": {
+                            "$ref": "#/definitions/phq9_value_set"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "question": {
+                            "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                        },
+                        "answer": {
+                            "enum": [
+                                {
+                                    "text": "Not difficult at all"
+                                },
+                                {
+                                    "text": "Somewhat difficult"
+                                },
+                                {
+                                    "text": "Very difficult"
+                                },
+                                {
+                                    "text": "Extremely difficult"
+                                }
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            ],
+            "additionalItems": false
+        },
+        "first_delivered_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "start_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "end_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "last_available_date_time": {
+            "$ref": "#/definitions/date_time"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["successful","missed","abandoned"]
+        }
+    },
+    "required": ["first_delivered_date_time","status"]
+}

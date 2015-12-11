@@ -43,7 +43,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "Specify here the question code (e.g., EXPSmo).",
+                                            "label": "Specify here the question code (e.g., EXPSmo).",
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
                                     ]
@@ -53,7 +53,7 @@
                                     "$ref": "#/definitions/some_value_set"
                                 },
                                 "date_time": {
-                                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time.",
+                                    "description": "Create one property for each of the question-level timestamp you need: for ex.,  date_time_asked, date_time_answered.",
                                     "$ref": "#/definitions/date_time"
                                 }
                             }
@@ -71,7 +71,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "Specify here the question code (e.g., EXPSmo).",
+                                            "label": "Specify here the question code (e.g., EXPSmo).",
                                             "text": "Specify here the question text (e.g., Have you smoked since the last time you recorded anything on the phone?)."
                                         }
                                     ]
@@ -80,7 +80,7 @@
                                     "description": "Specify answer type (text, number, time, date) or value set (categories, scale), or referenced defines code set, as applicable."
                                 },
                                 "date_time": {
-                                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time.",
+                                    "description": "Create one property for each of the question-level timestamp you need: for ex., date_time_asked, date_time_answered.",
                                     "$ref": "#/definitions/date_time"
                                 }
 

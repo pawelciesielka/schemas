@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This template represents a generic question with categorical values as answers.",
+    "type": "object",
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "item": {
+            "type": "object",
+            "properties": {
+                "question": {
+                    "type": "object",
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                },
+                "answer": {
+                    "description": "Define the answer type: basic type, categorical or unit-value pair (see also generic-question-by-cardinality template).",
+                    "oneOf": [
+                        {
+                            "description": "Define type as needed: string, integer, number, date, etc."
+                        },
+                        {
+                            "description": "Enumerate the code/text pairs inside the enum: for example 'code': 1, 'text': 'not useful'",
+                            "type": "object",
+                            "enum": [
+
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "description": "Reference the appropriate unit_value schema, if it already exists (for ex., duration-unit-value for time) and, if applicable, subset the unit of measures, or define a unit-value schema as needed.",
+                            "$ref": "#/definitions/unit_value"
+                        }
+                    ]
+                },
+                "date_time": {
+                    "description": "Create one property for each of the question-level timestamp you need: for ex., date_time_asked, date_time_answered.",
+                    "$ref": "#/definitions/date_time"
+                }
+            }
+        }
+    }
+}
