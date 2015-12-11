@@ -3,7 +3,7 @@
     "items": [
         {
             "question": {
-                "code": "1",
+                "label": "1",
                 "text": "Little interest or pleasure in doing things"
             },
             "answer": {
@@ -13,7 +13,7 @@
         },
         {
             "question": {
-                "code": "1",
+                "label": "1",
                 "text": "Little interest or pleasure in doing things"
             },
             "answer": {
@@ -23,11 +23,11 @@
         },
         {
             "question": {
-                "code": "2",
+                "label": "2",
                 "text": "Feeling down, depressed, or hopeless"
             },
             "answer": {
-                "code": 0,
+                "label": 0,
                 "text": "Not at all"
             }
         },
