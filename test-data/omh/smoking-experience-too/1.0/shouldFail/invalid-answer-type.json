@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "EXPSmo",
+                "text": "Have you smoked since the last time you recorded anything on the phone?"
+            },
+            "answer": {
+                "code": 1,
+                "text": "yes"
+            },
+            "start_date_time": "2015-02-05T07:24:10Z",
+            "end_date_time": "2015-02-05T07:24:40Z"
+        },
+        {
+            "question": {
+                "label": "EXPSmoTime",
+                "text": "Approximately how long ago did you take the first puff from that cigarette?"
+            },
+            "answer": {
+                "value": 30,
+                "unit": "min"
+            },
+            "start_date_time": "2015-02-05T07:24:50Z",
+            "end_date_time": "2015-02-05T07:25:00Z"
+        },
+        {
+            "question": {
+                "label": "EXPSmoText",
+                "text": "How did it feel to inhale that first puff?"
+            },
+            "answer": 7,
+            "start_date_time": "2015-02-05T07:24:10Z",
+            "end_date_time": "2015-02-05T07:24:40Z"
+        }
+    ],
+    "first_delivered_date_time": "2015-02-05T07:24:00Z",
+    "start_date_time": "2015-02-05T07:24:10Z",
+    "status": "successful"
+}
