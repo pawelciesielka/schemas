@@ -3,7 +3,7 @@
     "items": [
         {
             "question": {
-                "code": "1",
+                "label": "1",
                 "text": "Little interest or pleasure in doing things"
             }
         }
