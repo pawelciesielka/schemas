@@ -31,7 +31,7 @@
                             "description": "Define type as needed: string, integer, number, date, etc."
                         },
                         {
-                            "description": "Enumerate the code/text pairs inside the enum: for example 'code': 1, 'text': 'not useful'",
+                            "description": "Enumerate the valid text or code/text pairs inside the enum: for example 'code': 1, 'text': 'not useful'",
                             "type": "object",
                             "enum": [
 
