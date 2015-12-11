@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema shows he Patient Health Questionnaire 9.",
+    "description": "This schema shows he Patient Health Questionnaire 9. http://www.cqaimh.org/pdf/tool_phq9.pdf",
     "type": "object",
     "references": [
         {
@@ -34,8 +34,7 @@
                     "code": 3,
                     "text": "Nearly every day"
                 }
-            ],
-            "additionalItems": false
+            ]
         }
     },
     "properties": {
@@ -271,11 +270,7 @@
                         {
                             "properties": {
                                 "question": {
-                                    "enum": [
-                                        {
-                                            "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
-                                        }
-                                    ]
+                                    "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
                                 },
                                 "answer": {
                                     "enum": [
@@ -291,8 +286,7 @@
                                         {
                                             "text": "Extremely difficult"
                                         }
-                                    ],
-                                    "additionalItems": false
+                                    ]
                                 }
                             },
                             "additionalProperties": false

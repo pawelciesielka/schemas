@@ -14,7 +14,7 @@
                 "question": {
                     "type": "object",
                     "properties": {
-                        "code": {
+                        "label": {
                             "type": "string"
                         },
                         "text": {
@@ -30,11 +30,10 @@
                     "type": "object",
                     "enum": [
 
-                    ],
-                    "additionalItems": false
+                    ]
                 },
                 "date_time": {
-                    "description": "Create one property for each of the question-level timestamp you need: for ex., start_date_time, end_date_time",
+                    "description": "Create one property for each of the question-level timestamp you need: for ex., date_time_asked, date_time_answered.",
                     "$ref": "#/definitions/date_time"
                 }
             }
