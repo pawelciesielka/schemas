@@ -76,7 +76,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "EXPSmo",
+                                            "label": "EXPSmo",
                                             "text": "Have you smoked since the last time you recorded anything on the phone?"
                                         }
                                     ]
@@ -116,7 +116,7 @@
                                     "description": "If EXPSmo = 1, then EXPSmoTime is displayed.",
                                     "enum": [
                                         {
-                                            "code": "EXPSmoTime",
+                                            "label": "EXPSmoTime",
                                             "text": "Approximately how long ago did you take the first puff from that cigarette?"
                                         }
                                     ]
@@ -161,7 +161,7 @@
                                     "description": "If EXPSmo = 1, then EXPSmoText is displayed.",
                                     "enum": [
                                         {
-                                            "code": "EXPSmoText",
+                                            "label": "EXPSmoText",
                                             "text": "How did it feel to inhale that first puff?"
                                         }
                                     ]
@@ -191,7 +191,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "DDTFB",
+                                            "label": "DDTFB",
                                             "text": "Please check the hour blocks when you took 1 or more puffs today."
                                         }
                                     ]
@@ -237,7 +237,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "SUrge",
+                                            "label": "SUrge",
                                             "text": "How strong is your urge to smoke right now?"
                                         }
                                     ]
@@ -285,7 +285,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "SStress1r",
+                                            "label": "SStress1r",
                                             "text": "I feel cheerful."
                                         }
                                     ]
@@ -315,7 +315,7 @@
                                 "question": {
                                     "enum": [
                                         {
-                                            "code": "SStress2r",
+                                            "label": "SStress2r",
                                             "text": "I feel happy."
                                         }
                                     ]

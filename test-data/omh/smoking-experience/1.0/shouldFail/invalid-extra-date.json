@@ -2,7 +2,7 @@
     "items": [
         {
             "question": {
-                "code": "EXPSmo",
+                "label": "EXPSmo",
                 "text": "Have you smoked since the last time you recorded anything on the phone?"
             },
             "answer": {

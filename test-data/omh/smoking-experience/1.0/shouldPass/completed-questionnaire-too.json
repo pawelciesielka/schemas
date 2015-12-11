@@ -2,7 +2,7 @@
     "items": [
         {
             "question": {
-                "code": "EXPSmo",
+                "label": "EXPSmo",
                 "text": "Have you smoked since the last time you recorded anything on the phone?"
             },
             "answer": {
@@ -14,7 +14,7 @@
         },
         {
             "question": {
-                "code": "EXPSmoTime",
+                "label": "EXPSmoTime",
                 "text": "Approximately how long ago did you take the first puff from that cigarette?"
             },
             "answer": {
@@ -26,7 +26,7 @@
         },
         {
             "question": {
-                "code": "EXPSmoText",
+                "label": "EXPSmoText",
                 "text": "How did it feel to inhale that first puff?"
             },
             "answer": "Bad taste in my mouth",
@@ -35,7 +35,7 @@
         },
         {
             "question": {
-                "code": "DDTFB",
+                "label": "DDTFB",
                 "text": "Please check the hour blocks when you took 1 or more puffs today."
             },
             "answer": [
@@ -48,7 +48,7 @@
         },
         {
             "question": {
-                "code": "SUrge",
+                "label": "SUrge",
                 "text": "How strong is your urge to smoke right now?"
             },
             "answer": {
@@ -60,7 +60,7 @@
         },
         {
             "question": {
-                "code": "SStress1r",
+                "label": "SStress1r",
                 "text": "I feel cheerful."
             },
             "answer": {
@@ -72,7 +72,7 @@
         },
         {
             "question": {
-                "code": "SStress2r",
+                "label": "SStress2r",
                 "text": "I feel happy."
             },
             "answer": {
