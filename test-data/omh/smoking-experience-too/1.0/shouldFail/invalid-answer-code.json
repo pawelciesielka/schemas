@@ -9,8 +9,8 @@
                 "code": 2,
                 "text": "no"
             },
-            "start_date_time": "2015-02-05T07:24:10Z",
-            "end_date_time": "2015-02-05T07:24:40Z"
+            "date_time_asked": "2015-02-05T07:24:10Z",
+            "date_time_answered": "2015-02-05T07:24:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

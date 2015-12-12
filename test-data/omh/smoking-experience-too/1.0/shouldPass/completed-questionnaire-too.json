@@ -9,8 +9,8 @@
                 "code": 1,
                 "text": "yes"
             },
-            "start_date_time": "2015-02-05T07:24:10Z",
-            "end_date_time": "2015-02-05T07:24:40Z"
+            "date_time_asked": "2015-02-05T07:24:10Z",
+            "date_time_answered": "2015-02-05T07:24:40Z"
         },
         {
             "question": {
@@ -21,8 +21,8 @@
                 "value": 30,
                 "unit": "min"
             },
-            "start_date_time": "2015-02-05T07:24:50Z",
-            "end_date_time": "2015-02-05T07:25:00Z"
+            "date_time_asked": "2015-02-05T07:24:50Z",
+            "date_time_answered": "2015-02-05T07:25:00Z"
         },
         {
             "question": {
@@ -30,8 +30,8 @@
                 "text": "How did it feel to inhale that first puff?"
             },
             "answer": "Bad taste in my mouth",
-            "start_date_time": "2015-02-05T07:25:10Z",
-            "end_date_time": "2015-02-05T07:25:40Z"
+            "date_time_asked": "2015-02-05T07:25:10Z",
+            "date_time_answered": "2015-02-05T07:25:40Z"
         },
         {
             "question": {
@@ -43,8 +43,8 @@
                 "4pm-5pm",
                 "7pm-8pm"
             ],
-            "start_date_time": "2015-02-05T07:27:10Z",
-            "end_date_time": "2015-02-05T07:27:40Z"
+            "date_time_asked": "2015-02-05T07:27:10Z",
+            "date_time_answered": "2015-02-05T07:27:40Z"
         },
         {
             "question": {
@@ -55,8 +55,8 @@
                 "code": 2,
                 "text": "moderate"
             },
-            "start_date_time": "2015-02-05T07:26:10Z",
-            "end_date_time": "2015-02-05T07:26:40Z"
+            "date_time_asked": "2015-02-05T07:26:10Z",
+            "date_time_answered": "2015-02-05T07:26:40Z"
         },
         {
             "question": {
@@ -67,8 +67,8 @@
                 "code": 2,
                 "text": "no"
             },
-            "start_date_time": "2015-02-05T07:27:10Z",
-            "end_date_time": "2015-02-05T07:27:40Z"
+            "date_time_asked": "2015-02-05T07:27:10Z",
+            "date_time_answered": "2015-02-05T07:27:40Z"
         },
         {
             "question": {
@@ -79,8 +79,8 @@
                 "code": 1,
                 "text": "NO"
             },
-            "start_date_time": "2015-02-05T07:28:10Z",
-            "end_date_time": "2015-02-05T07:28:40Z"
+            "date_time_asked": "2015-02-05T07:28:10Z",
+            "date_time_answered": "2015-02-05T07:28:40Z"
         }
     ],
     "first_delivered_date_time": "2015-02-05T07:24:00Z",

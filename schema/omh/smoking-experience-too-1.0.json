@@ -76,10 +76,10 @@
                                 }
                             ]
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -116,10 +116,10 @@
                                 }
                             ]
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -141,10 +141,10 @@
                         "answer": {
                             "type": "string"
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -181,10 +181,10 @@
                                 ]
                             }
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -223,10 +223,10 @@
                             ],
                             "additionalItems": false
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -247,10 +247,10 @@
                         "answer": {
                             "$ref": "#/definitions/yesno_value_set"
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
@@ -270,10 +270,10 @@
                         "answer": {
                             "$ref": "#/definitions/yesno_value_set"
                         },
-                        "start_date_time": {
+                        "date_time_asked": {
                             "$ref": "#/definitions/date_time"
                         },
-                        "end_date_time": {
+                        "date_time_answered": {
                             "$ref": "#/definitions/date_time"
                         }
                     },
