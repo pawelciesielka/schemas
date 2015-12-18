@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a survey categorical answer.",
+
+    "type": "object",
+    "definitions": {
+        "generic_answer": {
+            "$ref": "survey-answer-1.x.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "definitions/generic_answer"
+        },
+        {
+            "properties": {
+                "code": {
+                    "description": "A code used to identify the answer.",
+                    "type": "string"
+                }
+            }
+        }
+    ]
+}

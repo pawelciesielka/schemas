@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a survey.",
+
+    "type": "object",
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-1.x.json"
+        }
+    },
+    "properties": {
+        "type": "object",
+        "properties": {
+            "items": {
+                "description": "The list of questions and answers that make up this survey.",
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/survey_item"
+                },
+                "minItems": 1
+            },
+            "delivery_details": {
+                "description": "The operational details of delivering this survey.",
+                "type": "object",
+                "properties": {
+                    "start_date_time": {
+                        "description": "The date time at which this survey was started.",
+                        "$ref": "#/definitions/date_time"
+                    },
+                    "end_status": {
+                        "description": "The way this survey was ended by the participant.",
+                        "type": "string",
+                        "enum": [
+                            "completed",
+                            "missed",
+                            "abandoned"
+                        ]
+                    },
+                    "end_date_time": {
+                        "description": "The date time at which this survey was finished, based on status.",
+                        "$ref": "#/definitions/date_time"
+                    }
+                }
+            }
+        },
+        "required": [
+            "items",
+            "delivery_details"
+        ]
+    }
+}

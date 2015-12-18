@@ -1,0 +1,320 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema shows the Patient Health Questionnaire 9.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The SNOMED code represents ...",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+        },
+        {
+            "description": "An overview of the PHQ-9 questionnaire.",
+            "url": "http://www.cqaimh.org/pdf/tool_phq9.pdf"
+        }
+    ],
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "survey_question": {
+            "$ref": "survey-question-1.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-1.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has a categorical answer.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey-item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey-categorical-answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the four frequency categories from PHQ-9.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": 0,
+                                        "value": "Not at all"
+                                    },
+                                    {
+                                        "code": 1,
+                                        "value": "Several days"
+                                    },
+                                    {
+                                        "code": 2,
+                                        "value": "More than half the days"
+                                    },
+                                    {
+                                        "code": 3,
+                                        "value": "Nearly every day"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+
+    "properties": {
+        "allOf": [
+            {
+                "$ref": "#/definitions/survey-questionnaire"
+            },
+            {
+                "properties": {
+                    "items": {
+                        "type": "array",
+                        "items": [
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "1",
+                                                        "text": "Little interest or pleasure in doing things"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "2",
+                                                        "text": "Feeling down, depressed, or hopeless"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "3",
+                                                        "text": "Trouble falling or staying asleep, or sleeping too much"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "4",
+                                                        "text": "Feeling tired or having little energy"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "5",
+                                                        "text": "Poor appetite or overeating"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "6",
+                                                        "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "7",
+                                                        "text": "Trouble concentrating on things, such as reading the newspaper or watching television"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "8",
+                                                        "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/frequency_scale_item"
+                                    },
+                                    {
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "label": "9",
+                                                        "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "allOf": [
+                                    {
+                                        "$ref": "#/definitions/survey_categorical_answer_item"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "properties": {
+                                            "question": {
+                                                "enum": [
+                                                    {
+                                                        "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                                                    }
+                                                ]
+                                            },
+                                            "answers": {
+                                                "items": {
+                                                    "enum": [
+                                                        {
+                                                            "value": "Not difficult at all"
+                                                        },
+                                                        {
+                                                            "value": "Somewhat difficult"
+                                                        },
+                                                        {
+                                                            "value": "Very difficult"
+                                                        },
+                                                        {
+                                                            "value": "Extremely difficult"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "additionalItems": false
+                    },
+                    "delivery_details": {
+                        "properties": {
+                            "first_delivered_date_time": {
+                                "$ref": "#/definitions/date_time"
+                            },
+                            "last_available_date_time": {
+                                "$ref": "#/definitions/date_time"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "This schema represents a survey question.",
+
+    "type": "object",
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        }
+    },
+    "properties": {
+        "question": {
+            "type": "object",
+            "properties": {
+                "label": {
+                    "description": "A label used to identify the question.",
+                    "type": "string"
+                },
+                "text": {
+                    "description": "The text of the question.",
+                    "type": "string"
+                },
+                "asked_date_time": {
+                    "description": "The date time at which this question was presented to the participant.",
+                    "$ref": "#/definitions/date_time"
+                }
+            },
+            "required": [
+                "text"
+            ]
+        }
+    }
+}
