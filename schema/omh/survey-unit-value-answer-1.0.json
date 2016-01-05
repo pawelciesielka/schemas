@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a survey unit value answer.",
+    "description": "This schema represents a unit value answer to a survey question.",
 
     "type": "object",
     "definitions": {

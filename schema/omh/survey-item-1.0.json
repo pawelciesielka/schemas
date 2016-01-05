@@ -1,14 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a survey item.",
+    "description": "This schema represents a survey item, i.e., the combination of a question and the list of its possible answers.",
 
     "type": "object",
     "definitions": {
         "question": {
-            "$ref": "survey-question-1.0.json"
+            "$ref": "survey-question-1.x.json"
         },
         "answer": {
-            "$ref": "survey-answer-1.0.json"
+            "$ref": "survey-answer-1.x.json"
         }
     },
     "properties": {
@@ -20,7 +20,7 @@
             "description": "A list of answers to the question. This list is empty if the question isn't answered, and may have multiple elements if more than one answer is provided.",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/answer",
+                "$ref": "#/definitions/answer"
             }
         }
     },

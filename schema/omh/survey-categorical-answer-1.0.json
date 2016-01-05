@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a survey categorical answer.",
+    "description": "This schema represents a categorical answer to a survey question.",
 
     "type": "object",
     "definitions": {
