@@ -12,43 +12,40 @@
         }
     },
     "properties": {
-        "type": "object",
-        "properties": {
+        "items": {
+            "description": "The list of questions and answers that make up this survey.",
+            "type": "array",
             "items": {
-                "description": "The list of questions and answers that make up this survey.",
-                "type": "array",
-                "items": {
-                    "$ref": "#/definitions/survey_item"
-                },
-                "minItems": 1
+                "$ref": "#/definitions/survey_item"
             },
-            "delivery_details": {
-                "description": "The operational details of delivering this survey.",
-                "type": "object",
-                "properties": {
-                    "start_date_time": {
-                        "description": "The date time at which this survey was started.",
-                        "$ref": "#/definitions/date_time"
-                    },
-                    "end_status": {
-                        "description": "The way this survey was ended by the participant.",
-                        "type": "string",
-                        "enum": [
-                            "completed",
-                            "missed",
-                            "abandoned"
-                        ]
-                    },
-                    "end_date_time": {
-                        "description": "The date time at which this survey was finished, based on status.",
-                        "$ref": "#/definitions/date_time"
-                    }
+            "minItems": 1
+        },
+        "delivery_details": {
+            "description": "The operational details of delivering this survey.",
+            "type": "object",
+            "properties": {
+                "start_date_time": {
+                    "description": "The date time at which this survey was started.",
+                    "$ref": "#/definitions/date_time"
+                },
+                "end_status": {
+                    "description": "The way this survey was ended by the participant.",
+                    "type": "string",
+                    "enum": [
+                        "completed",
+                        "missed",
+                        "abandoned"
+                    ]
+                },
+                "end_date_time": {
+                    "description": "The date time at which this survey was finished, based on status.",
+                    "$ref": "#/definitions/date_time"
                 }
             }
-        },
-        "required": [
-            "items",
-            "delivery_details"
-        ]
-    }
+        }
+    },
+    "required": [
+        "items",
+        "delivery_details"
+    ]
 }

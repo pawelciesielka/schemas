@@ -4,7 +4,7 @@
 
     "type": "object",
     "definitions": {
-        "generic_answer": {
+        "answer": {
             "$ref": "survey-answer-1.x.json"
         },
         "unit_value": {
@@ -13,7 +13,7 @@
     },
     "allOf": [
         {
-            "$ref": "definitions/generic_answer"
+            "$ref": "#/definitions/answer"
         },
         {
             "properties": {
