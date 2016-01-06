@@ -1,0 +1,17 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "SUrge",
+                "text": "How strong is your urge to smoke right now?"
+            },
+            "answers": [
+                {
+                    "code": 0,
+                    "value": "Not at all"
+                }
+            ]
+        }
+    ]
+}
+
