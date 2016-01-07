@@ -1,19 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema shows the Patient Health Questionnaire 9.",
+    "description": "This schema shows a sample survey.",
     "type": "object",
-
-    "references": [
-        {
-            "description": "The SNOMED code represents ...",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
-        },
-        {
-            "description": "An overview of the PHQ-9 questionnaire.",
-            "url": "http://www.cqaimh.org/pdf/tool_phq9.pdf"
-        }
-    ],
 
     "definitions": {
         "date_time": {
@@ -32,7 +21,7 @@
             "$ref": "survey-categorical-answer-1.x.json"
         },
         "survey_categorical_answer_item": {
-            "description": "A survey item that has a categorical answer.",
+            "description": "A survey item that has one or more categorical answers.",
             "allOf": [
                 {
                     "$ref": "#/definitions/survey_item"
@@ -44,6 +33,41 @@
                             "type": "array",
                             "items": {
                                 "$ref": "#/definitions/survey_categorical_answer"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the four frequency categories from PHQ-9.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": "0",
+                                        "value": "Not at all"
+                                    },
+                                    {
+                                        "code": "1",
+                                        "value": "Several days"
+                                    },
+                                    {
+                                        "code": "2",
+                                        "value": "More than half the days"
+                                    },
+                                    {
+                                        "code": "3",
+                                        "value": "Nearly every day"
+                                    }
+                                ]
                             },
                             "maxItems": 1
                         }
@@ -64,12 +88,32 @@
                         {
                             "allOf": [
                                 {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "9",
+                                                    "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
                                     "$ref": "#/definitions/survey_categorical_answer_item"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "question": {
+                                            "description": "A survey item that has only one answer.",
                                             "enum": [
                                                 {
                                                     "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
@@ -90,6 +134,44 @@
                                                     },
                                                     {
                                                         "value": "Extremely difficult"
+                                                    }
+                                                ]
+                                            },
+                                            "maxItems": 1
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_categorical_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "text": "If you checked off any problems, what are the top two activities affected?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "enum": [
+                                                    {
+                                                        "value": "Work"
+                                                    },
+                                                    {
+                                                        "value": "School"
+                                                    },
+                                                    {
+                                                        "value": "Social life"
+                                                    },
+                                                    {
+                                                        "value": "Sleep"
                                                     }
                                                 ]
                                             }
