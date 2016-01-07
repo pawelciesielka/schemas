@@ -1,0 +1,17 @@
+{
+    "items": [
+        {
+            "answers": [
+                {
+                    "code": "0",
+                    "value": "Not at all"
+                }
+            ]
+        }
+    ],
+    "delivery_details": {
+        "start_date_time": "2015-02-05T07:24:00Z",
+        "end_date_time": "2015-02-05T07:24:10Z",
+        "end_status": "abandoned"
+    }
+}

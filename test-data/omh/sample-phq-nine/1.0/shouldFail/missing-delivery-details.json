@@ -1,0 +1,17 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "1",
+                "text": "Little interest or pleasure in doing things"
+            },
+            "answers": [
+                {
+                    "code": "0",
+                    "value": "Not at all"
+                }
+            ]
+        }
+    ]
+}
+
