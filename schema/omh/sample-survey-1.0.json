@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema shows the Patient Health Questionnaire 9.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The SNOMED code represents ...",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+        },
+        {
+            "description": "An overview of the PHQ-9 questionnaire.",
+            "url": "http://www.cqaimh.org/pdf/tool_phq9.pdf"
+        }
+    ],
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "survey": {
+            "$ref": "survey-1.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-1.x.json"
+        },
+        "survey_question": {
+            "$ref": "survey-question-1.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-1.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has a categorical answer.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_categorical_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_categorical_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "enum": [
+                                                    {
+                                                        "value": "Not difficult at all"
+                                                    },
+                                                    {
+                                                        "value": "Somewhat difficult"
+                                                    },
+                                                    {
+                                                        "value": "Very difficult"
+                                                    },
+                                                    {
+                                                        "value": "Extremely difficult"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalItems": false
+                },
+                "delivery_details": {
+                    "properties": {
+                        "first_delivered_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "last_available_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
