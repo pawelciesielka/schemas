@@ -25,9 +25,6 @@
         "survey_item": {
             "$ref": "survey-item-1.x.json"
         },
-        "survey_question": {
-            "$ref": "survey-question-1.x.json"
-        },
         "survey_categorical_answer": {
             "$ref": "survey-categorical-answer-1.x.json"
         },

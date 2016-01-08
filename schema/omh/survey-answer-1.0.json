@@ -17,10 +17,6 @@
                 "string",
                 "boolean"
             ]
-        },
-        "answered_date_time": {
-            "description": "The date time at which this answer was provided.",
-            "$ref": "#/definitions/date_time"
         }
     },
     "required": [

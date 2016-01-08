@@ -9,6 +9,8 @@
         },
         "answer": {
             "$ref": "survey-answer-1.x.json"
+        },        "date_time": {
+            "$ref": "date-time-1.x.json"
         }
     },
     "properties": {
@@ -22,6 +24,14 @@
             "items": {
                 "$ref": "#/definitions/answer"
             }
+        },
+        "asked_date_time": {
+            "description": "The date time at which this question was presented to the participant.",
+            "$ref": "#/definitions/date_time"
+        },
+        "answered_date_time": {
+            "description": "The date time at which this answer was provided.",
+            "$ref": "#/definitions/date_time"
         }
     },
     "required": [
