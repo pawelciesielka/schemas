@@ -1,0 +1,21 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "EXPSmo",
+                "text": "Have you smoked since the last time you recorded anything on the phone?"
+            },
+            "answers":[
+
+            ],
+            "asked_date_time": "2015-02-05T07:24:10Z"
+        }
+    ],
+    "delivery_details": {
+        "first_delivered_date_time": "2015-02-05T07:24:00Z",
+        "start_date_time": "2015-02-05T07:24:00Z",
+        "last_available_date_time": "2015-02-05T07:34:30Z",
+        "end_status": "missed",
+        "trigger": "random"
+    }
+}

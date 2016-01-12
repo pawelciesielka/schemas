@@ -1,0 +1,233 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema shows a sample survey.",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "This is a custom survey."
+        },
+        {
+            "description": "The SNOMED code represents Tobacco smoking behavior (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/365981007"
+        }
+    ],
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "survey": {
+            "$ref": "survey-1.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-1.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-1.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has one or more categorical answers.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_categorical_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "survey_unit_value_answer": {
+            "$ref": "survey-unit-value-answer-1.x.json"
+        },
+        "survey_unit_value_answer_item": {
+            "description": "A survey item that has an answer made up of a value and its unit of measure.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_unit_value_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "duration_unit_value": {
+            "$ref": "duration-unit-value-1.x.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_categorical_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "EXPSmo",
+                                                    "text": "Have you smoked since the last time you recorded anything on the phone?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "enum": [
+                                                    {
+                                                        "code": "0",
+                                                        "value": "no"
+                                                    },
+                                                    {
+                                                        "code": "1",
+                                                        "value": "yes"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_unit_value_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "description": "If EXPSmo = 1, then EXPSmoTime is displayed.",
+                                            "enum": [
+                                                {
+                                                    "label": "EXPSmoTime",
+                                                    "text": "Approximately how long ago did you take the first puff from that cigarette?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/definitions/duration_unit_value"
+                                                    },
+                                                    {
+                                                        "properties": {
+                                                            "unit": {
+                                                                "enum": [
+                                                                    "min",
+                                                                    "h"
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_categorical_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "SUrge",
+                                                    "text": "How strong is your urge to smoke right now?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "enum": [
+                                                    {
+                                                        "code": "0",
+                                                        "value": "no urge"
+                                                    },
+                                                    {
+                                                        "code": "1",
+                                                        "value": "weak"
+                                                    },
+                                                    {
+                                                        "code": "2",
+                                                        "value": "moderate"
+                                                    },
+                                                    {
+                                                        "code": "3",
+                                                        "value": "strong"
+                                                    },
+                                                    {
+                                                        "code": "4",
+                                                        "value": "severe"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "additionalItems": false
+                },
+                "delivery_details": {
+                    "properties": {
+                        "first_delivered_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "last_available_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "delay_start_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "delay_end_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "trigger": {
+                            "type": "string",
+                            "enum": ["random","event","signal","end of day"]
+                        }
+                    },
+                    "required": ["first_delivered_date_time","end_status"]
+                }
+            }
+        }
+    ]
+}
