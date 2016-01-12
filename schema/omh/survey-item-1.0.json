@@ -27,11 +27,11 @@
             }
         },
         "asked_date_time": {
-            "description": "The date time at which this question was presented to the participant.",
+            "description": "The date time at which this item was presented to the participant.",
             "$ref": "#/definitions/date_time"
         },
         "answered_date_time": {
-            "description": "The date time at which this answer was provided.",
+            "description": "The date time at which the answer was provided. If multiple answers are provided, the suggestion is to use the last answer's date time.",
             "$ref": "#/definitions/date_time"
         }
     },
