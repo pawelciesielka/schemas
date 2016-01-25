@@ -3,11 +3,7 @@
     "description": "This schema represents a survey question.",
 
     "type": "object",
-    "definitions": {
-        "date_time": {
-            "$ref": "date-time-1.x.json"
-        }
-    },
+
     "properties": {
         "label": {
             "description": "A label used to identify the question.",
