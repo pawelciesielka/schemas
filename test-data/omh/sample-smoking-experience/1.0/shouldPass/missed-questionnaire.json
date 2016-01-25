@@ -5,9 +5,7 @@
                 "label": "EXPSmo",
                 "text": "Have you smoked since the last time you recorded anything on the phone?"
             },
-            "answers":[
-
-            ],
+            "answers":[ ],
             "asked_date_time": "2015-02-05T07:24:10Z"
         }
     ],

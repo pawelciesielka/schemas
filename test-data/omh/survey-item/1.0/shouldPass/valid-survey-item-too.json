@@ -1,21 +1,19 @@
 {
     "question": {
         "label": "DDTFB",
-        "text": "Please check the hour blocks when you took 1 or more puffs today.",
-        "asked_date_time": "2015-02-05T07:24:00Z"
+        "text": "Please check the hour blocks when you took 1 or more puffs today."
     },
     "answers": [
         {
-            "value": "1pm-2pm",
-            "answered_date_time": "2015-02-05T07:24:20Z"
+            "value": "1pm-2pm"
         },
         {
-            "value": "4pm-5pm",
-            "answered_date_time": "2015-02-05T07:24:21Z"
+            "value": "4pm-5pm"
         },
         {
-            "value": "7pm-8pm",
-            "answered_date_time": "2015-02-05T07:24:22Z"
+            "value": "7pm-8pm"
         }
-    ]
+    ],
+    "asked_date_time": "2015-02-05T07:24:00Z",
+    "answered_date_time": "2015-02-05T07:24:22Z"
 }
