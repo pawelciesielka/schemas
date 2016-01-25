@@ -50,7 +50,25 @@
         "survey_unit_value_answer": {
             "$ref": "survey-unit-value-answer-1.x.json"
         },
-        "survey_unit_value_answer_item": {
+        "duration_unit_value": {
+            "$ref": "duration-unit-value-1.x.json"
+        },
+        "survey_duration_unit_value_answer": {
+            "description": "An answer that is made up of a value and duration unit of measure.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_unit_value_answer"
+                },
+                {
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/duration_unit_value"
+                        }
+                    }
+                }
+            ]
+        },
+        "survey_duration_unit_value_answer_item": {
             "description": "A survey item that has an answer made up of a value and its unit of measure.",
             "allOf": [
                 {
@@ -62,16 +80,13 @@
                         "answers": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/survey_unit_value_answer"
+                                "$ref": "#/definitions/survey_duration_unit_value_answer"
                             },
                             "maxItems": 1
                         }
                     }
                 }
             ]
-        },
-        "duration_unit_value": {
-            "$ref": "duration-unit-value-1.x.json"
         }
     },
     "allOf": [
@@ -120,7 +135,7 @@
                         {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/survey_unit_value_answer_item"
+                                    "$ref": "#/definitions/survey_duration_unit_value_answer_item"
                                 },
                                 {
                                     "type": "object",
@@ -133,25 +148,6 @@
                                                     "text": "Approximately how long ago did you take the first puff from that cigarette?"
                                                 }
                                             ]
-                                        },
-                                        "answers": {
-                                            "items": {
-                                                "allOf": [
-                                                    {
-                                                        "$ref": "#/definitions/duration_unit_value"
-                                                    },
-                                                    {
-                                                        "properties": {
-                                                            "unit": {
-                                                                "enum": [
-                                                                    "min",
-                                                                    "h"
-                                                                ]
-                                                            }
-                                                        }
-                                                    }
-                                                ]
-                                            }
                                         }
                                     }
                                 }

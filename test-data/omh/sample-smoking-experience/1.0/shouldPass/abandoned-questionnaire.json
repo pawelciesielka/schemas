@@ -5,8 +5,14 @@
                 "label": "EXPSmo",
                 "text": "Have you smoked since the last time you recorded anything on the phone?"
             },
-            "answers":[ ],
-            "asked_date_time": "2015-02-05T07:24:10Z"
+            "answers":[
+                {
+                    "code": "0",
+                    "value": "no"
+                }
+            ],
+            "asked_date_time": "2015-02-05T07:24:10Z",
+            "answered_date_time": "2015-02-05T07:24:15Z"
         },
         {
             "question": {
@@ -20,14 +26,15 @@
                 "label": "SUrge",
                 "text": "How strong is your urge to smoke right now?"
             },
-            "answers": [ ]
+            "answers": [ ],
+            "asked_date_time": "2015-02-05T07:24:20Z"
         }
     ],
     "delivery_details": {
         "first_delivered_date_time": "2015-02-05T07:24:00Z",
         "start_date_time": "2015-02-05T07:24:00Z",
-        "last_available_date_time": "2015-02-05T07:34:30Z",
-        "end_status": "missed",
+        "end_date_time": "2015-02-05T07:24:30Z",
+        "end_status": "abandoned",
         "trigger": "random"
     }
 }
