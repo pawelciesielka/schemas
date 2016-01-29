@@ -1,13 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema shows the Patient Health Questionnaire 9.",
+    "description": "This schema models the Patient Health Questionnaire 9 (PHQ-9).",
     "type": "object",
 
     "references": [
         {
-            "description": "The SNOMED code represents ...",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/"
+            "description": "The LOINC code represents PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Reported.PHQ",
+            "url": "http://purl.bioontology.org/ontology/LNC/44249-1"
         },
         {
             "description": "An overview of the PHQ-9 questionnaire.",
@@ -92,6 +92,7 @@
             "properties": {
                 "items": {
                     "type": "array",
+                    "minItems": 10,
                     "items": [
                         {
                             "allOf": [
@@ -237,7 +238,7 @@
                                             "enum": [
                                                 {
                                                     "label": "8",
-                                                    "text": "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
+                                                    "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
                                                 }
                                             ]
                                         }
