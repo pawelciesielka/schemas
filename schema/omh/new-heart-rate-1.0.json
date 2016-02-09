@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's heart rate, either a single heart rate measurement, or the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Pulse rate (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/78564009"
+        }
+    ],
+
+    "definitions": {
+        "generic_quantitative_measure": {
+             "$ref": "generic-quantitative-measure-1.x.json"
+        },
+        "unit_value": {
+            "$ref": "unit-value-1.x.json"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/generic_quantitative_measure"
+        },
+        {
+            "properties": {
+                "unit_value": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/unit_value"
+                        },
+                        {
+                            "properties": {
+                                "unit": {
+                                    "enum": [
+                                        "beats/min"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "temporal_relationship_to_physical_activity": {
+                    "$ref": "#/definitions/temporal_relationship_to_physical_activity"
+                }
+            }
+        }
+    ]
+}
