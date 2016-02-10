@@ -43,5 +43,8 @@
             "$ref": "#/definitions/descriptive_statistic"
         }
     },
-    "required": ["unit_value","effective_time_frame"]
+    "required": [
+        "unit_value",
+        "effective_time_frame"
+    ]
 }
