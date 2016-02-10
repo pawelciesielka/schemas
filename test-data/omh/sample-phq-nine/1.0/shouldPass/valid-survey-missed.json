@@ -3,7 +3,7 @@
         {
             "question": {
                 "label": "1",
-                "text": "Little interest or pleasure in doing things"
+                "text": "Over the last 2 weeks, how often have you been bothered by having little interest or pleasure in doing things?"
             },
             "answers": [ ],
             "asked_date_time": "2015-02-05T07:24:00Z"
@@ -11,56 +11,56 @@
         {
             "question": {
                 "label": "2",
-                "text": "Feeling down, depressed, or hopeless"
+                "text": "Over the last 2 weeks, how often have you been bothered by feeling down, depressed, or hopeless?"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "3",
-                "text": "Trouble falling or staying asleep, or sleeping too much"
+                "text": "Over the last 2 weeks, how often have you been bothered by having trouble falling or staying asleep, or sleeping too much?"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "4",
-                "text": "Feeling tired or having little energy"
+                "text": "Over the last 2 weeks, how often have you been bothered by feeling tired or having little energy?"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "5",
-                "text": "Poor appetite or overeating"
+                "text": "Over the last 2 weeks, how often have you been bothered by having poor appetite or overeating"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "6",
-                "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down"
+                "text": "Over the last 2 weeks, how often have you been bothered by feeling bad about yourself — or that you are a failure or have let yourself or your family down?"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "7",
-                "text": "Trouble concentrating on things, such as reading the newspaper or watching television"
+                "text": "Over the last 2 weeks, how often have you been bothered by having trouble concentrating on things, such as reading the newspaper or watching television?"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "8",
-                "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
+                "text": "Over the last 2 weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual"
             },
             "answers": [ ]
         },
         {
             "question": {
                 "label": "9",
-                "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
+                "text": "Over the last 2 weeks, how often have you been bothered by thoughts that you would be better off dead or of hurting yourself in some way?"
             },
             "answers": [ ]
         },
