@@ -104,15 +104,19 @@
                                             "items": {
                                                 "enum": [
                                                     {
+                                                        "code": "W",
                                                         "value": "Work"
                                                     },
                                                     {
-                                                        "value": "School"
+                                                        "code": "E",
+                                                        "value": "Education"
                                                     },
                                                     {
+                                                        "code": "SL",
                                                         "value": "Social life"
                                                     },
                                                     {
+                                                        "code": "S",
                                                         "value": "Sleep"
                                                     }
                                                 ]

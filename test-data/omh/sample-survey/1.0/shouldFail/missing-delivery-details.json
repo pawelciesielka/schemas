@@ -18,9 +18,11 @@
             },
             "answers": [
                 {
-                    "value": "School"
+                    "code": "E",
+                    "value": "Education"
                 },
                 {
+                    "code": "S",
                     "value": "Sleep"
                 }
             ],
