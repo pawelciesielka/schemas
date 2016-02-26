@@ -7,7 +7,7 @@
             },
             "answers":[
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "no"
                 }
             ],
@@ -19,8 +19,7 @@
                 "label": "EXPSmoTime",
                 "text": "Approximately how long ago did you take the first puff from that cigarette?"
             },
-            "answers": [
-            ]
+            "answers": [ ]
         },
         {
             "question": {
@@ -29,7 +28,7 @@
             },
             "answers": [
                 {
-                    "code": "2",
+                    "code": 2,
                     "value": "moderate"
                 }
             ],

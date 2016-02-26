@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema shows a sample survey.",
+    "description": "This schema shows a sample survey with a single Q&A items of various types.",
     "type": "object",
 
     "references": [
@@ -28,7 +28,6 @@
             "$ref": "survey-categorical-answer-1.x.json"
         },
         "survey_categorical_answer_item": {
-            "description": "A survey item that has one or more categorical answers.",
             "allOf": [
                 {
                     "$ref": "#/definitions/survey_item"
@@ -97,6 +96,7 @@
             "properties": {
                 "items": {
                     "type": "array",
+                    "minItems": 3,
                     "items": [
                         {
                             "allOf": [
@@ -118,11 +118,11 @@
                                             "items": {
                                                 "enum": [
                                                     {
-                                                        "code": "0",
+                                                        "code": 0,
                                                         "value": "no"
                                                     },
                                                     {
-                                                        "code": "1",
+                                                        "code": 1,
                                                         "value": "yes"
                                                     }
                                                 ]
@@ -173,23 +173,23 @@
                                             "items": {
                                                 "enum": [
                                                     {
-                                                        "code": "0",
+                                                        "code": 0,
                                                         "value": "no urge"
                                                     },
                                                     {
-                                                        "code": "1",
+                                                        "code": 1,
                                                         "value": "weak"
                                                     },
                                                     {
-                                                        "code": "2",
+                                                        "code": 2,
                                                         "value": "moderate"
                                                     },
                                                     {
-                                                        "code": "3",
+                                                        "code": 3,
                                                         "value": "strong"
                                                     },
                                                     {
-                                                        "code": "4",
+                                                        "code": 4,
                                                         "value": "severe"
                                                     }
                                                 ]

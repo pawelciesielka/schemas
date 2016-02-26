@@ -16,7 +16,10 @@
             "properties": {
                 "code": {
                     "description": "A code used to identify the answer.",
-                    "type": "string"
+                    "type": [
+                        "number",
+                        "string"
+                    ]
                 }
             }
         }

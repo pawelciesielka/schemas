@@ -3,7 +3,7 @@
         {
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -17,7 +17,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -31,7 +31,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -45,7 +45,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -59,7 +59,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -73,7 +73,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -87,7 +87,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -101,7 +101,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],
@@ -115,7 +115,7 @@
             },
             "answers": [
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "Not at all"
                 }
             ],

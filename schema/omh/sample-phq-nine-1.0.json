@@ -61,19 +61,19 @@
                             "items": {
                                 "enum": [
                                     {
-                                        "code": "0",
+                                        "code": 0,
                                         "value": "Not at all"
                                     },
                                     {
-                                        "code": "1",
+                                        "code": 1,
                                         "value": "Several days"
                                     },
                                     {
-                                        "code": "2",
+                                        "code": 2,
                                         "value": "More than half the days"
                                     },
                                     {
-                                        "code": "3",
+                                        "code": 3,
                                         "value": "Nearly every day"
                                     }
                                 ]

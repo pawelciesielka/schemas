@@ -7,7 +7,7 @@
             },
             "answers":[
                 {
-                    "code": "0",
+                    "code": 0,
                     "value": "tadah"
                 }
             ],

@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema shows a sample survey.",
+    "description": "This schema shows a sample survey with a Q&A item, where the answer is a single value from a categorical value set and one where the answer can include more than one value from a categorical value set.",
     "type": "object",
 
     "definitions": {
@@ -18,7 +18,6 @@
             "$ref": "survey-categorical-answer-1.x.json"
         },
         "survey_categorical_answer_item": {
-            "description": "A survey item that has one or more categorical answers.",
             "allOf": [
                 {
                     "$ref": "#/definitions/survey_item"
@@ -35,42 +34,6 @@
                     }
                 }
             ]
-        },
-        "frequency_scale_item": {
-            "description": "A categorical answer item where the answer is one of the four frequency categories from PHQ-9.",
-            "allOf": [
-                {
-                    "$ref": "#/definitions/survey_categorical_answer_item"
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "answers": {
-                            "items": {
-                                "enum": [
-                                    {
-                                        "code": "0",
-                                        "value": "Not at all"
-                                    },
-                                    {
-                                        "code": "1",
-                                        "value": "Several days"
-                                    },
-                                    {
-                                        "code": "2",
-                                        "value": "More than half the days"
-                                    },
-                                    {
-                                        "code": "3",
-                                        "value": "Nearly every day"
-                                    }
-                                ]
-                            },
-                            "maxItems": 1
-                        }
-                    }
-                }
-            ]
         }
     },
     "allOf": [
@@ -81,26 +44,8 @@
             "properties": {
                 "items": {
                     "type": "array",
+                    "minItems": 2,
                     "items": [
-                        {
-                            "allOf": [
-                                {
-                                    "$ref": "#/definitions/frequency_scale_item"
-                                },
-                                {
-                                    "properties": {
-                                        "question": {
-                                            "enum": [
-                                                {
-                                                    "label": "9",
-                                                    "text": "Thoughts that you would be better off dead or of hurting yourself in some way"
-                                                }
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        },
                         {
                             "allOf": [
                                 {

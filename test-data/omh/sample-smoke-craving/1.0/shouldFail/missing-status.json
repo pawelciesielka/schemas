@@ -7,7 +7,7 @@
             },
             "answers":[
                 {
-                    "code": "4",
+                    "code": 4,
                     "value": "severe"
                 }
             ],
@@ -18,8 +18,6 @@
     "delivery_details": {
         "first_delivered_date_time": "2015-02-05T07:24:00Z",
         "start_date_time": "2015-02-05T07:24:00Z",
-        "end_date_time": "2015-02-05T07:24:30Z",
-        "end_status": "successful",
-        "trigger": "random"
+        "end_date_time": "2015-02-05T07:24:30Z"
     }
 }
