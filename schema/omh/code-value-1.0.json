@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a code-value pair.",
+
+    "type": "object",
+
+    "properties": {
+        "code": {
+            "description": "The code of the category.",
+            "type": [
+                "number",
+                "string"
+            ]
+        },
+        "value": {
+            "description": "The value of the category.",
+            "type": [
+                "object",
+                "number",
+                "string",
+                "boolean"
+            ]
+        }
+    },
+    "required": [
+        "code"
+    ]
+}

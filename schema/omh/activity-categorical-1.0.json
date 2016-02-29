@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents the result of evaluating activity based on AutoSense and other sensor as a binary variable.",
+
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Physical activity (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/68130003"
+        }
+    ],
+    "definitions": {
+        "generic_categorical_measure": {
+            "$ref": "generic-categorical-measure-1.0.json"
+        },
+        "code_value": {
+            "$ref": "code-value-1.0.json"
+        },
+        "activity_code_value": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/code_value"
+                },
+                {
+                    "properties": {
+                        "code": {
+                            "type": "integer",
+                            "enum": [
+                                0,
+                                1
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/generic_categorical_measure"
+        },
+        {
+            "properties": {
+                "categorical_measure": {
+                    "items": {
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

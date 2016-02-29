@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents <name of measure>, Describe here the measure the schema represents",
+    "type": "object",
+    "references": [
+        {
+            "description": "Additional details on the use of this template and an annotated sample application are available on the OmH website.",
+            "url": ""
+        },
+        {
+            "description": "The XXX code represents yyy. Specify here the term from a standard vocabulary that best describes this measure.",
+            "url": "<link to term in BioPortal>"
+        },
+        {
+            "description": "Add any relevant references, for example the website or paper used to inform the definition of this measure.",
+            "url": "<link to relevant website or paper>"
+        }
+    ],
+
+    "definitions": {
+        "code_value": {
+            "$ref": "code-value-1.0.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        }
+    },
+
+    "properties": {
+        "categorical_measure": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/code_value"
+            }
+        },
+        "effective_time_frame": {
+            "description": "The time frame to which the quantitative measure effectively refers.",
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        }
+    },
+    "required": [
+        "categorical_measure",
+        "effective_time_frame"
+    ]
+}
