@@ -32,10 +32,7 @@
 
     "properties": {
         "categorical_measure": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/code_value"
-            }
+            "$ref": "#/definitions/code_value"
         },
         "effective_time_frame": {
             "description": "The time frame to which the quantitative measure effectively refers.",

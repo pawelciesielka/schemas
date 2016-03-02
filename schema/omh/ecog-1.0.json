@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents the result of evaluating activity based on AutoSense and other sensor as a binary variable.",
+
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Physical activity (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/68130003"
+        }
+    ],
+    "definitions": {
+        "generic_categorical_measure": {
+            "$ref": "generic-categorical-measure-1.0.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/generic_categorical_measure"
+        },
+        {
+            "properties": {
+                "categorical_measure": {
+                    "enum": [
+                        {
+                            "code": 0,
+                            "value": "Fully active, able to carry on all pre-disease performance without restriction"
+                        },
+                        {
+                            "code": 1,
+                            "value": "Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work"
+                        },
+                        {
+                            "code": 2,
+                            "value": "Ambulatory and capable of all selfcare but unable to carry out any work activities; up and about more than 50% of waking hours"
+                        },
+                        {
+                            "code": 3,
+                            "value": "Capable of only limited selfcare; confined to bed or chair more than 50% of waking hours"
+                        },
+                        {
+                            "code": 4,
+                            "value": "Completely disabled; cannot carry on any selfcare; totally confined to bed or chair"
+                        },
+                        {
+                            "code": 5,
+                            "value": "Dead"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
