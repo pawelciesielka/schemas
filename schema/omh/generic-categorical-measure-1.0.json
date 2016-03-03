@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents <name of measure>, Describe here the measure the schema represents",
+    "description": "This schema represents <name of measure> (describe here the measure the schema represents)",
     "type": "object",
     "references": [
         {
@@ -20,7 +20,7 @@
 
     "definitions": {
         "code_value": {
-            "$ref": "code-value-1.0.json"
+            "$ref": "code-value-1.x.json"
         },
         "time_frame": {
             "$ref": "time-frame-1.x.json"

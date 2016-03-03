@@ -12,7 +12,7 @@
     ],
     "definitions": {
         "generic_categorical_measure": {
-            "$ref": "generic-categorical-measure-1.0.json"
+            "$ref": "generic-categorical-measure-1.x.json"
         }
     },
     "allOf": [
