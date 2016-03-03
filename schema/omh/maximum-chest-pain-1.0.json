@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "Numerical rating scale (NRS): patients rate their maximum pain intensity on the scale of 0 to 10 where 0 represents 'no pain' and 10 represents 'worst pain imaginable', plus intensity 'not recorded'.",
+
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Chest pain (finding)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/29857009"
+        }
+    ],
+    "definitions": {
+        "generic_categorical_measure": {
+            "$ref": "generic-categorical-measure-1.x.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/generic_categorical_measure"
+        },
+        {
+            "properties": {
+                "categorical_measure": {
+                    "enum": [
+                        {
+                            "code": 0
+                        },
+                        {
+                            "code": 1
+                        },
+                        {
+                            "code": 2
+                        },
+                        {
+                            "code": 3
+                        },
+                        {
+                            "code": 4
+                        },
+                        {
+                            "code": 5
+                        },
+                        {
+                            "code": 6
+                        },
+                        {
+                            "code": 7
+                        },
+                        {
+                            "code": 8
+                        },
+                        {
+                            "code": 9
+                        },
+                        {
+                            "code": 10
+                        },
+                        {
+                            "code": "not recorded"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
