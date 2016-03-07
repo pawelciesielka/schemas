@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a survey answer.",
+    "description": "This schema represents a survey answer. If the answer is chosen out of a set of categories, use the schema survey-categorical-answer. If the answer is a value with its unit of measure, use the schema survey-unit-value-answer.",
 
     "type": "object",
 

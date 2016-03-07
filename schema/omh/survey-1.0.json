@@ -28,6 +28,10 @@
                     "description": "The date time at which this survey was started.",
                     "$ref": "#/definitions/date_time"
                 },
+                "end_date_time": {
+                    "description": "The date time at which this survey was finished, based on status.",
+                    "$ref": "#/definitions/date_time"
+                },
                 "end_status": {
                     "description": "The way this survey was ended by the participant.",
                     "type": "string",
@@ -36,10 +40,6 @@
                         "missed",
                         "abandoned"
                     ]
-                },
-                "end_date_time": {
-                    "description": "The date time at which this survey was finished, based on status.",
-                    "$ref": "#/definitions/date_time"
                 }
             }
         }

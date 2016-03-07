@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "This schema represents a survey item, i.e., the combination of a question and the list of its possible answers.",
+    "description": "This schema represents a survey item, i.e., the combination of a question and the list of its answers.",
 
     "type": "object",
     "definitions": {
