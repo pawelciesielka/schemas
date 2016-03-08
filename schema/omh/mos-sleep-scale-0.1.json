@@ -1,0 +1,414 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema models the Sleep Scale from the Medical Outcomes Study (MOS-SS).",
+    "type": "object",
+
+    "references": [
+        {
+            "description": "The Sleep Scale from the Medical Outcomes Study (MOS-SS)",
+            "url": "https://www.rand.org/content/dam/rand/www/external/health/surveys_tools/mos/mos_sleep_survey.pdf"
+        }
+    ],
+
+    "definitions": {
+        "date_time": {
+            "$ref": "date-time-1.x.json"
+        },
+        "survey": {
+            "$ref": "survey-0.x.json"
+        },
+        "survey_item": {
+            "$ref": "survey-item-0.x.json"
+        },
+        "survey_categorical_answer": {
+            "$ref": "survey-categorical-answer-0.x.json"
+        },
+        "survey_categorical_answer_item": {
+            "description": "A survey item that has one categorical answer.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_categorical_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "survey_unit_value_answer": {
+            "$ref": "survey-unit-value-answer-0.x.json"
+        },
+        "duration_unit_value": {
+            "$ref": "duration-unit-value-1.x.json"
+        },
+        "survey_duration_unit_value_answer": {
+            "description": "An answer that is made up of a value and duration unit of measure.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_unit_value_answer"
+                },
+                {
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/duration_unit_value"
+                        }
+                    }
+                }
+            ]
+        },
+        "survey_duration_unit_value_answer_item": {
+            "description": "A survey item that has an answer made up of a value and its unit of measure.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/survey_duration_unit_value_answer"
+                            },
+                            "maxItems": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the six frequency categories from MOS-SS.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": 1,
+                                        "value": "All of the time"
+                                    },
+                                    {
+                                        "code": 2,
+                                        "value": "Most of the time"
+                                    },
+                                    {
+                                        "code": 3,
+                                        "value": "A Good Bit of the time"
+                                    },
+                                    {
+                                        "code": 4,
+                                        "value": "Some of the time"
+                                    },
+                                    {
+                                        "code": 5,
+                                        "value": "A little of the time"
+                                    },
+                                    {
+                                        "code": 6,
+                                        "value": "None of the time"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/survey"
+        },
+        {
+            "properties": {
+                "items": {
+                    "type": "array",
+                    "minItems": 12,
+                    "items": [
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_categorical_answer_item"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "1.",
+                                                    "text": "How long did it usually take for you to fall asleep during the past 4 weeks?"
+                                                }
+                                            ]
+                                        },
+                                        "answers": {
+                                            "items": {
+                                                "enum": [
+                                                    {
+                                                        "code": 1,
+                                                        "value": "0-15 minutes"
+                                                    },
+                                                    {
+                                                        "code": 2,
+                                                        "value": "16-30 minutes"
+                                                    },
+                                                    {
+                                                        "code": 3,
+                                                        "value": "31-45 minutes"
+                                                    },
+                                                    {
+                                                        "code": 4,
+                                                        "value": "46-60 minutes"
+                                                    },
+                                                    {
+                                                        "code": 5,
+                                                        "value": "More than 60 minutes"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/survey_duration_unit_value_answer_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "2",
+                                                    "text": "On the average, how many hours did you sleep each night during the past 4 weeks?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "3.",
+                                                    "text": "How often during the past 4 weeks did you feel that your sleep was not quiet (moving restlessly, feeling tense, speaking, etc., while sleeping)?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "4.",
+                                                    "text": "How often during the past 4 weeks did you get enough sleep to feel rested upon waking in the morning?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "5.",
+                                                    "text": "How often during the past 4 weeks did you awaken short of breath or with a headache?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "6.",
+                                                    "text": "How often during the past 4 weeks did you feel drowsy or sleepy during the day?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "7.",
+                                                    "text": "How often during the past 4 weeks did you have trouble falling asleep?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "8.",
+                                                    "text": "How often during the past 4 weeks did you awaken during your sleep time and have trouble falling asleep again?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "9.",
+                                                    "text": "How often during the past 4 weeks did you have trouble staying awake during the day?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "10.",
+                                                    "text": "How often during the past 4 weeks did you snore during your sleep?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "11.",
+                                                    "text": "How often during the past 4 weeks did you take naps (5 minutes or longer) during the day?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/frequency_scale_item"
+                                },
+                                {
+                                    "properties": {
+                                        "question": {
+                                            "enum": [
+                                                {
+                                                    "label": "12.",
+                                                    "text": "How often during the past 4 weeks did you get the amount of sleep you needed?"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+
+                    ],
+                    "additionalItems": false
+                },
+                "delivery_details": {
+                    "properties": {
+                        "first_delivered_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        },
+                        "last_available_date_time": {
+                            "$ref": "#/definitions/date_time"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

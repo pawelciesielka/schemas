@@ -1,0 +1,112 @@
+{
+    "items": [
+        {
+            "question": {
+                "label": "1.",
+                "text": "How long did it usually take for you to fall asleep during the past 4 weeks?"
+            },
+            "answers": [
+                {
+                    "code": 2,
+                    "value": "16-30 minutes"
+                }
+            ]
+        },
+        {
+            "question": {
+                "label": "2",
+                "text": "On the average, how many hours did you sleep each night during the past 4 weeks?"
+            },
+            "answers": [
+                {
+                    "value": {
+                        "value": 6.5,
+                        "unit": "h"
+                    }
+                }
+            ]
+        },
+        {
+            "question": {
+                "label": "3.",
+                "text": "How often during the past 4 weeks did you feel that your sleep was not quiet (moving restlessly, feeling tense, speaking, etc., while sleeping)?"
+            },
+            "answers": [
+                {
+                    "code": 5,
+                    "value": "A little of the time"
+                }
+            ]
+
+        },
+        {
+            "question": {
+                "label": "4.",
+                "text": "How often during the past 4 weeks did you get enough sleep to feel rested upon waking in the morning?"
+            },
+            "answers": [
+                {
+                    "code": 6,
+                    "value": "None of the time"
+                }
+            ]
+        },
+        {
+            "question": {
+                "label": "5.",
+                "text": "How often during the past 4 weeks did you awaken short of breath or with a headache?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "6.",
+                "text": "How often during the past 4 weeks did you feel drowsy or sleepy during the day?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "7.",
+                "text": "How often during the past 4 weeks did you have trouble falling asleep?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "8.",
+                "text": "How often during the past 4 weeks did you awaken during your sleep time and have trouble falling asleep again?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "9.",
+                "text": "How often during the past 4 weeks did you have trouble staying awake during the day?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "10.",
+                "text": "How often during the past 4 weeks did you snore during your sleep?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "11.",
+                "text": "How often during the past 4 weeks did you take naps (5 minutes or longer) during the day?"
+            },
+            "answers": [ ]
+        },
+        {
+            "question": {
+                "label": "12.",
+                "text": "How often during the past 4 weeks did you get the amount of sleep you needed?"
+            },
+            "answers": [ ]
+        }
+    ]
+}
+
