@@ -5,10 +5,10 @@
     "type": "object",
     "definitions": {
         "question": {
-            "$ref": "survey-question-1.x.json"
+            "$ref": "survey-question-0.x.json"
         },
         "answer": {
-            "$ref": "survey-answer-1.x.json"
+            "$ref": "survey-answer-0.x.json"
         },
         "date_time": {
             "$ref": "date-time-1.x.json"

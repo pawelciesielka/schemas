@@ -5,7 +5,7 @@
     "type": "object",
     "definitions": {
         "answer": {
-            "$ref": "survey-answer-1.x.json"
+            "$ref": "survey-answer-0.x.json"
         }
     },
     "allOf": [

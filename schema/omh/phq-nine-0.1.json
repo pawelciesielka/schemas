@@ -20,13 +20,13 @@
             "$ref": "date-time-1.x.json"
         },
         "survey": {
-            "$ref": "survey-1.x.json"
+            "$ref": "survey-0.x.json"
         },
         "survey_item": {
-            "$ref": "survey-item-1.x.json"
+            "$ref": "survey-item-0.x.json"
         },
         "survey_categorical_answer": {
-            "$ref": "survey-categorical-answer-1.x.json"
+            "$ref": "survey-categorical-answer-0.x.json"
         },
         "survey_categorical_answer_item": {
             "description": "A survey item that has one categorical answer.",
