@@ -51,7 +51,7 @@
             "$ref": "duration-unit-value-1.x.json"
         },
         "survey_duration_unit_value_answer": {
-            "description": "An answer that is made up of a value and duration unit of measure.",
+            "description": "An answer that is made up of a value and a duration unit of measure restricted to be hours.",
             "allOf": [
                 {
                     "$ref": "#/definitions/survey_unit_value_answer"
@@ -59,7 +59,20 @@
                 {
                     "properties": {
                         "value": {
-                            "$ref": "#/definitions/duration_unit_value"
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/duration_unit_value"
+                                },
+                                {
+                                    "properties": {
+                                        "unit": {
+                                            "enum": [
+                                                "h"
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
                         }
                     }
                 }
