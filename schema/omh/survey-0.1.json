@@ -29,7 +29,7 @@
                     "$ref": "#/definitions/date_time"
                 },
                 "end_date_time": {
-                    "description": "The date time at which this survey was finished, based on status.",
+                    "description": "The date time at which this survey was finished (not necessarily completed).",
                     "$ref": "#/definitions/date_time"
                 },
                 "end_status": {
