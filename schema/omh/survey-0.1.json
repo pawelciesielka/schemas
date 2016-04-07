@@ -42,6 +42,10 @@
                     ]
                 }
             }
+        },
+        "score": {
+            "description": "The score calculated for the survey.",
+            "type": "number"
         }
     },
     "required": [
