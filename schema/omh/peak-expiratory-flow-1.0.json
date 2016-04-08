@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's peak expiratory flow (PEF), i.e., the maximal flow (or speed) achieved during the maximally forced expiration initiated at full inspiration.",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Peak expiratory flow rate (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/18491006"
+        }
+    ],
+
+    "definitions": {
+        "unit_value": {
+            "$ref": "unit-value-1.x.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
+        }
+    },
+
+    "properties": {
+        "peak_expiratory_flow": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/unit_value"
+                },
+                {
+                    "properties": {
+                        "unit": {
+                            "enum": [
+                                "L/min",
+                                "L/sec"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "#/definitions/temporal_relationship_to_physical_activity"
+        }
+    },
+
+    "required": ["peak_expiratory_flow"]
+}
