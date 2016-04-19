@@ -1,0 +1,20 @@
+{
+    "trade_name": "CODEINE 10MG/PROMETHAZINE 6.25MG/5ML SOLN",
+    "strength": [
+        {
+            "ingredient_name": "Codeine Phosphate",
+            "numerator_value": 10,
+            "numerator_unit": "mg",
+            "denominator_value": 5,
+            "denominator_unit": "mL"
+        },
+        {
+            "ingredient_name": "Promethazine Hydrochloride",
+            "numerator_value": 6.25,
+            "numerator_unit": "mg",
+            "denominator_value": 5,
+            "denominator_unit": "mL"
+        }
+    ],
+    "rxnorm_code": 991486
+}
