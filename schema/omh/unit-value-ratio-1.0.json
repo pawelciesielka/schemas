@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a ratio of numerical values with a unit of measure.",
+
+    "type": "object",
+
+    "properties": {
+        "numerator_value": {
+            "description": "The lower boundary of the range.",
+            "type": "number"
+        },
+        "denominator_value": {
+            "description": "The upper boundary of the range.",
+            "type": "number"
+        },
+        "numerator_unit": {
+            "references": [
+                {
+                    "description": "The unit of measure of the element. Allowed values are drawn from the Common synonyms (non-UCUM) column of [subset of] UCUM, SI and English units. ",
+                    "url": "http://download.hl7.de/documents/ucum/ucumdata.html"
+                }
+            ],
+            "type": "string"
+        },
+        "denominator_unit": {
+            "references": [
+                {
+                    "description": "The unit of measure of the element. Allowed values are drawn from the Common synonyms (non-UCUM) column of [subset of] UCUM, SI and English units. ",
+                    "url": "http://download.hl7.de/documents/ucum/ucumdata.html"
+                }
+            ],
+            "type": "string"
+        }
+    },
+    "required": [
+        "numerator_value",
+        "denominator_value",
+        "numerator_unit",
+        "denominator_unit"
+    ]
+}
