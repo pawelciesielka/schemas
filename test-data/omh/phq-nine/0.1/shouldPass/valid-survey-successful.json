@@ -35,8 +35,8 @@
             },
             "answers": [
                 {
-                    "code": 1,
-                    "value": "Several days"
+                    "code": 2,
+                    "value": "More than half the days"
                 }
             ],
             "asked_date_time": "2015-02-05T07:24:20Z",
@@ -142,7 +142,8 @@
     "delivery_details": {
         "start_date_time": "2015-02-05T07:24:00Z",
         "end_date_time": "2015-02-05T07:26:00Z",
-        "end_status": "successful"
+        "end_status": "successful",
+        "score": 4
     }
 }
 
