@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's body weight, either a single body weight measurement, or for the result of aggregating several measurements made over time (see Numeric descriptor schema for a list of aggregate measures)",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Body weight measure (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/363808001"
+        }
+    ],
+    "definitions": {
+        "mass_unit_value": {
+            "$ref": "mass-unit-value-1.x.json"
+        },
+        "generic_quantitative_measure": {
+            "$ref": "generic-quantitative-measure-1.x.json"
+        }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/generic_quantitative_measure"
+        },
+        {
+            "properties": {
+                "unit_value": {
+                    "$ref": "#/definitions/mass_unit_value"
+                }
+            }
+        }
+
+    ]
+}

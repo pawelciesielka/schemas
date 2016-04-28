@@ -5,7 +5,7 @@
     "type": "object",
     "references": [
         {
-            "description": "Additional details on the use of this template and an annotated sample application are available on the OmH website.",
+            "description": "Additional details on the use of this generic schema and an annotated sample application are available on the OmH website.",
             "url": "http://www.openmhealth.org/documentation/#/schema-docs/write-a-schema/annotated-quantitative-measure-schema-template"
         },
         {
@@ -13,7 +13,7 @@
             "url": "<link to term in BioPortal>"
         },
         {
-            "description": "Add any relevant references, for example the website or paper used to inform the definition of this measure.",
+            "description": "If applicable, add any relevant references, for example the website or paper used to inform the definition of this measure.",
             "url": "<link to relevant website or paper>"
         }
     ],
