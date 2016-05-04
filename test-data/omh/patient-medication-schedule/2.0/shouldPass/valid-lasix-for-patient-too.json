@@ -1,15 +1,15 @@
 {
-    "description": "Lasix 40 mg every morning --> at 7:30 am",
+    "description": "Lasix 20 mg every afternoon --> at 1:30 pm",
 
     "medication": {
         "trade_name": "Lasix",
         "strength": [
             {
-                "value": 40,
+                "value": 20,
                 "unit": "mg"
             }
         ],
-        "rxnorm_code": 200809
+        "rxnorm_code": 200801
     },
     "route": "oral",
 
@@ -30,7 +30,7 @@
             "dose_recurrence": {
                 "timing": [
                     {
-                        "time_of_day": "07:30:00"
+                        "time_of_day": "13:30:00"
                     }
                 ]
             }
