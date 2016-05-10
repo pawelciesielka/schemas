@@ -36,9 +36,9 @@
                     "description": "The way this survey was ended by the participant.",
                     "type": "string",
                     "enum": [
-                        "successful",
-                        "missed",
-                        "abandoned"
+                        "abandoned",
+                        "completed",
+                        "missed"
                     ]
                 }
             }
