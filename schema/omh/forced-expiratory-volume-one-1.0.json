@@ -53,5 +53,8 @@
         }
     },
 
-    "required": ["forced_expiratory_volume_one"]
+    "required": [
+        "forced_expiratory_volume_one",
+        "effective_time_frame"
+    ]
 }
