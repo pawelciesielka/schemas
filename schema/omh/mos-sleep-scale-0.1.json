@@ -44,6 +44,50 @@
                 }
             ]
         },
+        "frequency_scale_item": {
+            "description": "A categorical answer item where the answer is one of the six frequency categories from MOS-SS.",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/survey_categorical_answer_item"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "answers": {
+                            "items": {
+                                "enum": [
+                                    {
+                                        "code": 1,
+                                        "value": "All of the time"
+                                    },
+                                    {
+                                        "code": 2,
+                                        "value": "Most of the time"
+                                    },
+                                    {
+                                        "code": 3,
+                                        "value": "A Good Bit of the time"
+                                    },
+                                    {
+                                        "code": 4,
+                                        "value": "Some of the time"
+                                    },
+                                    {
+                                        "code": 5,
+                                        "value": "A little of the time"
+                                    },
+                                    {
+                                        "code": 6,
+                                        "value": "None of the time"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+
         "survey_unit_value_answer": {
             "$ref": "survey-unit-value-answer-0.x.json"
         },
@@ -93,49 +137,6 @@
                                 "$ref": "#/definitions/survey_duration_unit_value_answer"
                             },
                             "maxItems": 1
-                        }
-                    }
-                }
-            ]
-        },
-        "frequency_scale_item": {
-            "description": "A categorical answer item where the answer is one of the six frequency categories from MOS-SS.",
-            "allOf": [
-                {
-                    "$ref": "#/definitions/survey_categorical_answer_item"
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "answers": {
-                            "items": {
-                                "enum": [
-                                    {
-                                        "code": 1,
-                                        "value": "All of the time"
-                                    },
-                                    {
-                                        "code": 2,
-                                        "value": "Most of the time"
-                                    },
-                                    {
-                                        "code": 3,
-                                        "value": "A Good Bit of the time"
-                                    },
-                                    {
-                                        "code": 4,
-                                        "value": "Some of the time"
-                                    },
-                                    {
-                                        "code": 5,
-                                        "value": "A little of the time"
-                                    },
-                                    {
-                                        "code": 6,
-                                        "value": "None of the time"
-                                    }
-                                ]
-                            }
                         }
                     }
                 }
