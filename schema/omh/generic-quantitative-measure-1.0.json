@@ -27,6 +27,15 @@
         },
         "descriptive_statistic": {
             "$ref": "descriptive-statistic-1.x.json"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
+        },
+        "temporal_relationship_to_sleep": {
+            "$ref": "temporal-relationship-to-sleep-1.x.json"
+        },
+        "temporal_relationship_to_meal": {
+            "$ref": "temporal-relationship-to-meal-1.x.json"
         }
     },
 
@@ -41,6 +50,15 @@
         },
         "descriptive_statistic": {
             "$ref": "#/definitions/descriptive_statistic"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "#/definitions/temporal_relationship_to_physical_activity"
+        },
+        "temporal_relationship_to_sleep": {
+            "$ref": "#/definitions/temporal_relationship_to_sleep"
+        },
+        "temporal_relationship_to_meal": {
+            "$ref": "#/definitions/temporal_relationship_to_meal"
         }
     },
     "required": [

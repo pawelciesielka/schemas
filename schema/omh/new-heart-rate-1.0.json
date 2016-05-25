@@ -13,9 +13,6 @@
     "definitions": {
         "generic_quantitative_measure": {
              "$ref": "generic-quantitative-measure-1.x.json"
-        },
-        "temporal_relationship_to_physical_activity": {
-            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
         }
     },
     "allOf": [
@@ -39,12 +36,8 @@
                             }
                         }
                     ]
-                },
-                "temporal_relationship_to_physical_activity": {
-                    "$ref": "#/definitions/temporal_relationship_to_physical_activity"
                 }
             }
         }
     ]
-
 }
