@@ -1,6 +1,6 @@
 {
     "unit_value": {
-        "value": 60,
+        "value": 58,
         "unit": "beats/min"
     },
     "effective_time_frame": {
@@ -9,6 +9,5 @@
             "end_date_time": "2015-02-05T19:00:00Z"
         }
     },
-    "descriptive_statistic": "maximum",
-    "temporal_relationship_to_physical_activity": "at rest"
+    "descriptive_statistic": "minimum"
 }
