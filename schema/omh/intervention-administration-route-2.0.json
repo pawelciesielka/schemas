@@ -5,7 +5,7 @@
     "description": "The route of administration of a therapeutic agent or other intervention (e.g., a device).",
     "references": [
         {
-            "description": "The SNOMED code represents Drug administration route",
+            "description": "The SNOMED code represents Route of administration value (qualifier value)",
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/284009009"
         },
         {

@@ -6,8 +6,12 @@
 
     "references": [
         {
-            "description": "The NCIT codes represent Timespan (synonym: time interval).",
+            "description": "The NCIT codes represent Time interval (The period of time between two dates or events or between the beginning and end of something.).",
             "url": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C0872291"
+        },
+        {
+            "description": "The SNOMED codes represent Interval (qualifier value).",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/385673002"
         }
     ],
 

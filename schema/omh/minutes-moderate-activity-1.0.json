@@ -6,6 +6,10 @@
         {
             "description": "The SNOMED code represents Physical activity target moderate exercise (finding)",
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/408581006"
+        },
+        {
+            "description": "The SNOMED code represents Target physical activity (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/391105003"
         }
     ],
     "definitions": {
