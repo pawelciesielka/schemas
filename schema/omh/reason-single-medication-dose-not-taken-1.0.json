@@ -6,8 +6,8 @@
     "type": "object",
     "references": [
         {
-            "description": "The SNOMED code represents Medication regimen behavior finding (finding)",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/422979000"
+            "description": "The SNOMED code represents Medication compliance (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/418633004"
         }
     ],
     "definitions": {
