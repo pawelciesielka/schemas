@@ -5,7 +5,7 @@
     "type": "object",
     "references": [
         {
-            "description": "The SNOMED code represents Minute volume",
+            "description": "The SNOMED code represents Minute volume (observable entity)",
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/250811004"
         }
     ],
