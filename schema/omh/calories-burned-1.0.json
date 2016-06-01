@@ -5,8 +5,8 @@
     "type": "object",
     "references": [
         {
-            "description": "The LOINC code represents Calories burned:Power = Energy/Time:Point in time:^Patient:Quantitative, that is, a Quantitative measure of Calories burned by a Patient at a Point in time",
-            "url": "http://purl.bioontology.org/ontology/LNC/41981-2"
+            "description": "The SNOMED code represents Energy expenditure (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/251833007"
         }
     ],
 

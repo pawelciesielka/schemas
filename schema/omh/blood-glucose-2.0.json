@@ -6,8 +6,8 @@
 
     "references": [
         {
-            "description": "The SNOMED code represents Blood glucose level (finding)",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/365812005"
+            "description": "The SNOMED code represents Blood glucose concentration (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/434912009"
         }
     ],
 

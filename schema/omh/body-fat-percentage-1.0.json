@@ -4,8 +4,8 @@
     "type": "object",
     "references": [
         {
-            "description": "The LOINC code represents Body fat percentage:Mass Fraction:Point in time:^Patient:Quantitative:Measured",
-            "url": "http://purl.bioontology.org/ontology/LNC/41982-0"
+            "description": "The SNOMED codes represents Total body fat (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/248361005"
         }
     ],
     "definitions": {
