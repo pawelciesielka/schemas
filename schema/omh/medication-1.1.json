@@ -75,43 +75,7 @@
                 "X"
             ]
         },
-        "unit_value_one": {
-            "allOf": [
-                {
-                    "$ref": "unit-value-1.x.json"
-                },
-                {
-                    "properties": {
-                        "ingredient_name": {
-                            "type": "string"
-                        },
-                        "unit": {
-                            "$ref": "#/definitions/unit"
-                        }
-                    }
-                }
-            ]
-        },
-        "unit_value_two": {
-            "allOf": [
-                {
-                    "$ref": "unit-value-ratio-1.0.json"
-                },
-                {
-                    "properties": {
-                        "ingredient_name": {
-                            "type": "string"
-                        },
-                        "numerator_unit": {
-                            "$ref": "#/definitions/unit"
-                        },
-                        "denominator_unit": {
-                            "$ref": "#/definitions/unit"
-                        }
-                    }
-                }
-            ]
-        },
+
         "ingredient_strength_unit_value": {
             "type": "array",
             "description": "A therapeutic agent can be the combination of more than one active ingredients, hence this isn an array.",
@@ -121,17 +85,49 @@
                 "references": [
                     {
                         "description": "The NCIT code represents Pharmaceutical Strength",
-                        "url": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53294"
+                        "url": "https://ncim.nci.nih.gov/ncimbrowser/ConceptReport.jsp?dictionary=NCI%20MetaThesaurus&code=C1705922"
                     }
                 ],
-                "anyOf": [
+                "oneOf": [
                     {
-                        "$ref": "#/definitions/unit_value_one"
+                        "allOf": [
+                            {
+                                "$ref": "unit-value-1.x.json"
+                            },
+                            {
+                                "properties": {
+                                    "ingredient_name": {
+                                        "type": "string"
+                                    },
+                                    "unit": {
+                                        "$ref": "#/definitions/unit"
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
-                        "$ref": "#/definitions/unit_value_two"
+                        "allOf": [
+                            {
+                                "$ref": "unit-value-ratio-1.0.json"
+                            },
+                            {
+                                "properties": {
+                                    "ingredient_name": {
+                                        "type": "string"
+                                    },
+                                    "numerator_unit": {
+                                        "$ref": "#/definitions/unit"
+                                    },
+                                    "denominator_unit": {
+                                        "$ref": "#/definitions/unit"
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ]
+
             }
         }
     },
