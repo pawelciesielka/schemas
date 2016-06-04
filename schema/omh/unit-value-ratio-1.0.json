@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a ratio of numerical values with a unit of measure.",
+    "description": "This schema represents a ratio of two numerical values each with its own unit of measure. This schema models the case in which the denominator has a value greater than 1, e.g., 10 mg/5 mL.",
 
     "type": "object",
 
