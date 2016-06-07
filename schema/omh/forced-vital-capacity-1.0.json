@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a person's FCV, the volume of air that s/he can forcibly be blown out after full inspiration.",
+    "description": "This schema represents a person's Forced vital capacity (FCV), the volume of air that s/he can forcibly be blown out after full inspiration.",
     "type": "object",
     "references": [
         {
-            "description": "The SNOMED code represents  Forced vital capacity (observable entity)",
+            "description": "The SNOMED code represents Forced vital capacity (observable entity)",
             "url": "http://purl.bioontology.org/ontology/SNOMEDCT/50834005"
         }
     ],

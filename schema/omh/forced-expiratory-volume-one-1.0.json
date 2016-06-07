@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a person's FEV1, the volume of air that s/he can forcibly blow out in one second, after full inspiration.",
+    "description": "This schema represents a person's Forced expired volume in 1 second (FEV1), the volume of air that s/he can forcibly blow out in one second, after full inspiration.",
     "type": "object",
     "references": [
         {

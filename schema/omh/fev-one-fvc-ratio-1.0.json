@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
 
-    "description": "This schema represents a person's FEV1/FVC ratio, the ratio of Forced expired volume in 1 secon to Forced vital capacity (in %).",
+    "description": "This schema represents a person's FEV1/FVC ratio, the ratio of Forced expired volume in 1 second to Forced vital capacity (in %).",
     "type": "object",
     "references": [
         {
