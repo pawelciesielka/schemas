@@ -11,8 +11,8 @@
     ],
 
     "definitions": {
-        "unit_value": {
-            "$ref": "unit-value-1.x.json"
+        "volume_unit_value": {
+            "$ref": "volume-unit-value-1.x.json"
         },
         "time_frame": {
             "$ref": "time-frame-1.x.json"
@@ -29,7 +29,7 @@
         "forced_expiratory_volume_one": {
             "allOf": [
                 {
-                    "$ref": "#/definitions/unit_value"
+                    "$ref": "#/definitions/volume_unit_value"
                 },
                 {
                     "properties": {
