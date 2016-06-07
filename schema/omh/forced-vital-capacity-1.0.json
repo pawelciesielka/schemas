@@ -5,8 +5,8 @@
     "type": "object",
     "references": [
         {
-            "description": "The SNOMED code represents  Forced expired volume in 1 second (observable entity)",
-            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/59328004"
+            "description": "The SNOMED code represents  Forced vital capacity (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/50834005"
         }
     ],
 
