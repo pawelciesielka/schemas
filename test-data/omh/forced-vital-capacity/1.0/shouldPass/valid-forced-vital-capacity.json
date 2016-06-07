@@ -1,6 +1,6 @@
 {
-    "forced_expiratory_volume_one": {
-        "value": 1.456,
+    "forced_vital_capacity": {
+        "value": 4.56,
         "unit": "L"
     },
     "effective_time_frame": {

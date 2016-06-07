@@ -1,0 +1,13 @@
+{
+    "forced_vital_capacity": {
+        "value": 4.56,
+        "unit": "L"
+    },
+    "effective_time_frame": {
+        "time_interval": {
+            "start_date_time": "2016-02-05T07:25:00Z",
+            "end_date_time": "2016-03-05T07:25:00Z"
+        }
+    },
+    "descriptive_statistic": "average"
+}
