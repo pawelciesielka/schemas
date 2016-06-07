@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's FEV1/FVC ratio, the ratio of Forced expired volume in 1 secon to Forced vital capacity (in %).",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents Forced expired volume in one second/forced vital capacity ratio (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/251944000"
+        }
+    ],
+
+    "definitions": {
+        "unit_value": {
+            "$ref": "unit-value-1.x.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
+        }
+    },
+
+    "properties": {
+        "fev1_fvc_ratio": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/unit_value"
+                },
+                {
+                    "properties": {
+                        "unit": {
+                            "enum": [
+                                "%"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "#/definitions/temporal_relationship_to_physical_activity"
+        }
+    },
+
+    "required": [
+        "fev1_fvc_ratio",
+        "effective_time_frame"
+    ]
+}
