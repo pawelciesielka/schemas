@@ -12,9 +12,6 @@
     ],
 
     "definitions": {
-        "date_time": {
-            "$ref": "date-time-1.x.json"
-        },
         "survey": {
             "$ref": "survey-0.x.json"
         },
@@ -411,16 +408,6 @@
 
                     ],
                     "additionalItems": false
-                },
-                "delivery_details": {
-                    "properties": {
-                        "first_delivered_date_time": {
-                            "$ref": "#/definitions/date_time"
-                        },
-                        "last_available_date_time": {
-                            "$ref": "#/definitions/date_time"
-                        }
-                    }
                 }
             }
         }
