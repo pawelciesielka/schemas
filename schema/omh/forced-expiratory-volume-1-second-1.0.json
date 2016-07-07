@@ -26,7 +26,7 @@
     },
 
     "properties": {
-        "forced_expiratory_volume_one": {
+        "forced_expiratory_volume_1_second": {
             "allOf": [
                 {
                     "$ref": "#/definitions/volume_unit_value"
@@ -54,7 +54,7 @@
     },
 
     "required": [
-        "forced_expiratory_volume_one",
+        "forced_expiratory_volume_1_second",
         "effective_time_frame"
     ]
 }

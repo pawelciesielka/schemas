@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "description": "This schema represents a person's Forced expired volume in 1 second (FEV1), the volume of air that s/he can forcibly blow out in one second, after full inspiration.",
+    "type": "object",
+    "references": [
+        {
+            "description": "The SNOMED code represents  Forced expired volume in 1 second (observable entity)",
+            "url": "http://purl.bioontology.org/ontology/SNOMEDCT/59328004"
+        }
+    ],
+
+    "definitions": {
+        "volume_unit_value": {
+            "$ref": "volume-unit-value-1.x.json"
+        },
+        "time_frame": {
+            "$ref": "time-frame-1.x.json"
+        },
+        "descriptive_statistic": {
+            "$ref": "descriptive-statistic-1.x.json"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "temporal-relationship-to-physical-activity-1.x.json"
+        }
+    },
+
+    "properties": {
+        "forced_expiratory_volume_1_second": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/volume_unit_value"
+                },
+                {
+                    "properties": {
+                        "unit": {
+                            "enum": [
+                                "L"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "effective_time_frame": {
+            "$ref": "#/definitions/time_frame"
+        },
+        "descriptive_statistic": {
+            "$ref": "#/definitions/descriptive_statistic"
+        },
+        "temporal_relationship_to_physical_activity": {
+            "$ref": "#/definitions/temporal_relationship_to_physical_activity"
+        }
+    },
+
+    "required": [
+        "forced_expiratory_volume_1_second",
+        "effective_time_frame"
+    ]
+}
